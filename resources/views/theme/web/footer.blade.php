@@ -1,41 +1,14 @@
-<footer id="footer-part" class="pt-65">
+<footer id="footer-part" class="pt-25">
     <div class="container ">
-        <div class="newsletter pb-45">
-            <div class="row align-items-end">
-                <div class="col-lg-4">
-                    <div class="newsletter-text">
-                        <h2>Newsletter</h2>
-                        <p>Nullam condimentum varius ipsum at viverra. Donec tortor metus, sollicitudin vitae est
-                            id, ullamcorper pretium tortor.</p>
-                    </div>
-                </div>
-                <div class="col-lg-7 offset-lg-1">
-                    <form action="#">
-                        <div class="row no-gutters pt-40">
-                            <div class="col-sm-9">
-                                <div class="newsform">
-                                    <input type="email" placeholder="Enter Your email address...">
-                                </div>
-                            </div>
-                            <div class="col-sm-3">
-                                <div class="newsform">
-                                    <button type="button">Subscribe</button>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
 
         <div class="footer pt-20 pb-45">
             <div class="row">
                 <div class="col-lg-3 col-md-6">
                     <div class="footer-about pt-30">
-                        <a href="#"><img src="images/logo-footer.png" alt="logo"></a>
-                        <p>Donec vel ligula ornare, finibus ex at, vive risus. Aenean velit ex, finibus elementum
+                        <a href="#"><img src="{{ asset('images/Logo_Mpp.png') }}" alt="logo"></a>
+                        <p class="text-white">Donec vel ligula ornare, finibus ex at, vive risus. Aenean velit ex, finibus elementum
                             eu, dignissim varius augue. </p>
-                        <span><i class="fa fa-globe"></i>www.fresh@water.com</span>
+                        <span><i class="fa fa-globe"></i>www.email@gmail.com</span>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-6">
