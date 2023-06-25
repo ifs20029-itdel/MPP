@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!--====== Favicon Icon ======-->
-    <link rel="shortcut icon" href="{{ asset('assets/images/favicon.png') }}" type="image/png">
+    <link rel="shortcut icon" href="{{ asset('images/logo_medan.png') }}" type="image/png">
 
     <!--====== Owl Carousel css ======-->
     <link rel="stylesheet" href="{{ asset('assets/css/owl.carousel.min.css') }}">

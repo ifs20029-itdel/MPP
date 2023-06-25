@@ -4,7 +4,7 @@
     <section id="slider-part-1" class="slider-1">
         <div class="slider-active">
             <div class="single-slider bg_cover d-flex align-items-center"
-                style="background-image: url(images/slider/bg-1.jpg)">
+                style="background-image: url({{ asset('images/poster-2.jpg') }})">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-8">
@@ -22,7 +22,7 @@
             </div> <!-- single slider -->
 
             <div class="single-slider bg_cover d-flex align-items-center"
-                style="background-image: url(images/slider/bg-3.jpg)">
+                style="background-image: url({{ asset('images/poster-4.jfif') }})">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-8">

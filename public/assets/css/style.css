@@ -333,6 +333,7 @@ p {
 
 .navigation {
     position: absolute;
+    background-color: #122b19;
     left: 0;
     width: 100%;
     z-index: 99;
@@ -345,7 +346,7 @@ p {
     left: 0;
     width: 100%;
     z-index: 999;
-    background: #fff;
+    background: #122b19;
     -webkit-box-shadow: 0px 5px 30px 0px rgba(46, 76, 185, 0.2);
     box-shadow: 0px 5px 30px 0px rgba(46, 76, 185, 0.2);
     -webkit-animation: sticky 0.5s;
@@ -390,7 +391,7 @@ p {
 
 .navbar .navbar-nav .nav-item a {
     font-size: 16px;
-    color: #2c2d3e;
+    color: #fff;
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
     -webkit-transition: all 0.4s linear;
@@ -1753,13 +1754,13 @@ p {
     width: 40px;
     height: 50px;
     border-radius: 5px;
-    background-color: #2e4db9;
+    background-color: #16662D;
     text-align: center;
     z-index: 999;
     display: none;
 }
 
-.back-to-top img {
+.back-to-top svg {
     margin-top: 7px;
 }
 
@@ -3888,3 +3889,7 @@ p.form-message.error {
 
 
 .account-popup-content .account-form {}
+
+.logo_mpp {
+    width: 200px;
+}
