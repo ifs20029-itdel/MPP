@@ -1,31 +1,7 @@
-<x-WebLayout title="Home">
+<x-WebLayout title="Statistik">
     <!--====== SLIDER PART START ======-->
-
-    <section id="slider-part-1" class="slider-1">
-        <div class="slider-active">
-            <div class="single-slider bg_cover d-flex align-items-center"
-                style="background-image: url({{ asset('images/poster-2.jpg') }})">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8">
-                            
-                        </div>
-                    </div> <!-- row -->
-                </div> <!-- container -->
-            </div> <!-- single slider -->
-
-            <div class="single-slider bg_cover d-flex align-items-center"
-                style="background-image: url({{ asset('images/poster-4.jfif') }})">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8">
-                            
-                        </div>
-                    </div> <!-- row -->
-                </div> <!-- container -->
-            </div> <!-- single slider -->
-    </section>
-
+    <li></li>
+    <li></li>
     <!--====== SLIDER PART ENDS ======--> 
 
     <!--====== PRODUCTS PART START ======-->
@@ -35,7 +11,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="section-title text-center pb-15">
-                        <h2>INSTANSI</h2>
+                        <h2>Statistik</h2>
                         <ul>
                             <li></li>
                             <li></li>
@@ -55,7 +31,7 @@
                             </div>
                             <div class="products-contant">
                                 <h6 class="products-title"><a href="#">Mineral water big bottle</a></h6> 
-                            </div>  
+                            </div>
                         </div>
                     </div>
                     <div class="col-lg-12">

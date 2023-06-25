@@ -16,3 +16,28 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('pages.web.main');
 });
+
+
+Route::get('/pages/profil', function () {
+    return view('pages.web.profil');
+});
+
+Route::get('/pages/berita', function () {
+    return view('pages.web.berita');
+});
+
+Route::get('/pages/statistik', function () {
+    return view('pages.web.statistik');
+});
+
+Route::get('/pages/instansi', function () {
+    return view('pages.web.instansi');
+});
+
+Route::get('/pages/kritik', function () {
+    return view('pages.web.kritik');
+});
+
+Route::get('/pages/survei', function () {
+    return view('pages.web.survei');
+});

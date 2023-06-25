@@ -1,31 +1,8 @@
-<x-WebLayout title="Home">
+<x-WebLayout title="Instansi">
     <!--====== SLIDER PART START ======-->
-
-    <section id="slider-part-1" class="slider-1">
-        <div class="slider-active">
-            <div class="single-slider bg_cover d-flex align-items-center"
-                style="background-image: url({{ asset('images/poster-2.jpg') }})">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8">
-                            
-                        </div>
-                    </div> <!-- row -->
-                </div> <!-- container -->
-            </div> <!-- single slider -->
-
-            <div class="single-slider bg_cover d-flex align-items-center"
-                style="background-image: url({{ asset('images/poster-4.jfif') }})">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8">
-                            
-                        </div>
-                    </div> <!-- row -->
-                </div> <!-- container -->
-            </div> <!-- single slider -->
-    </section>
-
+    <li></li>
+    <li></li>
+   
     <!--====== SLIDER PART ENDS ======--> 
 
     <!--====== PRODUCTS PART START ======-->
@@ -55,7 +32,7 @@
                             </div>
                             <div class="products-contant">
                                 <h6 class="products-title"><a href="#">Mineral water big bottle</a></h6> 
-                            </div>  
+                            </div>
                         </div>
                     </div>
                     <div class="col-lg-12">

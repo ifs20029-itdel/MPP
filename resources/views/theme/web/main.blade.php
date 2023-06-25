@@ -29,7 +29,7 @@
                     <div class="col-lg-12">
                         <nav class="navbar navbar-expand-lg">
 
-                            <a class="navbar-brand" href="index.html">
+                            <a class="navbar-brand" href="/">
                                 <img src="{{ asset('images/Logo_Mpp.png') }}" class="logo_mpp" alt="Logo">
                             </a> <!-- Logo -->
 
@@ -44,25 +44,25 @@
                             <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                                 <ul class="navbar-nav m-auto">
                                     <li class="nav-item">
-                                        <a href="about.html">BERANDA</a>
+                                        <a href="/">BERANDA</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="about.html">PROFIL</a>
+                                        <a href="../pages/profil">PROFIL</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="about.html">BERITA</a>
+                                        <a href="../pages/berita">BERITA</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="about.html">STATISTIK</a>
+                                        <a href="../pages/statistik">STATISTIK</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="about.html">INSTANSI</a>
+                                        <a href="../pages/instansi">INSTANSI</a>
+                                        </li>
+                                    <li class="nav-item">
+                                        <a href="../pages/kritik">KRITIK & SARAN</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="about.html">KRITIK & SARAN</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="about.html">SURVEI</a>
+                                        <a href="../pages/survei">SURVEI</a>
                                     </li>
                                     
                                 </ul>

@@ -1,33 +1,7 @@
-<x-WebLayout title="Home">
-    <!--====== SLIDER PART START ======-->
-
-    <section id="slider-part-1" class="slider-1">
-        <div class="slider-active">
-            <div class="single-slider bg_cover d-flex align-items-center"
-                style="background-image: url({{ asset('images/poster-2.jpg') }})">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8">
-                            
-                        </div>
-                    </div> <!-- row -->
-                </div> <!-- container -->
-            </div> <!-- single slider -->
-
-            <div class="single-slider bg_cover d-flex align-items-center"
-                style="background-image: url({{ asset('images/poster-4.jfif') }})">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8">
-                            
-                        </div>
-                    </div> <!-- row -->
-                </div> <!-- container -->
-            </div> <!-- single slider -->
-    </section>
-
+<x-WebLayout title="profil">
     <!--====== SLIDER PART ENDS ======--> 
-
+    <li></li>
+    <li></li>
     <!--====== PRODUCTS PART START ======-->
 
     <section id="products-part" class="pt-65">
@@ -35,7 +9,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="section-title text-center pb-15">
-                        <h2>INSTANSI</h2>
+                        <h3>Profil Mal Pelayanan Publik Kota Medan</h3>
                         <ul>
                             <li></li>
                             <li></li>
