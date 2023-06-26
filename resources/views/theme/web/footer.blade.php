@@ -3,7 +3,7 @@
 
         <div class="footer pt-20 pb-45">
             <div class="row">
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-3 col-md-9">
                     <div class="footer-about pt-30">
                         <a href="#"><img src="{{ asset('images/Logo_Mpp.png') }}" alt="logo"></a>
                         <p class="text-white">Donec vel ligula ornare, finibus ex at, vive risus. Aenean velit ex, finibus elementum
@@ -11,57 +11,7 @@
                         <span><i class="fa fa-globe"></i>www.email@gmail.com</span>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-3 col-sm-6">
-                    <div class="footer-title pt-30">
-                        <h5>Information</h5>
-                    </div>
-                    <div class="footer-info">
-                        <ul>
-                            <li><a href="contact.html">Contact Us</a></li>
-                            <li><a href="about.html">About Us</a></li>
-                            <li><a href="#">Delivery Information</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Terms & Conditions</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-3 col-sm-6">
-                    <div class="footer-title pt-30">
-                        <h5>Our Services</h5>
-                    </div>
-                    <div class="footer-info">
-                        <ul>
-                            <li><a href="#">My Account</a></li>
-                            <li><a href="#">Order History</a></li>
-                            <li><a href="#">Wishlist</a></li>
-                            <li><a href="#">Newsletter</a></li>
-                            <li><a href="#">Returns</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-6 col-sm-6">
-                    <div class="footer-title pt-30">
-                        <h5>Recent News</h5>
-                    </div>
-                    <div class="footer-news">
-                        <ul>
-                            <li>
-                                <div class="f-news">
-                                    <h6 class="news-title"><a href="#">Nullam condimenum varius ipsum.</a></h6>
-                                    <a class="news-date" href="#"><i class="fa fa-calendar"></i> 15 Aug 2019</a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="f-news">
-                                    <h6 class="news-title"><a href="#">Nullam condimenum varius ipsum.</a></h6>
-                                    <a class="news-date" href="#"><i class="fa fa-calendar"></i> 15 Aug 2019</a>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="col-lg-6 col-md-6 col-sm-9">
                     <div class="footer-title pt-30">
                         <h5>Get In Tuch</h5>
                     </div>
