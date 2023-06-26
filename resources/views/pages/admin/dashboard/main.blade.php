@@ -1,4 +1,4 @@
-<x-WebLayout title="Dashboard">  
+<x-WebAdmin title="Dashboard">  
     <!--begin::Header-->
     <div id="kt_header" style="" class="header align-items-stretch">
         <!--begin::Brand-->
@@ -1894,4 +1894,4 @@
         <!--end::Post-->
     </div>
     <!--end::Content-->
-</x-WebLayout>
+</x-WebAdmin>
