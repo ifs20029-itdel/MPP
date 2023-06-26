@@ -1638,12 +1638,13 @@ p {
 
 .footer-about span {
     padding-top: 20px;
-    color: #2c2d3e;
+    color: #fff;
     font-size: 14px;
 }
 
 .footer-about span i {
     margin-right: 10px;
+    color: #fff;
 }
 
 .footer-title h5 {
@@ -1659,7 +1660,7 @@ p {
     left: 0;
     bottom: 0;
     width: 30px;
-    border-bottom: 1px dashed #2c2d3e;
+    border-bottom: 1px dashed #fff;
 }
 
 .footer-info {
@@ -1670,7 +1671,7 @@ p {
     font-size: 14px;
     font-family: 'Open Sans', sans-serif;
     line-height: 36px;
-    color: #2c2d3e;
+    color: #fff;
 }
 
 .footer-news {}
@@ -1726,16 +1727,20 @@ p {
 
 .footer-address ul li .icon i {
     font-size: 15px;
-    color: #2c2d3e;
+    color: #fff;
 }
 
-.footer-address ul li .address {}
+.footer-address ul li .address {
+    color: #fff;
+}
 
 .footer-address ul li .address h5 {
-    color: #2c2d3e;
+    color: #fff;
 }
 
-.footer-address ul li .address p {}
+.footer-address ul li .address p {
+    color: #fff;
+}
 
 .copyright {
     background-color: #e0eef9;
@@ -1799,7 +1804,7 @@ p {
 
 
 .footer-2 .footer-title h5::before {
-    border-bottom: 1px dashed #9daac9;
+    border-bottom: 1px dashed #fff;
 }
 
 .footer-2 .copyright {
