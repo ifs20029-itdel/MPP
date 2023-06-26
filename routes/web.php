@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\DashboardAdminController;
 use App\Http\Controllers\Web\BeritaController;
 use App\Http\Controllers\Web\HomeController;
 use App\Http\Controllers\Web\InstansiController;
@@ -31,3 +32,4 @@ Route::get('statistik', [StatistikController::class, 'index'])->name('statistik'
 Route::get('instansi', [InstansiController::class, 'index'])->name('instansi');
 Route::get('kritik', [KritikController::class, 'index'])->name('kritik');
 Route::get('survei', [SurveiController::class, 'index'])->name('survei');
+Route::get('admin', [DashboardAdminController::class, 'index'])->name('admin');
