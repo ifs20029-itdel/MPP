@@ -44,25 +44,25 @@
                             <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                                 <ul class="navbar-nav m-auto">
                                     <li class="nav-item">
-                                        <a href="/">BERANDA</a>
+                                        <a href="{{ route('home') }}">BERANDA</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="../pages/profil">PROFIL</a>
+                                        <a href="{{ route('profil') }}">PROFIL</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="../pages/berita">BERITA</a>
+                                        <a href="{{ route('berita') }}">BERITA</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="../pages/statistik">STATISTIK</a>
+                                        <a href="{{ route('statistik') }}">STATISTIK</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="../pages/instansi">INSTANSI</a>
+                                        <a href="{{ route('instansi') }}">INSTANSI</a>
                                         </li>
                                     <li class="nav-item">
-                                        <a href="../pages/kritik">KRITIK & SARAN</a>
+                                        <a href="{{ route('kritik') }}">KRITIK & SARAN</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="../pages/survei">SURVEI</a>
+                                        <a href="{{ route('survei') }}">SURVEI</a>
                                     </li>
                                     
                                 </ul>

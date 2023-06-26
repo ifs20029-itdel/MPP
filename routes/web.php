@@ -1,5 +1,12 @@
 <?php
 
+use App\Http\Controllers\Web\BeritaController;
+use App\Http\Controllers\Web\HomeController;
+use App\Http\Controllers\Web\InstansiController;
+use App\Http\Controllers\Web\KritikController;
+use App\Http\Controllers\Web\ProfileController;
+use App\Http\Controllers\Web\StatistikController;
+use App\Http\Controllers\Web\SurveiController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,27 +24,10 @@ Route::get('/', function () {
     return view('pages.web.main');
 });
 
-
-Route::get('/pages/profil', function () {
-    return view('pages.web.profil');
-});
-
-Route::get('/pages/berita', function () {
-    return view('pages.web.berita');
-});
-
-Route::get('/pages/statistik', function () {
-    return view('pages.web.statistik');
-});
-
-Route::get('/pages/instansi', function () {
-    return view('pages.web.instansi');
-});
-
-Route::get('/pages/kritik', function () {
-    return view('pages.web.kritik');
-});
-
-Route::get('/pages/survei', function () {
-    return view('pages.web.survei');
-});
+Route::get('home', [HomeController::class, 'index'])->name('home');
+Route::get('profil', [ProfileController::class, 'index'])->name('profil');
+Route::get('berita', [BeritaController::class, 'index'])->name('berita');
+Route::get('statistik', [StatistikController::class, 'index'])->name('statistik');
+Route::get('instansi', [InstansiController::class, 'index'])->name('instansi');
+Route::get('kritik', [KritikController::class, 'index'])->name('kritik');
+Route::get('survei', [SurveiController::class, 'index'])->name('survei');
