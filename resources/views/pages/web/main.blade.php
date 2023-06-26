@@ -4,7 +4,7 @@
     <section id="slider-part-1" class="slider-1">
         <div class="slider-active">
             <div class="single-slider bg_cover d-flex align-items-center"
-                style="background-image: url({{ asset('images/poster-2.jpg') }})">
+                style="background-image: url({{ asset('images/Poster-1.jpg') }})">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-8">
@@ -15,7 +15,29 @@
             </div> <!-- single slider -->
 
             <div class="single-slider bg_cover d-flex align-items-center"
-                style="background-image: url({{ asset('images/poster-4.jfif') }})">
+                style="background-image: url({{ asset('images/Poster-2.jpeg') }})">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            
+                        </div>
+                    </div> <!-- row -->
+                </div> <!-- container -->
+            </div> <!-- single slider -->
+
+            <div class="single-slider bg_cover d-flex align-items-center"
+                style="background-image: url({{ asset('images/Poster-3.jfif') }})">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            
+                        </div>
+                    </div> <!-- row -->
+                </div> <!-- container -->
+            </div> <!-- single slider -->
+
+            <div class="single-slider bg_cover d-flex align-items-center"
+                style="background-image: url({{ asset('images/Poster-4.jpg') }})">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-8">
