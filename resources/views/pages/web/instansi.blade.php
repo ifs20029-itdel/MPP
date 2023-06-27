@@ -79,7 +79,7 @@
                                 <img src="images/Kesehatan.png" alt="Kesehatan">
                             </div>
                             <div class="products-contant">
-                                <h6 class="products-title"><a href="#">BPJS-Kesehatan</a></h6> 
+                                <h6 class="products-title"><a href="#">BPJS Kesehatan</a></h6> 
                             </div>
                         </div>
                     </div>

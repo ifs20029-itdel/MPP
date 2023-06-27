@@ -26,7 +26,7 @@
             </div> <!-- single slider -->
 
             <div class="single-slider bg_cover d-flex align-items-center"
-                style="background-image: url({{ asset('images/Poster-3.jfif') }})">
+                style="background-image: url({{ asset('images/Poster-3.jpg') }})">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-8">
@@ -73,60 +73,60 @@
                     <div class="col-lg-12">
                         <div class="singel-products mt-30">
                             <div class="products-image">
-                                <img src="images/product/p-1.jpg" alt="Intansi">
+                                <img src="images/Disdukcapil.png" alt="Intansi">
                             </div>
                             <div class="products-contant">
-                                <h6 class="products-title"><a href="#">Mineral water big bottle</a></h6> 
+                                <h6 class="products-title"><a href="#">Dinas Kependudukan dan Catatan Sipil</a></h6> 
                             </div>  
                         </div>
                     </div>
                     <div class="col-lg-12">
                         <div class="singel-products mt-30">
                             <div class="products-image">
-                                <img src="images/product/p-1.jpg" alt="Intansi">
+                                <img src="images/Polresta.png" alt="Intansi">
                             </div>
                             <div class="products-contant">
-                                <h6 class="products-title"><a href="#">Mineral water big bottle</a></h6> 
+                                <h6 class="products-title"><a href="#">Polresta Medan</a></h6> 
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-12">
                         <div class="singel-products mt-30">
                             <div class="products-image">
-                                <img src="images/product/p-1.jpg" alt="Intansi">
+                                <img src="images/Kejaksaan.png" alt="Intansi">
                             </div>
                             <div class="products-contant">
-                                <h6 class="products-title"><a href="#">Mineral water big bottle</a></h6> 
+                                <h6 class="products-title"><a href="#">Kejaksaan Negeri Medan</a></h6> 
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-12">
                         <div class="singel-products mt-30">
                             <div class="products-image">
-                                <img src="images/product/p-1.jpg" alt="Intansi">
+                                <img src="images/BeaCukai.png" alt="Intansi">
                             </div>
                             <div class="products-contant">
-                                <h6 class="products-title"><a href="#">Mineral water big bottle</a></h6> 
+                                <h6 class="products-title"><a href="#">Dirjen Bea Cukai</a></h6> 
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-12">
                         <div class="singel-products mt-30">
                             <div class="products-image">
-                                <img src="images/product/p-1.jpg" alt="Intansi">
+                                <img src="images/Kesehatan.png" alt="Intansi">
                             </div>
                             <div class="products-contant">
-                                <h6 class="products-title"><a href="#">Mineral water big bottle</a></h6> 
+                                <h6 class="products-title"><a href="#">BPJS Kesehatan</a></h6> 
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-12">
                         <div class="singel-products mt-30">
                             <div class="products-image">
-                                <img src="images/product/p-1.jpg" alt="Intansi">
+                                <img src="images/Ketenagakerjaan.png" alt="Intansi">
                             </div>
                             <div class="products-contant">
-                                <h6 class="products-title"><a href="#">Mineral water big bottle</a></h6> 
+                                <h6 class="products-title"><a href="#">BPJS Ketenagakerjaan</a></h6> 
                             </div>
                         </div>
                     </div>

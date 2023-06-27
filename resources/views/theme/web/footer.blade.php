@@ -6,9 +6,8 @@
                 <div class="col-lg-3 col-md-6 col-sm-12">
                     <div class="footer-about pt-30">
                         <a href="#"><img src="{{ asset('images/Logo_Mpp.png') }}" alt="logo"></a>
-                        <p class="text-white">Donec vel ligula ornare, finibus ex at, vive risus. Aenean velit ex, finibus elementum
-                            eu, dignissim varius augue. </p>
-                        <span><i class="fa fa-globe"></i>devdpmptsp.pemkomedan.go.id</span>
+                        <p class="text-white">Melayani dengan Cepat dan Transparan. </p>
+                        <span><i class="fa fa-globe"></i><a href="https://devdpmptsp.pemkomedan.go.id/dpmptspwebaplikasi/">devdpmptsp.pemkomedan.go.id</a> </span>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-12">
