@@ -3,19 +3,13 @@
     <li></li>
     <li></li>
     <!--====== PRODUCTS PART START ======-->
-
     
-
-    <!--====== PRODUCTS PART ENDS ======-->
-
-    <!--====== SERVICES PART START ======-->
-
-    <section id="services-part" class="pt-70">
+    <section id="products-part" class="pt-65">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8">
-                    <div class="section-title text-center">
-                        <h2>BERITA</h2>
+                    <div class="section-title text-center pb-15">
+                        <h2>About Us</h2>
                         <ul>
                             <li></li>
                             <li></li>
@@ -27,38 +21,57 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-12">
-                    <div class="singel-services mt-45 pb-50">
-                        <div class="services-icon">
-                            <img src="images/choose-us/icon-1.png" alt="Icon">
-                        </div>
-                        <div class="services-cont pt-25 pl-70">
-                            <h4>Aliquam congue fermentum</h4>
-                            <p>Nam ut pharetra enim, in tincidunt orci. Ut sed neque dolor. Nullam auctor placerat
-                                ipsum. In finibus tortor pulvinar pulvinar laoreet. Quisque id nibh non lectus dictum
-                                dapibus quis ac urna.</p>
-                            <a href="#">Read More <span><i class="fa fa-long-arrow-right"></i></span></a>
-                        </div>
-                    </div>
+                <div class="about-content mt-30">
+                    <p>Proin fringilla vulputate lorem quis congue. Mauris lacinia gravida ultrices. Phasellus consectetur pellentesque. Vestibulum eu ligula cursus nisi ultrices laoreet iaculis sed lum non dolor fermentum, consequat risus non, auctor nisi. Nunc sodales blandit lum auctor nibh varius metus volutpat, et sollicitudin massa ornare. Donec rutrum urna tempor, a euismod massa porttitor. Donec at sapien non orci blandit placerat nec vitae diam dui, facilisis eget risus a, scelerisque molestie sem. Suspendisse convallis, lorem bus feugiat, elit turpis rutrum justo, eget dapibus leo eros quis tellus. Suspendisse varius fermentum varius fermentum.</p>
                 </div>
-                <div class="col-lg-12">
-                    <div class="singel-services pt-45 pb-50">
-                        <div class="services-icon pt-45">
-                            <img src="images/choose-us/icon-2.png" alt="Icon">
-                        </div>
-                        <div class="services-cont pt-25 pl-70">
-                            <h4>Pellentesque sed dolor</h4>
-                            <p>Nam ut pharetra enim, in tincidunt orci. Ut sed neque dolor. Nullam auctor placerat
-                                ipsum. In finibus tortor pulvinar pulvinar laoreet. Quisque id nibh non lectus dictum
-                                dapibus quis ac urna.</p>
-                            <a href="#">Read More <span><i class="fa fa-long-arrow-right"></i></span></a>
-                        </div>
-                    </div>
-                </div> 
             </div>
         </div>
     </section>
+    
+    
+    <section id="client-part" class="pt-80">
+        <div class="row">
+        <div class="col-lg-6">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="section-title text-center">
+                        <img src="images/client/c.png" alt="icon">
+                        <h2>Our Exhort Happy Clients say !</h2>
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                        <p>Nunc molestie mi nunc, nec accumsan libero dignissim sit amet. Fusce sit amet tincidunt metus. Nunc eu risus suscipit massa dapibus blandit. Vivamus ac commodo eros.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> 
 
+    <section id="client-part" class="pt-80">
+        <div class="row">
+        <div class="col-lg-6 offset-lg-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="section-title text-center">
+                        <img src="images/client/c.png" alt="icon">
+                        <h2>Our Exhort Happy Clients say !</h2>
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                        <p>Nunc molestie mi nunc, nec accumsan libero dignissim sit amet. Fusce sit amet tincidunt metus. Nunc eu risus suscipit massa dapibus blandit. Vivamus ac commodo eros.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!--====== SERVICES PART ENDS ======-->
 
 </x-WebLayout>
