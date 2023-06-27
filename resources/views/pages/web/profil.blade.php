@@ -9,7 +9,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="section-title text-center pb-15">
-                        <h2>About Us</h2>
+                        <h2>Profil MPP</h2>
                         <ul>
                             <li></li>
                             <li></li>
@@ -28,7 +28,7 @@
         </div>
     </section>
     
-    
+
     <section id="client-part" class="pt-80">
         <div class="row">
         <div class="col-lg-6">
@@ -57,6 +57,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="section-title text-center">
+                        <div class="mb-50">
                         <img src="images/client/c.png" alt="icon">
                         <h2>Our Exhort Happy Clients say !</h2>
                         <ul>
@@ -67,6 +68,7 @@
                             <li></li>
                         </ul>
                         <p>Nunc molestie mi nunc, nec accumsan libero dignissim sit amet. Fusce sit amet tincidunt metus. Nunc eu risus suscipit massa dapibus blandit. Vivamus ac commodo eros.</p>
+                        </div>
                     </div>
                 </div>
             </div>

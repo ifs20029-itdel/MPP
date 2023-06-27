@@ -23,67 +23,45 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="container">
             <div class="row">
-                <div class="products-slied owl-carousel">
-                    <div class="col-lg-12">
-                        <div class="singel-products mt-30">
-                            <div class="products-image">
-                                <img src="images/product/p-1.jpg" alt="Intansi">
+                <div class="col-lg-12">
+                    <div class="contact-form pt-45">
+                        <h6>Berikan Keluhan anda</h6>
+                        <form id="contact-form" action="..." data-toggle="validator">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="singel-form form-group">
+                                        <label>Nama :</label>
+                                        <input name="name" type="text" data-error="Nama wajib diisi." required="required">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="singel-form form-group">
+                                        <label>Nomor Telepon / WA :</label>
+                                        <input type="number-text" name="nomor" data-error="Nomor Wajib diisi." required="required">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="singel-form form-group">
+                                        <label>Kritik atau Saran anda :</label>
+                                        <textarea name="message" data-error="Wajib diisi." required="required"></textarea>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <p class="form-message"></p>
+                                <div class="col-md-12">
+                                    <div class="singel-form">
+                                        <div class="mb-50">
+                                            <button type="submit">Submit</button>
+                                            </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="products-contant">
-                                <h6 class="products-title"><a href="#">Mineral water big bottle</a></h6> 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-12">
-                        <div class="singel-products mt-30">
-                            <div class="products-image">
-                                <img src="images/product/p-1.jpg" alt="Intansi">
-                            </div>
-                            <div class="products-contant">
-                                <h6 class="products-title"><a href="#">Mineral water big bottle</a></h6> 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-12">
-                        <div class="singel-products mt-30">
-                            <div class="products-image">
-                                <img src="images/product/p-1.jpg" alt="Intansi">
-                            </div>
-                            <div class="products-contant">
-                                <h6 class="products-title"><a href="#">Mineral water big bottle</a></h6> 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-12">
-                        <div class="singel-products mt-30">
-                            <div class="products-image">
-                                <img src="images/product/p-1.jpg" alt="Intansi">
-                            </div>
-                            <div class="products-contant">
-                                <h6 class="products-title"><a href="#">Mineral water big bottle</a></h6> 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-12">
-                        <div class="singel-products mt-30">
-                            <div class="products-image">
-                                <img src="images/product/p-1.jpg" alt="Intansi">
-                            </div>
-                            <div class="products-contant">
-                                <h6 class="products-title"><a href="#">Mineral water big bottle</a></h6> 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-12">
-                        <div class="singel-products mt-30">
-                            <div class="products-image">
-                                <img src="images/product/p-1.jpg" alt="Intansi">
-                            </div>
-                            <div class="products-contant">
-                                <h6 class="products-title"><a href="#">Mineral water big bottle</a></h6> 
-                            </div>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -93,55 +71,6 @@
     <!--====== PRODUCTS PART ENDS ======-->
 
     <!--====== SERVICES PART START ======-->
-
-    <section id="services-part" class="pt-70">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="section-title text-center">
-                        <h2>BERITA</h2>
-                        <ul>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="singel-services mt-45 pb-50">
-                        <div class="services-icon">
-                            <img src="images/choose-us/icon-1.png" alt="Icon">
-                        </div>
-                        <div class="services-cont pt-25 pl-70">
-                            <h4>Aliquam congue fermentum</h4>
-                            <p>Nam ut pharetra enim, in tincidunt orci. Ut sed neque dolor. Nullam auctor placerat
-                                ipsum. In finibus tortor pulvinar pulvinar laoreet. Quisque id nibh non lectus dictum
-                                dapibus quis ac urna.</p>
-                            <a href="#">Read More <span><i class="fa fa-long-arrow-right"></i></span></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-12">
-                    <div class="singel-services pt-45 pb-50">
-                        <div class="services-icon pt-45">
-                            <img src="images/choose-us/icon-2.png" alt="Icon">
-                        </div>
-                        <div class="services-cont pt-25 pl-70">
-                            <h4>Pellentesque sed dolor</h4>
-                            <p>Nam ut pharetra enim, in tincidunt orci. Ut sed neque dolor. Nullam auctor placerat
-                                ipsum. In finibus tortor pulvinar pulvinar laoreet. Quisque id nibh non lectus dictum
-                                dapibus quis ac urna.</p>
-                            <a href="#">Read More <span><i class="fa fa-long-arrow-right"></i></span></a>
-                        </div>
-                    </div>
-                </div> 
-            </div>
-        </div>
-    </section>
 
     <!--====== SERVICES PART ENDS ======-->
 
