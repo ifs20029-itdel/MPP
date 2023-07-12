@@ -40,8 +40,15 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="singel-form form-group">
-                                        <label>Nomor Telepon / WA :</label>
-                                        <input type="number-text" name="nomor" data-error="Nomor Wajib diisi." required="required">
+                                        <label>Nama :</label>
+                                        <div class="produtct">
+                                            <select name="select">
+                                                <option>Most Re.asdasdasasdadsdasd.</option>
+                                                <option>Laptop</option>
+                                                <option>Ram</option>
+                                                <option>cpu</option>
+                                            </select>
+                                        </div>
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
