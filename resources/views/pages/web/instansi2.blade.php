@@ -86,14 +86,97 @@
                         <div class="m-5">
                             <div class="singel-services">
                                 <div class="services-cont">
-                                    <a href="#" class="m-1">Pengaduan SIM <span><i class="fa fa-long-arrow-right"></i></span></a>
-                                    <a href="#" class="m-1">Pengaduan Kehilangan <span><i class="fa fa-long-arrow-right"></i></span></a>
-                                    <a href="#" class="m-1">Pengaduan Kehilangan <span><i class="fa fa-long-arrow-right"></i></span></a>
-                                    <a href="#" class="m-1">Pengaduan Kehilangan <span><i class="fa fa-long-arrow-right"></i></span></a>
-                                    <a href="#" class="m-1">Pengaduan Kehilangan <span><i class="fa fa-long-arrow-right"></i></span></a>
-                                    <a href="#" class="m-1">Pengaduan Kehilangan <span><i class="fa fa-long-arrow-right"></i></span></a>
+                                    <a href="#" class="m-1" type="button" data-toggle="modal" data-target="#exampleModalCenter">
+                                        Pengaduan Kehilangan<span><i class="fa fa-long-arrow-right"></i></span>
+                                    </a> 
+                                    <a href="#" class="m-1" type="button" data-toggle="modal" data-target="#exampleModalCenter">
+                                        Pengaduan Kemalingan<span><i class="fa fa-long-arrow-right"></i></span>
+                                    </a> 
                                 </div>
                             </div> 
+                            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalCenterTitle">Pengaduan Kehilangan</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <span>Silahkan Mendaftar nomor antrian anda</span>
+                                            <span>Nomor Antrian Sekarang : </span>
+                                            <div class="accordion mt-2" id="accordionExample">
+                                                <div class="card">
+                                                    <div class="card-header" id="headingTwo">
+                                                        <h5 class="mb-0">
+                                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseOne"
+                                                                aria-expanded="false" aria-controls="collapseOne">
+                                                                Hari Ini
+                                                            </button>
+                                                        </h5>
+                                                    </div>
+                                                    <div id="collapseOne" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                                                        <div class="card-body">
+                                                            <form>
+                                                                <div class="form-group">
+                                                                    <label for="fullname">Nama Anda</label>
+                                                                    <input type="text" class="form-control" id="fullname" aria-describedby="fullname"
+                                                                        placeholder="Nama Anda">
+                                                                    <small id="fullname" class="form-text text-muted">Masukkan Nama Anda</small>
+                                                                </div> 
+                                                                <div class="form-group">
+                                                                    <label for="noWhatsApp">Nomor WhatsApp</label>
+                                                                    <input type="text" class="form-control" id="noWhatsApp" aria-describedby="noWhatsApp"
+                                                                        placeholder="Masukkan No WhatsApp">
+                                                                    <small id="noWhatsApp" class="form-text text-muted">Silahkan Masukkan No WhatsApp Anda agar kami mudah menghubungi</small>
+                                                                </div> 
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card">
+                                                    <div class="card-header" id="headingTwo">
+                                                        <h5 class="mb-0">
+                                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo"
+                                                                aria-expanded="false" aria-controls="collapseTwo">
+                                                                Tentukan Tanggal Sendiri
+                                                            </button>
+                                                        </h5>
+                                                    </div>
+                                                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                                                        <div class="card-body">
+                                                            <form>
+                                                                <div class="form-group">
+                                                                    <label for="tanggal">Tanggal</label>
+                                                                    <input type="date" class="form-control" id="tanggal" aria-describedby="tanggal"
+                                                                        placeholder="Tanggal"> 
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="fullname">Nama Anda</label>
+                                                                    <input type="text" class="form-control" id="fullname" aria-describedby="fullname"
+                                                                        placeholder="Nama Anda">
+                                                                    <small id="fullname" class="form-text text-muted">Masukkan Nama Anda</small>
+                                                                </div> 
+                                                                <div class="form-group">
+                                                                    <label for="noWhatsApp">Nomor WhatsApp</label>
+                                                                    <input type="text" class="form-control" id="noWhatsApp" aria-describedby="noWhatsApp"
+                                                                        placeholder="Masukkan No WhatsApp">
+                                                                    <small id="noWhatsApp" class="form-text text-muted">Silahkan Masukkan No WhatsApp Anda agar kami mudah menghubungi</small>
+                                                                </div> 
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                                            <button type="button" class="btn btn-primary">Kirim</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
