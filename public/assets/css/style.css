@@ -3512,8 +3512,8 @@ p {
 
 .checkout-box .details {
     padding: 48px 0;
-    padding-left: 95px;
-    padding-right: 95px;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 .checkout-box .details .details-title h6 {
