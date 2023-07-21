@@ -61,9 +61,6 @@
                                     <li class="nav-item">
                                         <a href="{{ route('kritik') }}">KRITIK & SARAN</a>
                                     </li>
-                                    <li class="nav-item">
-                                        <a href="{{ route('survei') }}">SURVEI</a>
-                                    </li>
                                     
                                 </ul>
                             </div>

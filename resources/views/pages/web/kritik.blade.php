@@ -40,10 +40,10 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="singel-form form-group">
-                                        <label>Nama :</label>
+                                        <label>Instansi :</label>
                                         <div class="produtct">
                                             <select name="select">
-                                                <option>Most Re.asdasdasasdadsdasd.</option>
+                                                <option>Instansi</option>
                                                 <option>Laptop</option>
                                                 <option>Ram</option>
                                                 <option>cpu</option>
