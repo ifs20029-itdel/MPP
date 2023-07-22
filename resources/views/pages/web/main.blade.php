@@ -57,7 +57,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="section-title text-center pb-15">
-                        <h2>INSTANSI</h2>
+                        <h2>AMBIL NOMOR ANTRIAN INSTANSI</h2>
                         <ul>
                             <li></li>
                             <li></li>
