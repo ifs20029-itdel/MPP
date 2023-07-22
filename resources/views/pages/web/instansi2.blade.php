@@ -29,20 +29,20 @@
                 <div class="col-lg-6">
                     <div class="checkout-box mt-50">
                         <div class="title">
-                            <h5 class="text-center">Nama Instansi</h5>
+                            <h5 class="text-center">POLRESTA MEDAN</h5>
                         </div>
                         <div class="buyer-info">
-                            <img src="images/Polresta.png" alt="Polresta"> 
+                            <img width="75%" src="images/Polresta.png" alt="Polresta"> 
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="checkout-box mt-50">
-                        <div class="title">
-                            <H3>POLRESTA MEDAN</H3>
-                        </div>
                         <div class="details">
                             <div class="order-list">
+                                <div class="item-content mb-5 ">
+                                    Belum ada deskripsi
+                                </div>
                                 <ul class="features-list page-margin-top-section">
                                     <li class="gray">
                                         <div class="icon template-location1">
@@ -85,7 +85,7 @@
                 <div class="col-lg-12">
                     <div class="checkout-box mt-50">
                         <div class="title">
-                            <h5>Layanan Instansi</h5>
+                            <h5>Jenis Layanan Instansi</h5>
                         </div>
                         <div class="m-5">
                             <div class="singel-services">
