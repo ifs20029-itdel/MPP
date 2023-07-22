@@ -38,11 +38,15 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="checkout-box mt-50">
+                        <div class="title">
+                            <H3>POLRESTA MEDAN</H3>
+                        </div>
                         <div class="details">
                             <div class="order-list">
                                 <ul class="features-list page-margin-top-section">
                                     <li class="gray">
-                                        <div class="icon template-location1"></div>
+                                        <div class="icon template-location1">
+                                        </div>
                                         <div class="item-content">
                                             <p>Alamat</p>
                                             <h5>Medan Johor</h5>
@@ -112,7 +116,7 @@
                                                         <h5 class="mb-0">
                                                             <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseOne"
                                                                 aria-expanded="false" aria-controls="collapseOne">
-                                                                Hari Ini
+                                                                BOOKING ANTRIAN SEKARANG
                                                             </button>
                                                         </h5>
                                                     </div>
@@ -140,7 +144,7 @@
                                                         <h5 class="mb-0">
                                                             <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo"
                                                                 aria-expanded="false" aria-controls="collapseTwo">
-                                                                Tentukan Tanggal Sendiri
+                                                                BOOKING ANTRIAN BESOK
                                                             </button>
                                                         </h5>
                                                     </div>

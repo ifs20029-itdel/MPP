@@ -43,7 +43,7 @@
                                 <img src="images/Polresta.png" alt="Polresta">
                             </div>
                             <div class="products-contant">
-                                <h6 class="products-title"><a href="#">Polresta Medan</a></h6> 
+                                <h6 class="products-title"><a href="{{ route('instansi2') }}">Polresta Medan</a></h6> 
                             </div>
                         </div>
                     </div>
