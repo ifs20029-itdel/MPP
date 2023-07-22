@@ -29,7 +29,7 @@
                 <div class="col-lg-6">
                     <div class="checkout-box mt-50">
                         <div class="title">
-                            <h5>Nama Instansi</h5>
+                            <h5 class="text-center">Nama Instansi</h5>
                         </div>
                         <div class="buyer-info">
                             <img src="images/Polresta.png" alt="Polresta"> 
