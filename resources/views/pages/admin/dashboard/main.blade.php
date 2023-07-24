@@ -4,7 +4,7 @@
         <!--begin::Brand-->
         <div class="header-brand">
             <!--begin::Logo-->
-            <a href="../../demo8/dist/index.html">
+            <a href="{{route('home')}}">
                 <img alt="Logo" src="{{ asset('images/Logo_Mpp.png') }}" class="h-50px h-lg-50px" />
             </a>
             <!--end::Logo-->
