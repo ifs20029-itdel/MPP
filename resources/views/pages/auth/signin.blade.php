@@ -1,7 +1,7 @@
-<x-AuthLayout>
+<x-AuthLayout title="Login">
     
 <div class="d-flex flex-lg-row-fluid"> 
-    
+
 </div>
 <!--begin::Aside-->
 <!--begin::Body-->

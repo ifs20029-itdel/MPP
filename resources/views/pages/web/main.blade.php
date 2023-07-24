@@ -159,7 +159,7 @@
                 <div class="col-lg-12">
                     <div class="singel-services mt-45 pb-50">
                         <div class="services-icon">
-                            <img src="{{ asset('images/logo_medan.png') }}" alt="Icon">
+                            <img class="berita" src="{{ asset('images/logo_medan.png') }}" alt="Icon">
                         </div>
                         <div class="services-cont pt-25 pl-70">
                             <h4>Aliquam congue fermentum</h4>

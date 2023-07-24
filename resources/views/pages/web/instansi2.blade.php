@@ -32,7 +32,7 @@
                             <h5 class="text-center">POLRESTA MEDAN</h5>
                         </div>
                         <div class="buyer-info">
-                            <img width="75%" src="images/Polresta.png" alt="Polresta"> 
+                            <img src="{{ asset('images/Polresta.png') }}" alt="Polresta"> 
                         </div>
                     </div>
                 </div>
