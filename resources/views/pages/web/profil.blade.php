@@ -35,7 +35,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="section-title text-center">
-                        <img src="images/client/c.png" alt="icon">
+                        <img src="{{asset('images/logo_medan.png')}}" alt="icon">
                         <h2>Our Exhort Happy Clients say !</h2>
                         <ul>
                             <li></li>
@@ -58,7 +58,7 @@
                 <div class="col-lg-8">
                     <div class="section-title text-center">
                         <div class="mb-50">
-                        <img src="images/client/c.png" alt="icon">
+                        <img src="{{asset('images/logo_medan.png')}}" alt="icon">
                         <h2>Our Exhort Happy Clients say !</h2>
                         <ul>
                             <li></li>
