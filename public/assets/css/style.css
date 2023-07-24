@@ -1228,6 +1228,10 @@ p {
     position: relative;
 }
 
+.singel-services img {
+    width: 65px;
+}
+
 .singel-services.line-r {
     border-right: 1px dashed #cdd2e2;
 }
