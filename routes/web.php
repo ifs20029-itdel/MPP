@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\DashboardAdminController;
 use App\Http\Controllers\Admin\InstansiAdminController;
+use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\Web\BeritaController;
 use App\Http\Controllers\Web\HomeController;
 use App\Http\Controllers\Web\InstansiController;
@@ -28,6 +29,7 @@ Route::get('/', function () {
 });
 
 Route::get('home', [HomeController::class, 'index'])->name('home');
+Route::get('sign-in', [AuthController::class, 'index'])->name('sign-in');
 Route::get('profil', [ProfileController::class, 'index'])->name('profil');
 Route::get('berita', [BeritaController::class, 'index'])->name('berita');
 Route::get('statistik', [StatistikController::class, 'index'])->name('statistik');

@@ -7,8 +7,8 @@
                     <div class="footer-about pt-30">
                         <a href="#"><img src="{{ asset('images/Logo_Mpp.png') }}" alt="logo"></a>
                         <p class="text-white">Melayani dengan Cepat dan Transparan. </p>
-                        <span><i class="fa fa-globe"></i><a href="https://devdpmptsp.pemkomedan.go.id/dpmptspwebaplikasi/">devdpmptsp.pemkomedan.go.id</a> </span>
-                        <span><i></i><a href="{{route('admin')}}">Login</a> </span>
+                        <span><i class="fa fa-globe"></i><a href="https://devdpmptsp.pemkomedan.go.id/dpmptspwebaplikasi/" class="text-white">devdpmptsp.pemkomedan.go.id</a> </span>
+                        <span><i></i><a href="{{route('sign-in')}}" class="text-white">Login</a> </span>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-12">
