@@ -7,17 +7,17 @@ use Illuminate\Http\Request;
 
 class AuthController extends Controller
 {
-    
+
     public function index()
     {
         return view('pages.auth.signin');
     }
-    
+
     public function create()
     {
         //
     }
-    
+
     public function store(Request $request)
     {
         //
@@ -27,17 +27,17 @@ class AuthController extends Controller
     {
         //
     }
-    
+
     public function edit($id)
     {
         //
     }
-    
+
     public function update(Request $request, $id)
     {
         //
     }
-    
+
     public function destroy($id)
     {
         //
