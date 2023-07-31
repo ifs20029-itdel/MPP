@@ -5,14 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Critic extends Model
+class CriticSuggestion extends Model
 {
     use HasFactory;
 
     protected $fillable = [
         'name',
         'agency_id',
-        'critic',
+        'message',
     ];
 
     public function agency()

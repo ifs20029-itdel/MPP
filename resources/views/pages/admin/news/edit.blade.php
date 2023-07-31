@@ -1,15 +1,14 @@
-<x-WebAdmin title="Membuat Layanan Instansi">  
+<x-WebAdmin title="Membuat Instansi">
     <div id="kt_header" style="" class="header align-items-stretch">
         <!--begin::Brand-->
         <div class="header-brand">
             <!--begin::Logo-->
-            <a href="{{route('home')}}">
+            <a href="{{ route('home') }}">
                 <img alt="Logo" src="{{ asset('images/Logo_Mpp.png') }}" class="h-50px h-lg-50px" />
             </a>
             <!--end::Logo-->
             <!--begin::Aside minimize-->
-            <div id="kt_aside_toggle"
-                class="btn btn-icon w-auto px-0 btn-active-color-primary aside-minimize"
+            <div id="kt_aside_toggle" class="btn btn-icon w-auto px-0 btn-active-color-primary aside-minimize"
                 data-kt-toggle="true" data-kt-toggle-state="active" data-kt-toggle-target="body"
                 data-kt-toggle-name="aside-minimize">
                 <i class="ki-duotone ki-entrance-right fs-1 me-n1 minimize-default">
@@ -24,8 +23,7 @@
             <!--end::Aside minimize-->
             <!--begin::Aside toggle-->
             <div class="d-flex align-items-center d-lg-none me-n2" title="Show aside menu">
-                <div class="btn btn-icon btn-active-color-primary w-30px h-30px"
-                    id="kt_aside_mobile_toggle">
+                <div class="btn btn-icon btn-active-color-primary w-30px h-30px" id="kt_aside_mobile_toggle">
                     <i class="ki-duotone ki-abstract-14 fs-1">
                         <span class="path1"></span>
                         <span class="path2"></span>
@@ -43,14 +41,13 @@
                 <!--begin::Page title-->
                 <div class="page-title d-flex justify-content-center flex-column me-5">
                     <!--begin::Title-->
-                    <h1 class="d-flex flex-column text-dark fw-bold fs-3 mb-0">Layanan Instasni</h1>
+                    <h1 class="d-flex flex-column text-dark fw-bold fs-3 mb-0">Berita</h1>
                     <!--end::Title-->
                     <!--begin::Breadcrumb-->
                     <ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 pt-1">
                         <!--begin::Item-->
                         <li class="breadcrumb-item text-muted">
-                            <a href="#"
-                                class="text-muted text-hover-primary">Beranda</a>
+                            <a href="#" class="text-muted text-hover-primary">Beranda</a>
                         </li>
                         <!--end::Item-->
                         <!--begin::Item-->
@@ -59,7 +56,7 @@
                         </li>
                         <!--end::Item-->
                         <!--begin::Item-->
-                        <li class="breadcrumb-item text-muted">Instansi</li>
+                        <li class="breadcrumb-item text-muted">Berita</li>
                         <!--end::Item-->
                         <!--begin::Item-->
                         <li class="breadcrumb-item">
@@ -67,12 +64,12 @@
                         </li>
                         <!--end::Item-->
                         <!--begin::Item-->
-                        <li class="breadcrumb-item text-dark">Membuat Layanan Instansi</li>
+                        <li class="breadcrumb-item text-dark">Edit Berita</li>
                         <!--end::Item-->
                     </ul>
                     <!--end::Breadcrumb-->
                 </div>
-                <!--end::Page title--> 
+                <!--end::Page title-->
             </div>
             <!--end::Toolbar container-->
         </div>
@@ -85,8 +82,9 @@
         <div class="post d-flex flex-column-fluid" id="kt_post">
             <!--begin::Container-->
             <div id="kt_content_container" class="container-xxl">
-                <form id="kt_ecommerce_add_category_form" class="form d-flex flex-column flex-lg-row"
-                    data-kt-redirect="../../demo8/dist/apps/ecommerce/catalog/categories.html">
+                <form id="form_input" class="form d-flex flex-column flex-lg-row"
+                    data-kt-redirect="{{ route('backend.news.index') }}"
+                    action="{{ route('backend.news.update', $news->id) }}" method="PUT">
                     <!--begin::Aside column-->
                     <div class="d-flex flex-column gap-7 gap-lg-10 w-100 w-lg-300px mb-7 me-lg-10">
                         <!--begin::Thumbnail settings-->
@@ -95,7 +93,7 @@
                             <div class="card-header">
                                 <!--begin::Card title-->
                                 <div class="card-title">
-                                    <h2>Logo Instansi</h2>
+                                    <h2>Gambar Utama</h2>
                                 </div>
                                 <!--end::Card title-->
                             </div>
@@ -106,11 +104,11 @@
                                 <!--begin::Image input placeholder-->
                                 <style>
                                     .image-input-placeholder {
-                                        background-image: url('assets/media/svg/files/blank-image.svg');
+                                        background-image: url({{ asset('metro/media/svg/files/blank-image.svg') }});
                                     }
 
                                     [data-bs-theme="dark"] .image-input-placeholder {
-                                        background-image: url('assets/media/svg/files/blank-image-dark.svg');
+                                        background-image: url({{ asset('metro/media/svg/files/blank-image-dark.svg') }});
                                     }
                                 </style>
                                 <!--end::Image input placeholder-->
@@ -118,7 +116,9 @@
                                 <div class="image-input image-input-empty image-input-outline image-input-placeholder mb-3"
                                     data-kt-image-input="true">
                                     <!--begin::Preview existing avatar-->
-                                    <div class="image-input-wrapper w-150px h-150px"></div>
+                                    <div class="image-input-wrapper w-150px h-150px"
+                                        style="background-image: url({{ asset('uploads/news/' . $news->image) }})">
+                                    </div>
                                     <!--end::Preview existing avatar-->
                                     <!--begin::Label-->
                                     <label
@@ -132,8 +132,8 @@
                                         </i>
                                         <!--end::Icon-->
                                         <!--begin::Inputs-->
-                                        <input type="file" name="avatar" accept=".png, .jpg, .jpeg" />
-                                        <input type="hidden" name="avatar_remove" />
+                                        <input type="file" name="image" accept=".png, .jpg, .jpeg" />
+                                        <input type="hidden" name="image_remove" />
                                         <!--end::Inputs-->
                                     </label>
                                     <!--end::Label-->
@@ -178,24 +178,18 @@
                                     <h2>Status</h2>
                                 </div>
                                 <!--end::Card title-->
-                                <!--begin::Card toolbar-->
-                                <div class="card-toolbar">
-                                    <div class="rounded-circle bg-success w-15px h-15px"
-                                        id="kt_ecommerce_add_category_status"></div>
-                                </div>
-                                <!--begin::Card toolbar-->
                             </div>
                             <!--end::Card header-->
                             <!--begin::Card body-->
                             <div class="card-body pt-0">
                                 <!--begin::Select2-->
-                                <select class="form-select mb-2" data-control="select2"
-                                    data-hide-search="true" data-placeholder="Select an option"
-                                    id="kt_ecommerce_add_category_status_select" readonly>
+                                <select class="form-select mb-2" data-control="select2" data-hide-search="true"
+                                    data-placeholder="Select an option" name="status">
                                     <option></option>
-                                    <option value="published" selected="selected">Published</option>
-                                    <option value="scheduled">Scheduled</option>
-                                    <option value="unpublished">Unpublished</option>
+                                    <option value="draft" {{ $news->status == 'draft' ? 'selected' : '' }}>Draft
+                                    </option>
+                                    <option value="publish" {{ $news->status == 'publish' ? 'selected' : '' }}>
+                                        Publish</option>
                                 </select>
                                 <!--end::Select2-->
                                 <!--begin::Description-->
@@ -203,17 +197,16 @@
                                 <!--end::Description-->
                                 <!--begin::Datepicker-->
                                 <div class="d-none mt-10">
-                                    <label for="kt_ecommerce_add_category_status_datepicker"
-                                        class="form-label">Select publishing date and time</label>
-                                    <input class="form-control"
-                                        id="kt_ecommerce_add_category_status_datepicker"
+                                    <label for="kt_ecommerce_add_category_status_datepicker" class="form-label">Select
+                                        publishing date and time</label>
+                                    <input class="form-control" id="kt_ecommerce_add_category_status_datepicker"
                                         placeholder="Pick date & time" />
                                 </div>
                                 <!--end::Datepicker-->
                             </div>
                             <!--end::Card body-->
                         </div>
-                        <!--end::Status--> 
+                        <!--end::Status-->
                     </div>
                     <!--end::Aside column-->
                     <!--begin::Main column-->
@@ -232,64 +225,48 @@
                                 <!--begin::Input group-->
                                 <div class="mb-10 fv-row">
                                     <!--begin::Label-->
-                                    <label class="required form-label">Nama Instansi</label>
+                                    <label class="required form-label">Judul</label>
                                     <!--end::Label-->
                                     <!--begin::Input-->
-                                    <input type="text" name="category_name" class="form-control mb-2"
-                                        placeholder="Product name" value="" readonly/>
+                                    <input type="text" name="title" class="form-control mb-2"
+                                        placeholder="Judul" value="{{ $news->title }}" />
                                     <!--end::Input-->
                                     <!--begin::Description-->
-                                    <div class="text-muted fs-7">A category name is required and recommended
-                                        to be unique.</div>
-                                    <!--end::Description-->
-                                </div>
-                                <!--end::Input group--> 
-                                <!--begin::Input group-->
-                                <div class="mb-10 fv-row">
-                                    <!--begin::Label-->
-                                    <label class="required form-label">Link Instansi</label>
-                                    <!--end::Label-->
-                                    <!--begin::Input-->
-                                    <input type="text" name="category_name" class="form-control mb-2"
-                                        placeholder="Product name" value="" readonly/>
-                                    <!--end::Input-->
-                                    <!--begin::Description-->
-                                    <div class="text-muted fs-7">A category name is required and recommended
-                                        to be unique.</div>
+                                    <div class="text-muted fs-7">Judul harus diisi.</div>
                                     <!--end::Description-->
                                 </div>
                                 <!--end::Input group-->
                                 <!--begin::Input group-->
                                 <div class="mb-10 fv-row">
                                     <!--begin::Label-->
-                                    <label class="required form-label">Layanan Instansi</label>
+                                    <label class="form-label">Content</label>
                                     <!--end::Label-->
-                                    <!--begin::Input-->
-                                    <input type="text" name="category_name" class="form-control mb-2"
-                                        placeholder="Product name" value="" />
-                                    <!--end::Input-->
+                                    <!--begin::Editor-->
+                                    <div id="content" name="content" class="min-h-200px mb-2">
+                                        {!! $news->content !!}</div>
+                                    <input type="hidden" name="content" value="{{ $news->content }}" />
+                                    <!--end::Editor-->
                                     <!--begin::Description-->
-                                    <div class="text-muted fs-7">A category name is required and recommended
-                                        to be unique.</div>
+                                    <div class="text-muted fs-7">Enter the content for the post.
+                                    </div>
                                     <!--end::Description-->
                                 </div>
                                 <!--end::Input group-->
                             </div>
                             <!--end::Card header-->
                         </div>
-                        <!--end::General options--> 
+                        <!--end::General options-->
                         <div class="d-flex justify-content-end">
                             <!--begin::Button-->
-                            <a href="../../demo8/dist/apps/ecommerce/catalog/products.html"
-                                id="kt_ecommerce_add_product_cancel" class="btn btn-light me-5">Cancel</a>
+                            <a href="javascript:void(0);" data-kt-element="cancel" class="btn btn-light me-3">
+                                Cancel
+                            </a>
                             <!--end::Button-->
                             <!--begin::Button-->
-                            <button type="submit" id="kt_ecommerce_add_category_submit"
-                                class="btn btn-primary">
+                            <button type="submit" class="btn btn-primary" data-kt-element="submit">
                                 <span class="indicator-label">Save Changes</span>
                                 <span class="indicator-progress">Please wait...
-                                    <span
-                                        class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+                                    <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
                             </button>
                             <!--end::Button-->
                         </div>
@@ -302,5 +279,91 @@
         <!--end::Post-->
     </div>
     <!--end::Content-->
+    @section('custom_js')
+        <script src="{{ asset('js/FormControls.js') }}"></script>
+        <script>
+            "use strict";
+            // Class definition
+            const PostForm = function() {
+                // Base elements
+                const formEl = $('#form_input');
+                const editorEl = $('#content');
+                const toolbar = [
+                    [{
+                        'font': []
+                    }, {
+                        'size': []
+                    }],
+                    ['bold', 'italic', 'underline', 'strike'],
+                    [{
+                        'color': []
+                    }, {
+                        'background': []
+                    }],
+                    [{
+                        'script': 'super'
+                    }, {
+                        'script': 'sub'
+                    }],
+                    [{
+                        'header': [false, 1, 2, 3, 4, 5, 6]
+                    }, 'blockquote', 'code-block'],
+                    [{
+                        'list': 'ordered'
+                    }, {
+                        'list': 'bullet'
+                    }, {
+                        'indent': '-1'
+                    }, {
+                        'indent': '+1'
+                    }],
+                    ['direction', {
+                        'align': []
+                    }],
+                    ['link', 'image', 'video', 'formula'],
+                    ['clean']
+                ];
+                var editor;
+                // Private functions
+                const _initEditor = function() {
+                    editor = new Quill(editorEl.get(0), {
+                        placeholder: 'Enter the content',
+                        theme: 'snow',
+                        modules: {
+                            'toolbar': toolbar
+                        }
+                    });
+                }
 
+                const _autoSave = function() {
+                    editor.on('text-change', function(delta, oldDelta, source) {
+                        if (source == 'user') {
+                            $('input[name="content"]').val(editor.root.innerHTML);
+                        }
+                    });
+                }
+
+                const _onSubmitForm = function() {
+                    formEl.on('submit', function(e) {
+                        e.preventDefault();
+                        KTFormControls.onSubmitForm(formEl);
+                    });
+                }
+
+                return {
+                    // public functions
+                    init: function() {
+                        _initEditor();
+                        _autoSave();
+                        _onSubmitForm();
+                    }
+                };
+            }();
+
+            // On document ready
+            KTUtil.onDOMContentLoaded(function() {
+                PostForm.init();
+            });
+        </script>
+    @endsection
 </x-WebAdmin>

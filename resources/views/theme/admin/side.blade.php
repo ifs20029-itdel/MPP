@@ -5,7 +5,7 @@
     <div class="aside-user d-flex align-items-sm-center justify-content-center py-5">
         <!--begin::Symbol-->
         <div class="symbol symbol-50px">
-            <img src="assets/media/avatars/300-1.jpg" alt="" />
+            <img src="{{ asset('metro/media/avatars/300-1.jpg') }}" alt="" />
         </div>
         <!--end::Symbol-->
         <!--begin::Wrapper-->
@@ -22,7 +22,8 @@
                     <!--end::Description-->
                     <!--begin::Label-->
                     <div class="d-flex align-items-center text-success fs-9">
-                        <span class="bullet bullet-dot bg-success me-1"></span>online</div>
+                        <span class="bullet bullet-dot bg-success me-1"></span>online
+                    </div>
                     <!--end::Label-->
                 </div>
                 <!--end::Info-->
@@ -30,8 +31,7 @@
                 <div class="me-n2">
                     <!--begin::Action-->
                     <a href="#" class="btn btn-icon btn-sm btn-active-color-primary mt-n2"
-                        data-kt-menu-trigger="click" data-kt-menu-placement="bottom-start"
-                        data-kt-menu-overflow="true">
+                        data-kt-menu-trigger="click" data-kt-menu-placement="bottom-start" data-kt-menu-overflow="true">
                         <i class="ki-duotone ki-setting-2 text-muted fs-1">
                             <span class="path1"></span>
                             <span class="path2"></span>
@@ -45,14 +45,13 @@
                             <div class="menu-content d-flex align-items-center px-3">
                                 <!--begin::Avatar-->
                                 <div class="symbol symbol-50px me-5">
-                                    <img alt="Logo" src="assets/media/avatars/300-1.jpg" />
+                                    <img alt="Logo" src="{{ asset('metro/media/avatars/300-1.jpg') }}" />
                                 </div>
                                 <!--end::Avatar-->
                                 <!--begin::Username-->
                                 <div class="d-flex flex-column">
                                     <div class="fw-bold d-flex align-items-center fs-5">Max Smith
-                                        <span
-                                            class="badge badge-light-success fw-bold fs-8 px-2 py-1 ms-2">Pro</span>
+                                        <span class="badge badge-light-success fw-bold fs-8 px-2 py-1 ms-2">Pro</span>
                                     </div>
                                     <a href="#"
                                         class="fw-semibold text-muted text-hover-primary fs-7">max@kt.com</a>
@@ -65,172 +64,14 @@
                         <div class="separator my-2"></div>
                         <!--end::Menu separator-->
                         <!--begin::Menu item-->
-                        <div class="menu-item px-5">
-                            <a href="../../demo8/dist/account/overview.html" class="menu-link px-5">My
-                                Profile</a>
-                        </div>
-                        <!--end::Menu item-->
-                        <!--begin::Menu item-->
-                        <div class="menu-item px-5">
-                            <a href="../../demo8/dist/apps/projects/list.html" class="menu-link px-5">
-                                <span class="menu-text">My Projects</span>
-                                <span class="menu-badge">
-                                    <span
-                                        class="badge badge-light-danger badge-circle fw-bold fs-7">3</span>
-                                </span>
-                            </a>
-                        </div>
-                        <!--end::Menu item-->
-                        <!--begin::Menu item-->
-                        <div class="menu-item px-5"
-                            data-kt-menu-trigger="{default: 'click', lg: 'hover'}"
-                            data-kt-menu-placement="right-start" data-kt-menu-offset="-15px, 0">
-                            <a href="#" class="menu-link px-5">
-                                <span class="menu-title">My Subscription</span>
-                                <span class="menu-arrow"></span>
-                            </a>
-                            <!--begin::Menu sub-->
-                            <div class="menu-sub menu-sub-dropdown w-175px py-4">
-                                <!--begin::Menu item-->
-                                <div class="menu-item px-3">
-                                    <a href="../../demo8/dist/account/referrals.html"
-                                        class="menu-link px-5">Referrals</a>
-                                </div>
-                                <!--end::Menu item-->
-                                <!--begin::Menu item-->
-                                <div class="menu-item px-3">
-                                    <a href="../../demo8/dist/account/billing.html"
-                                        class="menu-link px-5">Billing</a>
-                                </div>
-                                <!--end::Menu item-->
-                                <!--begin::Menu item-->
-                                <div class="menu-item px-3">
-                                    <a href="../../demo8/dist/account/statements.html"
-                                        class="menu-link px-5">Payments</a>
-                                </div>
-                                <!--end::Menu item-->
-                                <!--begin::Menu item-->
-                                <div class="menu-item px-3">
-                                    <a href="../../demo8/dist/account/statements.html"
-                                        class="menu-link d-flex flex-stack px-5">Statements
-                                        <span class="ms-2" data-bs-toggle="tooltip"
-                                            title="View your statements">
-                                            <i class="ki-duotone ki-information fs-7">
-                                                <span class="path1"></span>
-                                                <span class="path2"></span>
-                                                <span class="path3"></span>
-                                            </i>
-                                        </span></a>
-                                </div>
-                                <!--end::Menu item-->
-                                <!--begin::Menu separator-->
-                                <div class="separator my-2"></div>
-                                <!--end::Menu separator-->
-                                <!--begin::Menu item-->
-                                <div class="menu-item px-3">
-                                    <div class="menu-content px-3">
-                                        <label
-                                            class="form-check form-switch form-check-custom form-check-solid">
-                                            <input class="form-check-input w-30px h-20px"
-                                                type="checkbox" value="1" checked="checked"
-                                                name="notifications" />
-                                            <span
-                                                class="form-check-label text-muted fs-7">Notifications</span>
-                                        </label>
-                                    </div>
-                                </div>
-                                <!--end::Menu item-->
-                            </div>
-                            <!--end::Menu sub-->
-                        </div>
-                        <!--end::Menu item-->
-                        <!--begin::Menu item-->
-                        <div class="menu-item px-5">
-                            <a href="../../demo8/dist/account/statements.html" class="menu-link px-5">My
-                                Statements</a>
-                        </div>
-                        <!--end::Menu item-->
-                        <!--begin::Menu separator-->
-                        <div class="separator my-2"></div>
-                        <!--end::Menu separator-->
-                        <!--begin::Menu item-->
-                        <div class="menu-item px-5"
-                            data-kt-menu-trigger="{default: 'click', lg: 'hover'}"
-                            data-kt-menu-placement="right-start" data-kt-menu-offset="-15px, 0">
-                            <a href="#" class="menu-link px-5">
-                                <span class="menu-title position-relative">Language
-                                    <span
-                                        class="fs-8 rounded bg-light px-3 py-2 position-absolute translate-middle-y top-50 end-0">English
-                                        <img class="w-15px h-15px rounded-1 ms-2"
-                                            src="assets/media/flags/united-states.svg"
-                                            alt="" /></span></span>
-                            </a>
-                            <!--begin::Menu sub-->
-                            <div class="menu-sub menu-sub-dropdown w-175px py-4">
-                                <!--begin::Menu item-->
-                                <div class="menu-item px-3">
-                                    <a href="../../demo8/dist/account/settings.html"
-                                        class="menu-link d-flex px-5 active">
-                                        <span class="symbol symbol-20px me-4">
-                                            <img class="rounded-1"
-                                                src="assets/media/flags/united-states.svg" alt="" />
-                                        </span>English</a>
-                                </div>
-                                <!--end::Menu item-->
-                                <!--begin::Menu item-->
-                                <div class="menu-item px-3">
-                                    <a href="../../demo8/dist/account/settings.html"
-                                        class="menu-link d-flex px-5">
-                                        <span class="symbol symbol-20px me-4">
-                                            <img class="rounded-1" src="assets/media/flags/spain.svg"
-                                                alt="" />
-                                        </span>Spanish</a>
-                                </div>
-                                <!--end::Menu item-->
-                                <!--begin::Menu item-->
-                                <div class="menu-item px-3">
-                                    <a href="../../demo8/dist/account/settings.html"
-                                        class="menu-link d-flex px-5">
-                                        <span class="symbol symbol-20px me-4">
-                                            <img class="rounded-1" src="assets/media/flags/germany.svg"
-                                                alt="" />
-                                        </span>German</a>
-                                </div>
-                                <!--end::Menu item-->
-                                <!--begin::Menu item-->
-                                <div class="menu-item px-3">
-                                    <a href="../../demo8/dist/account/settings.html"
-                                        class="menu-link d-flex px-5">
-                                        <span class="symbol symbol-20px me-4">
-                                            <img class="rounded-1" src="assets/media/flags/japan.svg"
-                                                alt="" />
-                                        </span>Japanese</a>
-                                </div>
-                                <!--end::Menu item-->
-                                <!--begin::Menu item-->
-                                <div class="menu-item px-3">
-                                    <a href="../../demo8/dist/account/settings.html"
-                                        class="menu-link d-flex px-5">
-                                        <span class="symbol symbol-20px me-4">
-                                            <img class="rounded-1" src="assets/media/flags/france.svg"
-                                                alt="" />
-                                        </span>French</a>
-                                </div>
-                                <!--end::Menu item-->
-                            </div>
-                            <!--end::Menu sub-->
-                        </div>
-                        <!--end::Menu item-->
-                        <!--begin::Menu item-->
                         <div class="menu-item px-5 my-1">
-                            <a href="../../demo8/dist/account/settings.html"
-                                class="menu-link px-5">Account Settings</a>
+                            <a href="" class="menu-link px-5">Account
+                                Settings</a>
                         </div>
                         <!--end::Menu item-->
                         <!--begin::Menu item-->
                         <div class="menu-item px-5">
-                            <a href="../../demo8/dist/authentication/layouts/corporate/sign-in.html"
-                                class="menu-link px-5">Sign Out</a>
+                            <a href="" class="menu-link px-5">Sign Out</a>
                         </div>
                         <!--end::Menu item-->
                     </div>
@@ -250,13 +91,84 @@
 <!--begin::Aside menu-->
 <div class="aside-menu flex-column-fluid">
     <!--begin::Aside Menu-->
-    <div class="hover-scroll-overlay-y px-2 my-5 my-lg-5" id="kt_aside_menu_wrapper"
-        data-kt-scroll="true" data-kt-scroll-height="auto"
+    <div class="hover-scroll-overlay-y px-2 my-5 my-lg-5" id="kt_aside_menu_wrapper" data-kt-scroll="true"
+        data-kt-scroll-height="auto"
         data-kt-scroll-dependencies="{default: '#kt_aside_toolbar, #kt_aside_footer', lg: '#kt_header, #kt_aside_toolbar, #kt_aside_footer'}"
         data-kt-scroll-wrappers="#kt_aside_menu" data-kt-scroll-offset="5px">
         <!--begin::Menu-->
         <div class="menu menu-column menu-title-gray-800 menu-state-title-primary menu-state-icon-primary menu-state-bullet-primary menu-arrow-gray-500"
             id="#kt_aside_menu" data-kt-menu="true">
+
+            <!--begin:Menu item-->
+            <div class="menu-item">
+                <!--begin:Menu link-->
+                <a class="menu-link {{ request()->is('backend/dashboard') ? 'active' : '' }}"
+                    href="{{ route('backend.dashboard') }}">
+                    <span class="menu-icon">
+                        <!--begin::Svg Icon | path: icons/duotune/general/gen025.svg-->
+                        <span class="svg-icon svg-icon-2">
+                            <i class="fas fa-home fs-2"></i>
+                        </span>
+                        <!--end::Svg Icon-->
+                    </span>
+                    <span class="menu-title">Dashboards</span>
+                </a>
+                <!--end:Menu link-->
+            </div>
+            <!--end:Menu item-->
+            @role('super-admin')
+                <!--begin:Menu item-->
+                <div class="menu-item">
+                    <!--begin:Menu link-->
+                    <a class="menu-link {{ request()->is('backend/agency') ? 'active' : '' }}"
+                        href="{{ route('backend.agency.index') }}">
+                        <span class="menu-icon">
+                            <i class="fas fa-building fs-2"></i>
+                        </span>
+                        <span class="menu-title">Agency</span>
+                    </a>
+                    <!--end:Menu link-->
+                </div>
+                <!--end:Menu item-->
+                <!--begin:Menu item-->
+                <!--begin:Menu item-->
+                <div class="menu-item">
+                    <!--begin:Menu link-->
+                    <a class="menu-link {{ request()->is('backend/agency-service') ? 'active' : '' }}"
+                        href="{{ route('backend.agency-service.index') }}">
+                        <span class="menu-icon">
+                            <i class="fas fa-building fs-2"></i>
+                        </span>
+                        <span class="menu-title">Agency Service</span>
+                    </a>
+                    <!--end:Menu link-->
+                </div>
+                <!--end:Menu item-->
+                <!--begin:Menu item-->
+                <div class="menu-item">
+                    <!--begin:Menu link-->
+                    <a class="menu-link {{ request()->is('backend/news') ? 'active' : '' }}"
+                        href="{{ route('backend.news.index') }}">
+                        <span class="menu-icon">
+                            <i class="fas fa-newspaper fs-2"></i>
+                        </span>
+                        <span class="menu-title">News</span>
+                    </a>
+                </div>
+                <!--end:Menu item-->
+                <!--begin:Menu item-->
+                <div class="menu-item">
+                    <!--begin:Menu link-->
+                    <a class="menu-link {{ request()->is('backend/critic-suggestion') ? 'active' : '' }}"
+                        href="{{ route('backend.critic-suggestion.index') }}">
+                        <span class="menu-icon">
+                            <i class="fas fa-comments fs-2"></i>
+                        </span>
+                        <span class="menu-title">Critic & Suggestion</span>
+                    </a>
+                </div>
+                <!--end:Menu item-->
+            @endrole
             <!--begin:Menu item-->
             <div class="menu-item pt-5">
                 <!--begin:Menu content-->
@@ -267,77 +179,9 @@
             </div>
             <!--end:Menu item-->
             <!--begin:Menu item-->
-            <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
-                <!--begin:Menu link-->
-                <span class="menu-link">
-                    <span class="menu-icon">
-                        <i class="ki-duotone ki-address-book fs-2">
-                            <span class="path1"></span>
-                            <span class="path2"></span>
-                            <span class="path3"></span>
-                        </i>
-                    </span>
-                    <span class="menu-title">Instansi</span>
-                    <span class="menu-arrow"></span>
-                </span>
-                <!--end:Menu link-->
-                <!--begin:Menu sub-->
-                <div class="menu-sub menu-sub-accordion"> 
-                    <!--begin:Menu item-->
-                    <div class="menu-item">
-                        <!--begin:Menu link-->
-                        <a class="menu-link" href="{{ route('instansicreate') }}">
-                            <span class="menu-bullet">
-                                <span class="bullet bullet-dot"></span>
-                            </span>
-                            <span class="menu-title">Membuat Instansi</span>
-                        </a>
-                        <!--end:Menu link-->
-                        <!--begin:Menu link-->
-                        <a class="menu-link" href="{{ route('listinstansi') }}">
-                            <span class="menu-bullet">
-                                <span class="bullet bullet-dot"></span>
-                            </span>
-                            <span class="menu-title">Melihat Instansi</span>
-                        </a>
-                        <!--end:Menu link-->
-                        <!--begin:Menu link-->
-                        <a class="menu-link" href="{{ route('layananinstansi') }}">
-                            <span class="menu-bullet">
-                                <span class="bullet bullet-dot"></span>
-                            </span>
-                            <span class="menu-title">Membuat Layanan Instansi</span>
-                        </a>
-                        <!--end:Menu link-->
-                        <!--begin:Menu link-->
-                        <a class="menu-link" href="{{ route('listlayananinstansi') }}">
-                            <span class="menu-bullet">
-                                <span class="bullet bullet-dot"></span>
-                            </span>
-                            <span class="menu-title">Melihat Layanan Instansi</span>
-                        </a>
-                        <!--end:Menu link-->
-                    </div>
-                    <!--end:Menu item-->
-                </div>
-                <!--end:Menu sub-->
-            </div>
-            <!--end:Menu item-->
-            <!--begin:Menu item--> 
-            <!--begin:Menu item-->
-            <div class="menu-item pt-5">
-                <!--begin:Menu content-->
-                <div class="menu-content">
-                    <span class="menu-heading fw-bold text-uppercase fs-7">Help</span>
-                </div>
-                <!--end:Menu content-->
-            </div>
-            <!--end:Menu item-->
-            <!--begin:Menu item-->
             <div class="menu-item">
                 <!--begin:Menu link-->
-                <a class="menu-link"
-                    href="https://preview.keenthemes.com/html/metronic/docs/base/utilities"
+                <a class="menu-link" href="https://preview.keenthemes.com/html/metronic/docs/base/utilities"
                     target="_blank">
                     <span class="menu-icon">
                         <i class="ki-duotone ki-rocket fs-2">

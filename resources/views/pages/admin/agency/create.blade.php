@@ -1,15 +1,14 @@
-<x-WebAdmin title="Membuat Instansi">  
+<x-WebAdmin title="Membuat Instansi">
     <div id="kt_header" style="" class="header align-items-stretch">
         <!--begin::Brand-->
         <div class="header-brand">
             <!--begin::Logo-->
-            <a href="{{route('home')}}">
+            <a href="{{ route('home') }}">
                 <img alt="Logo" src="{{ asset('images/Logo_Mpp.png') }}" class="h-50px h-lg-50px" />
             </a>
             <!--end::Logo-->
             <!--begin::Aside minimize-->
-            <div id="kt_aside_toggle"
-                class="btn btn-icon w-auto px-0 btn-active-color-primary aside-minimize"
+            <div id="kt_aside_toggle" class="btn btn-icon w-auto px-0 btn-active-color-primary aside-minimize"
                 data-kt-toggle="true" data-kt-toggle-state="active" data-kt-toggle-target="body"
                 data-kt-toggle-name="aside-minimize">
                 <i class="ki-duotone ki-entrance-right fs-1 me-n1 minimize-default">
@@ -24,8 +23,7 @@
             <!--end::Aside minimize-->
             <!--begin::Aside toggle-->
             <div class="d-flex align-items-center d-lg-none me-n2" title="Show aside menu">
-                <div class="btn btn-icon btn-active-color-primary w-30px h-30px"
-                    id="kt_aside_mobile_toggle">
+                <div class="btn btn-icon btn-active-color-primary w-30px h-30px" id="kt_aside_mobile_toggle">
                     <i class="ki-duotone ki-abstract-14 fs-1">
                         <span class="path1"></span>
                         <span class="path2"></span>
@@ -43,14 +41,13 @@
                 <!--begin::Page title-->
                 <div class="page-title d-flex justify-content-center flex-column me-5">
                     <!--begin::Title-->
-                    <h1 class="d-flex flex-column text-dark fw-bold fs-3 mb-0">Instasni</h1>
+                    <h1 class="d-flex flex-column text-dark fw-bold fs-3 mb-0">Instansi</h1>
                     <!--end::Title-->
                     <!--begin::Breadcrumb-->
                     <ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 pt-1">
                         <!--begin::Item-->
                         <li class="breadcrumb-item text-muted">
-                            <a href="#"
-                                class="text-muted text-hover-primary">Beranda</a>
+                            <a href="#" class="text-muted text-hover-primary">Beranda</a>
                         </li>
                         <!--end::Item-->
                         <!--begin::Item-->
@@ -72,7 +69,7 @@
                     </ul>
                     <!--end::Breadcrumb-->
                 </div>
-                <!--end::Page title--> 
+                <!--end::Page title-->
             </div>
             <!--end::Toolbar container-->
         </div>
@@ -85,8 +82,9 @@
         <div class="post d-flex flex-column-fluid" id="kt_post">
             <!--begin::Container-->
             <div id="kt_content_container" class="container-xxl">
-                <form id="kt_ecommerce_add_category_form" class="form d-flex flex-column flex-lg-row"
-                    data-kt-redirect="../../demo8/dist/apps/ecommerce/catalog/categories.html">
+                <form id="add_agency_form" class="form d-flex flex-column flex-lg-row"
+                    data-kt-redirect="{{ route('backend.agency.index') }}" action="{{ route('backend.agency.store') }}"
+                    method="POST">
                     <!--begin::Aside column-->
                     <div class="d-flex flex-column gap-7 gap-lg-10 w-100 w-lg-300px mb-7 me-lg-10">
                         <!--begin::Thumbnail settings-->
@@ -106,11 +104,11 @@
                                 <!--begin::Image input placeholder-->
                                 <style>
                                     .image-input-placeholder {
-                                        background-image: url('assets/media/svg/files/blank-image.svg');
+                                        background-image: url({{ asset('metro/media/svg/files/blank-image.svg') }});
                                     }
 
                                     [data-bs-theme="dark"] .image-input-placeholder {
-                                        background-image: url('assets/media/svg/files/blank-image-dark.svg');
+                                        background-image: url({{ asset('metro/media/svg/files/blank-image-dark.svg') }});
                                     }
                                 </style>
                                 <!--end::Image input placeholder-->
@@ -132,8 +130,8 @@
                                         </i>
                                         <!--end::Icon-->
                                         <!--begin::Inputs-->
-                                        <input type="file" name="avatar" accept=".png, .jpg, .jpeg" />
-                                        <input type="hidden" name="avatar_remove" />
+                                        <input type="file" name="logo" accept=".png, .jpg, .jpeg" />
+                                        <input type="hidden" name="logo_remove" />
                                         <!--end::Inputs-->
                                     </label>
                                     <!--end::Label-->
@@ -178,24 +176,16 @@
                                     <h2>Status</h2>
                                 </div>
                                 <!--end::Card title-->
-                                <!--begin::Card toolbar-->
-                                <div class="card-toolbar">
-                                    <div class="rounded-circle bg-success w-15px h-15px"
-                                        id="kt_ecommerce_add_category_status"></div>
-                                </div>
-                                <!--begin::Card toolbar-->
                             </div>
                             <!--end::Card header-->
                             <!--begin::Card body-->
                             <div class="card-body pt-0">
                                 <!--begin::Select2-->
-                                <select class="form-select mb-2" data-control="select2"
-                                    data-hide-search="true" data-placeholder="Select an option"
-                                    id="kt_ecommerce_add_category_status_select">
+                                <select class="form-select mb-2" data-control="select2" data-hide-search="true"
+                                    data-placeholder="Select an option" name="status">
                                     <option></option>
-                                    <option value="published" selected="selected">Published</option>
-                                    <option value="scheduled">Scheduled</option>
-                                    <option value="unpublished">Unpublished</option>
+                                    <option value="publish" selected="selected">Published</option>
+                                    <option value="unpublish">Unpublished</option>
                                 </select>
                                 <!--end::Select2-->
                                 <!--begin::Description-->
@@ -203,17 +193,16 @@
                                 <!--end::Description-->
                                 <!--begin::Datepicker-->
                                 <div class="d-none mt-10">
-                                    <label for="kt_ecommerce_add_category_status_datepicker"
-                                        class="form-label">Select publishing date and time</label>
-                                    <input class="form-control"
-                                        id="kt_ecommerce_add_category_status_datepicker"
+                                    <label for="kt_ecommerce_add_category_status_datepicker" class="form-label">Select
+                                        publishing date and time</label>
+                                    <input class="form-control" id="kt_ecommerce_add_category_status_datepicker"
                                         placeholder="Pick date & time" />
                                 </div>
                                 <!--end::Datepicker-->
                             </div>
                             <!--end::Card body-->
                         </div>
-                        <!--end::Status--> 
+                        <!--end::Status-->
                     </div>
                     <!--end::Aside column-->
                     <!--begin::Main column-->
@@ -235,46 +224,100 @@
                                     <label class="required form-label">Nama Instansi</label>
                                     <!--end::Label-->
                                     <!--begin::Input-->
-                                    <input type="text" name="category_name" class="form-control mb-2"
-                                        placeholder="Product name" value="" />
+                                    <input type="text" name="name" class="form-control mb-2"
+                                        placeholder="Nama Instansi" />
                                     <!--end::Input-->
                                     <!--begin::Description-->
-                                    <div class="text-muted fs-7">A category name is required and recommended
-                                        to be unique.</div>
+                                    <div class="text-muted fs-7">Nama Instansi harus diisi dan direkomendasikan
+                                        untuk unik.</div>
                                     <!--end::Description-->
                                 </div>
-                                <!--end::Input group--> 
+                                <!--end::Input group-->
                                 <!--begin::Input group-->
                                 <div class="mb-10 fv-row">
                                     <!--begin::Label-->
-                                    <label class="required form-label">Link Instansi</label>
+                                    <label class="required form-label">Alamat</label>
                                     <!--end::Label-->
                                     <!--begin::Input-->
-                                    <input type="text" name="category_name" class="form-control mb-2"
-                                        placeholder="Product name" value="" />
+                                    <input type="text" name="address" class="form-control mb-2"
+                                        placeholder="Alamat" />
                                     <!--end::Input-->
                                     <!--begin::Description-->
-                                    <div class="text-muted fs-7">A category name is required and recommended
-                                        to be unique.</div>
+                                    <div class="text-muted fs-7">Alamat harus diisi.</div>
+                                    <!--end::Description-->
+                                </div>
+                                <!--end::Input group-->
+                                <!--begin::Input group-->
+                                <div class="mb-10 fv-row">
+                                    <!--begin::Label-->
+                                    <label class="required form-label">No Telepon</label>
+                                    <!--end::Label-->
+                                    <!--begin::Input-->
+                                    <input type="text" name="phone" class="form-control mb-2"
+                                        placeholder="No Telepon" />
+                                    <!--end::Input-->
+                                    <!--begin::Description-->
+                                    <div class="text-muted fs-7">No Telepon harus diisi.</div>
+                                    <!--end::Description-->
+                                </div>
+                                <!--end::Input group-->
+                                <!--begin::Input group-->
+                                <div class="mb-10 fv-row">
+                                    <!--begin::Label-->
+                                    <label class="required form-label">Email</label>
+                                    <!--end::Label-->
+                                    <!--begin::Input-->
+                                    <input type="text" name="email" class="form-control mb-2"
+                                        placeholder="Email" />
+                                    <!--end::Input-->
+                                    <!--begin::Description-->
+                                    <div class="text-muted fs-7">Email harus diisi.</div>
+                                    <!--end::Description-->
+                                </div>
+                                <!--end::Input group-->
+                                <!--begin::Input group-->
+                                <div class="mb-10 fv-row">
+                                    <!--begin::Label-->
+                                    <label class="required form-label">Deskripsi</label>
+                                    <!--end::Label-->
+                                    <!--begin::Input-->
+                                    <input type="text" name="description" class="form-control mb-2"
+                                        placeholder="Deskripsi" />
+                                    <!--end::Input-->
+                                    <!--begin::Description-->
+                                    <div class="text-muted fs-7">Deskripsi harus diisi.</div>
+                                    <!--end::Description-->
+                                </div>
+                                <!--end::Input group-->
+                                <!--begin::Input group-->
+                                <div class="mb-10 fv-row">
+                                    <!--begin::Label-->
+                                    <label class="required form-label">Website</label>
+                                    <!--end::Label-->
+                                    <!--begin::Input-->
+                                    <input type="text" name="website" class="form-control mb-2"
+                                        placeholder="Website" />
+                                    <!--end::Input-->
+                                    <!--begin::Description-->
+                                    <div class="text-muted fs-7">Website harus diisi.</div>
                                     <!--end::Description-->
                                 </div>
                                 <!--end::Input group-->
                             </div>
                             <!--end::Card header-->
                         </div>
-                        <!--end::General options--> 
+                        <!--end::General options-->
                         <div class="d-flex justify-content-end">
                             <!--begin::Button-->
-                            <a href="../../demo8/dist/apps/ecommerce/catalog/products.html"
-                                id="kt_ecommerce_add_product_cancel" class="btn btn-light me-5">Cancel</a>
+                            <a href="javascript:void(0);" data-kt-element="cancel" class="btn btn-light me-3">
+                                Cancel
+                            </a>
                             <!--end::Button-->
                             <!--begin::Button-->
-                            <button type="submit" id="kt_ecommerce_add_category_submit"
-                                class="btn btn-primary">
+                            <button type="submit" class="btn btn-primary" data-kt-element="submit">
                                 <span class="indicator-label">Save Changes</span>
                                 <span class="indicator-progress">Please wait...
-                                    <span
-                                        class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+                                    <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
                             </button>
                             <!--end::Button-->
                         </div>
@@ -287,5 +330,19 @@
         <!--end::Post-->
     </div>
     <!--end::Content-->
-
+    @section('custom_js')
+        <script src="{{ asset('js/FormControls.js') }}"></script>
+        <script>
+            const formEl = $('#add_agency_form');
+            formEl.on('submit', function(e) {
+                e.preventDefault();
+                KTFormControls.onSubmitForm(formEl);
+            });
+            const btnCancelEl = formEl.find('[data-kt-element="cancel"]');
+            btnCancelEl.on('click', function(e) {
+                e.preventDefault();
+                KTFormControls.onCancelForm(formEl);
+            });
+        </script>
+    @endsection
 </x-WebAdmin>

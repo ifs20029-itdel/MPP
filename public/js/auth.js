@@ -42,7 +42,7 @@ function handle_post(tombol, form, url) {
     $(tombol).prop("disabled", true);
     $(tombol).attr("data-kt-indicator", "on");
     $.post(url, $(form).serialize(), function (result) {
-        if (result.alert == "success") {
+        if (result.status == "success") {
             Swal.fire({
                 text: result.message,
                 icon: "success",
@@ -87,7 +87,7 @@ function auth(button, form, uri, title) {
         data: data,
         dataType: 'json',
         success: function (response) {
-            if (response.alert == "success") {
+            if (response.status == "success") {
                 success_toastr(response.message);
                 $(form)[0].reset();
                 setTimeout(function () {
@@ -95,7 +95,7 @@ function auth(button, form, uri, title) {
                     $(button).html(title);
                     window.location.href = response.callback;
                 }, 2000);
-            } else if (response.alert == "error") {
+            } else if (response.status == "error") {
                 error_toastr(response.message);
                 setTimeout(function () {
                     $(button).prop("disabled", false);

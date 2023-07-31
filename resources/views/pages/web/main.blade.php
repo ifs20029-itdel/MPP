@@ -8,7 +8,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-8">
-                            
+
                         </div>
                     </div> <!-- row -->
                 </div> <!-- container -->
@@ -19,7 +19,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-8">
-                            
+
                         </div>
                     </div> <!-- row -->
                 </div> <!-- container -->
@@ -30,7 +30,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-8">
-                            
+
                         </div>
                     </div> <!-- row -->
                 </div> <!-- container -->
@@ -41,14 +41,14 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-8">
-                            
+
                         </div>
                     </div> <!-- row -->
                 </div> <!-- container -->
             </div> <!-- single slider -->
     </section>
 
-    <!--====== SLIDER PART ENDS ======--> 
+    <!--====== SLIDER PART ENDS ======-->
 
     <!--====== PRODUCTS PART START ======-->
 
@@ -70,66 +70,21 @@
             </div>
             <div class="row">
                 <div class="products-slied owl-carousel">
-                    <div class="col-lg-12">
-                        <div class="singel-products mt-30">
-                            <div class="products-image">
-                                <img src="images/Disdukcapil.png" alt="Intansi">
+                    @foreach ($agencies as $agency)
+                        <div class="col-lg-12">
+                            <div class="singel-products mt-30">
+                                <div class="products-image">
+                                    <img src="{{ asset('uploads/agencies/' . $agency->logo) }}" alt="Instansi">
+                                </div>
+                                <div class="products-contant">
+                                    <h6 class="products-title"><a
+                                            href="{{ route('agency.show', $agency->slug) }}">{{ $agency->name }}</a>
+                                    </h6>
+                                </div>
                             </div>
-                            <div class="products-contant">
-                                <h6 class="products-title"><a href="#">Dinas Kependudukan dan Catatan Sipil</a></h6> 
-                            </div>  
+
                         </div>
-                    </div>
-                    <div class="col-lg-12">
-                        <div class="singel-products mt-30">
-                            <div class="products-image">
-                                <img src="images/Polresta.png" alt="Intansi">
-                            </div>
-                            <div class="products-contant">
-                                <h6 class="products-title"><a href="{{route('instansi2')}}">Polresta Medan</a></h6> 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-12">
-                        <div class="singel-products mt-30">
-                            <div class="products-image">
-                                <img src="images/Kejaksaan.png" alt="Intansi">
-                            </div>
-                            <div class="products-contant">
-                                <h6 class="products-title"><a href="#">Kejaksaan Negeri Medan</a></h6> 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-12">
-                        <div class="singel-products mt-30">
-                            <div class="products-image">
-                                <img src="images/BeaCukai.png" alt="Intansi">
-                            </div>
-                            <div class="products-contant">
-                                <h6 class="products-title"><a href="#">Dirjen Bea Cukai</a></h6> 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-12">
-                        <div class="singel-products mt-30">
-                            <div class="products-image">
-                                <img src="images/Kesehatan.png" alt="Intansi">
-                            </div>
-                            <div class="products-contant">
-                                <h6 class="products-title"><a href="#">BPJS Kesehatan</a></h6> 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-12">
-                        <div class="singel-products mt-30">
-                            <div class="products-image">
-                                <img src="images/Ketenagakerjaan.png" alt="Intansi">
-                            </div>
-                            <div class="products-contant">
-                                <h6 class="products-title"><a href="#">BPJS Ketenagakerjaan</a></h6> 
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -183,7 +138,7 @@
                             <a href="#">Read More <span><i class="fa fa-long-arrow-right"></i></span></a>
                         </div>
                     </div>
-                </div> 
+                </div>
             </div>
         </div>
     </section>

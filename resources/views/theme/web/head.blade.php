@@ -1,7 +1,7 @@
 <head>
     <!--====== Required meta tags ======-->
     <meta name="csrf-token" content="{{ csrf_token() }}" />
-    <title>{{config('app.name') . ': ' .$title ?? config('app.name')}}</title>
+    <title>{{ config('app.name') . ': ' . $title ?? config('app.name') }}</title>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="description" content="">
@@ -42,5 +42,5 @@
 
     <!--====== Responsive css ======-->
     <link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}">
-
+    <link rel="stylesheet" href="{{ asset('css/sweetalert.css') }}" type="text/css" />
 </head>

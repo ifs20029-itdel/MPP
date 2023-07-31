@@ -11,6 +11,7 @@ class Agency extends Model
 
     protected $fillable = [
         'name',
+        'slug',
         'address',
         'phone',
         'email',
@@ -23,6 +24,4 @@ class Agency extends Model
     {
         return $this->hasMany(AgencyService::class);
     }
-
-    
 }

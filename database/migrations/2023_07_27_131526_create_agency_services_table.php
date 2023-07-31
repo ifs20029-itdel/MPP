@@ -18,6 +18,8 @@ class CreateAgencyServicesTable extends Migration
             $table->foreignId('agency_id')->constrained('agencies')->onDelete('cascade');
             $table->string('name', 100);
             $table->string('slug', 100);
+            $table->longText('description')->nullable();
+            $table->enum('status', ['publish', 'unpublish'])->default('publish');
             $table->timestamps();
             $table->softDeletes();
         });

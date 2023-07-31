@@ -1,16 +1,15 @@
-<x-WebAdmin title="Dashboard">  
+<x-WebAdmin title="Dashboard">
     <!--begin::Header-->
     <div id="kt_header" style="" class="header align-items-stretch">
         <!--begin::Brand-->
         <div class="header-brand">
             <!--begin::Logo-->
-            <a href="{{route('home')}}">
+            <a href="{{ route('home') }}">
                 <img alt="Logo" src="{{ asset('images/Logo_Mpp.png') }}" class="h-50px h-lg-50px" />
             </a>
             <!--end::Logo-->
             <!--begin::Aside minimize-->
-            <div id="kt_aside_toggle"
-                class="btn btn-icon w-auto px-0 btn-active-color-primary aside-minimize"
+            <div id="kt_aside_toggle" class="btn btn-icon w-auto px-0 btn-active-color-primary aside-minimize"
                 data-kt-toggle="true" data-kt-toggle-state="active" data-kt-toggle-target="body"
                 data-kt-toggle-name="aside-minimize">
                 <i class="ki-duotone ki-entrance-right fs-1 me-n1 minimize-default">
@@ -25,8 +24,7 @@
             <!--end::Aside minimize-->
             <!--begin::Aside toggle-->
             <div class="d-flex align-items-center d-lg-none me-n2" title="Show aside menu">
-                <div class="btn btn-icon btn-active-color-primary w-30px h-30px"
-                    id="kt_aside_mobile_toggle">
+                <div class="btn btn-icon btn-active-color-primary w-30px h-30px" id="kt_aside_mobile_toggle">
                     <i class="ki-duotone ki-abstract-14 fs-1">
                         <span class="path1"></span>
                         <span class="path2"></span>
@@ -50,8 +48,7 @@
                     <ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 pt-1">
                         <!--begin::Item-->
                         <li class="breadcrumb-item text-muted">
-                            <a href="../../demo8/dist/index.html"
-                                class="text-muted text-hover-primary">Home</a>
+                            <a href="../../demo8/dist/index.html" class="text-muted text-hover-primary">Home</a>
                         </li>
                         <!--end::Item-->
                         <!--begin::Item-->
@@ -73,7 +70,7 @@
                     </ul>
                     <!--end::Breadcrumb-->
                 </div>
-                <!--end::Page title--> 
+                <!--end::Page title-->
             </div>
             <!--end::Toolbar container-->
         </div>
@@ -169,8 +166,8 @@
                                         </i>
                                     </button>
                                     <!--begin::Menu 1-->
-                                    <div class="menu menu-sub menu-sub-dropdown w-250px w-md-300px"
-                                        data-kt-menu="true" id="kt_menu_641ad53cec8c6">
+                                    <div class="menu menu-sub menu-sub-dropdown w-250px w-md-300px" data-kt-menu="true"
+                                        id="kt_menu_641ad53cec8c6">
                                         <!--begin::Header-->
                                         <div class="px-7 py-5">
                                             <div class="fs-5 text-dark fw-bold">Filter Options</div>
@@ -189,8 +186,7 @@
                                                 <!--begin::Input-->
                                                 <div>
                                                     <select class="form-select form-select-solid"
-                                                        data-kt-select2="true"
-                                                        data-placeholder="Select option"
+                                                        data-kt-select2="true" data-placeholder="Select option"
                                                         data-dropdown-parent="#kt_menu_641ad53cec8c6"
                                                         data-allow-clear="true">
                                                         <option></option>
@@ -278,8 +274,7 @@
                                     <!--end::Symbol-->
                                     <!--begin::Text-->
                                     <div class="d-flex flex-column">
-                                        <a href="#"
-                                            class="text-dark text-hover-primary fs-6 fw-bold">Project
+                                        <a href="#" class="text-dark text-hover-primary fs-6 fw-bold">Project
                                             Briefing</a>
                                         <span class="text-muted fw-bold">Project Manager</span>
                                     </div>
@@ -300,8 +295,7 @@
                                     <!--end::Symbol-->
                                     <!--begin::Text-->
                                     <div class="d-flex flex-column">
-                                        <a href="#"
-                                            class="text-dark text-hover-primary fs-6 fw-bold">Concept
+                                        <a href="#" class="text-dark text-hover-primary fs-6 fw-bold">Concept
                                             Design</a>
                                         <span class="text-muted fw-bold">Art Director</span>
                                     </div>
@@ -323,8 +317,7 @@
                                     <!--end::Symbol-->
                                     <!--begin::Text-->
                                     <div class="d-flex flex-column">
-                                        <a href="#"
-                                            class="text-dark text-hover-primary fs-6 fw-bold">Functional
+                                        <a href="#" class="text-dark text-hover-primary fs-6 fw-bold">Functional
                                             Logics</a>
                                         <span class="text-muted fw-bold">Lead Developer</span>
                                     </div>
@@ -397,13 +390,11 @@
                                     <ul class="nav">
                                         <li class="nav-item">
                                             <a class="nav-link btn btn-sm btn-color-muted btn-active btn-active-secondary fw-bold px-4 me-1 active"
-                                                data-bs-toggle="tab"
-                                                href="#kt_table_widget_5_tab_1">Month</a>
+                                                data-bs-toggle="tab" href="#kt_table_widget_5_tab_1">Month</a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link btn btn-sm btn-color-muted btn-active btn-active-secondary fw-bold px-4 me-1"
-                                                data-bs-toggle="tab"
-                                                href="#kt_table_widget_5_tab_2">Week</a>
+                                                data-bs-toggle="tab" href="#kt_table_widget_5_tab_2">Week</a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link btn btn-sm btn-color-muted btn-active btn-active-secondary fw-bold px-4"
@@ -440,7 +431,7 @@
                                                         <td>
                                                             <div class="symbol symbol-45px me-2">
                                                                 <span class="symbol-label">
-                                                                    <img src="assets/media/svg/brand-logos/plurk.svg"
+                                                                    <img src="metro/media/svg/brand-logos/plurk.svg"
                                                                         class="h-50 align-self-center"
                                                                         alt="" />
                                                                 </span>
@@ -450,15 +441,13 @@
                                                             <a href="#"
                                                                 class="text-dark fw-bold text-hover-primary mb-1 fs-6">Brad
                                                                 Simmons</a>
-                                                            <span
-                                                                class="text-muted fw-semibold d-block">Movie
+                                                            <span class="text-muted fw-semibold d-block">Movie
                                                                 Creator</span>
                                                         </td>
                                                         <td class="text-end text-muted fw-bold">React, HTML
                                                         </td>
                                                         <td class="text-end">
-                                                            <span
-                                                                class="badge badge-light-success">Approved</span>
+                                                            <span class="badge badge-light-success">Approved</span>
                                                         </td>
                                                         <td class="text-end">
                                                             <a href="#"
@@ -474,7 +463,7 @@
                                                         <td>
                                                             <div class="symbol symbol-45px me-2">
                                                                 <span class="symbol-label">
-                                                                    <img src="assets/media/svg/brand-logos/telegram.svg"
+                                                                    <img src="metro/media/svg/brand-logos/telegram.svg"
                                                                         class="h-50 align-self-center"
                                                                         alt="" />
                                                                 </span>
@@ -484,8 +473,7 @@
                                                             <a href="#"
                                                                 class="text-dark fw-bold text-hover-primary mb-1 fs-6">Popular
                                                                 Authors</a>
-                                                            <span
-                                                                class="text-muted fw-semibold d-block">Most
+                                                            <span class="text-muted fw-semibold d-block">Most
                                                                 Successful</span>
                                                         </td>
                                                         <td class="text-end text-muted fw-bold">Python,
@@ -508,7 +496,7 @@
                                                         <td>
                                                             <div class="symbol symbol-45px me-2">
                                                                 <span class="symbol-label">
-                                                                    <img src="assets/media/svg/brand-logos/vimeo.svg"
+                                                                    <img src="metro/media/svg/brand-logos/vimeo.svg"
                                                                         class="h-50 align-self-center"
                                                                         alt="" />
                                                                 </span>
@@ -518,15 +506,13 @@
                                                             <a href="#"
                                                                 class="text-dark fw-bold text-hover-primary mb-1 fs-6">New
                                                                 Users</a>
-                                                            <span
-                                                                class="text-muted fw-semibold d-block">Awesome
+                                                            <span class="text-muted fw-semibold d-block">Awesome
                                                                 Users</span>
                                                         </td>
                                                         <td class="text-end text-muted fw-bold">
                                                             Laravel,Metronic</td>
                                                         <td class="text-end">
-                                                            <span
-                                                                class="badge badge-light-primary">Success</span>
+                                                            <span class="badge badge-light-primary">Success</span>
                                                         </td>
                                                         <td class="text-end">
                                                             <a href="#"
@@ -542,7 +528,7 @@
                                                         <td>
                                                             <div class="symbol symbol-45px me-2">
                                                                 <span class="symbol-label">
-                                                                    <img src="assets/media/svg/brand-logos/bebo.svg"
+                                                                    <img src="metro/media/svg/brand-logos/bebo.svg"
                                                                         class="h-50 align-self-center"
                                                                         alt="" />
                                                                 </span>
@@ -552,15 +538,13 @@
                                                             <a href="#"
                                                                 class="text-dark fw-bold text-hover-primary mb-1 fs-6">Active
                                                                 Customers</a>
-                                                            <span
-                                                                class="text-muted fw-semibold d-block">Movie
+                                                            <span class="text-muted fw-semibold d-block">Movie
                                                                 Creator</span>
                                                         </td>
                                                         <td class="text-end text-muted fw-bold">AngularJS,
                                                             C#</td>
                                                         <td class="text-end">
-                                                            <span
-                                                                class="badge badge-light-danger">Rejected</span>
+                                                            <span class="badge badge-light-danger">Rejected</span>
                                                         </td>
                                                         <td class="text-end">
                                                             <a href="#"
@@ -576,7 +560,7 @@
                                                         <td>
                                                             <div class="symbol symbol-45px me-2">
                                                                 <span class="symbol-label">
-                                                                    <img src="assets/media/svg/brand-logos/kickstarter.svg"
+                                                                    <img src="metro/media/svg/brand-logos/kickstarter.svg"
                                                                         class="h-50 align-self-center"
                                                                         alt="" />
                                                                 </span>
@@ -586,8 +570,7 @@
                                                             <a href="#"
                                                                 class="text-dark fw-bold text-hover-primary mb-1 fs-6">Bestseller
                                                                 Theme</a>
-                                                            <span
-                                                                class="text-muted fw-semibold d-block">Best
+                                                            <span class="text-muted fw-semibold d-block">Best
                                                                 Customers</span>
                                                         </td>
                                                         <td class="text-end text-muted fw-bold">ReactJS,
@@ -637,7 +620,7 @@
                                                         <td>
                                                             <div class="symbol symbol-45px me-2">
                                                                 <span class="symbol-label">
-                                                                    <img src="assets/media/svg/brand-logos/plurk.svg"
+                                                                    <img src="metro/media/svg/brand-logos/plurk.svg"
                                                                         class="h-50 align-self-center"
                                                                         alt="" />
                                                                 </span>
@@ -647,15 +630,13 @@
                                                             <a href="#"
                                                                 class="text-dark fw-bold text-hover-primary mb-1 fs-6">Brad
                                                                 Simmons</a>
-                                                            <span
-                                                                class="text-muted fw-semibold d-block">Movie
+                                                            <span class="text-muted fw-semibold d-block">Movie
                                                                 Creator</span>
                                                         </td>
                                                         <td class="text-end text-muted fw-bold">React, HTML
                                                         </td>
                                                         <td class="text-end">
-                                                            <span
-                                                                class="badge badge-light-success">Approved</span>
+                                                            <span class="badge badge-light-success">Approved</span>
                                                         </td>
                                                         <td class="text-end">
                                                             <a href="#"
@@ -671,7 +652,7 @@
                                                         <td>
                                                             <div class="symbol symbol-45px me-2">
                                                                 <span class="symbol-label">
-                                                                    <img src="assets/media/svg/brand-logos/telegram.svg"
+                                                                    <img src="metro/media/svg/brand-logos/telegram.svg"
                                                                         class="h-50 align-self-center"
                                                                         alt="" />
                                                                 </span>
@@ -681,8 +662,7 @@
                                                             <a href="#"
                                                                 class="text-dark fw-bold text-hover-primary mb-1 fs-6">Popular
                                                                 Authors</a>
-                                                            <span
-                                                                class="text-muted fw-semibold d-block">Most
+                                                            <span class="text-muted fw-semibold d-block">Most
                                                                 Successful</span>
                                                         </td>
                                                         <td class="text-end text-muted fw-bold">Python,
@@ -705,7 +685,7 @@
                                                         <td>
                                                             <div class="symbol symbol-45px me-2">
                                                                 <span class="symbol-label">
-                                                                    <img src="assets/media/svg/brand-logos/bebo.svg"
+                                                                    <img src="metro/media/svg/brand-logos/bebo.svg"
                                                                         class="h-50 align-self-center"
                                                                         alt="" />
                                                                 </span>
@@ -715,15 +695,13 @@
                                                             <a href="#"
                                                                 class="text-dark fw-bold text-hover-primary mb-1 fs-6">Active
                                                                 Customers</a>
-                                                            <span
-                                                                class="text-muted fw-semibold d-block">Movie
+                                                            <span class="text-muted fw-semibold d-block">Movie
                                                                 Creator</span>
                                                         </td>
                                                         <td class="text-end text-muted fw-bold">AngularJS,
                                                             C#</td>
                                                         <td class="text-end">
-                                                            <span
-                                                                class="badge badge-light-danger">Rejected</span>
+                                                            <span class="badge badge-light-danger">Rejected</span>
                                                         </td>
                                                         <td class="text-end">
                                                             <a href="#"
@@ -766,7 +744,7 @@
                                                         <td>
                                                             <div class="symbol symbol-45px me-2">
                                                                 <span class="symbol-label">
-                                                                    <img src="assets/media/svg/brand-logos/kickstarter.svg"
+                                                                    <img src="metro/media/svg/brand-logos/kickstarter.svg"
                                                                         class="h-50 align-self-center"
                                                                         alt="" />
                                                                 </span>
@@ -776,8 +754,7 @@
                                                             <a href="#"
                                                                 class="text-dark fw-bold text-hover-primary mb-1 fs-6">Bestseller
                                                                 Theme</a>
-                                                            <span
-                                                                class="text-muted fw-semibold d-block">Best
+                                                            <span class="text-muted fw-semibold d-block">Best
                                                                 Customers</span>
                                                         </td>
                                                         <td class="text-end text-muted fw-bold">ReactJS,
@@ -800,7 +777,7 @@
                                                         <td>
                                                             <div class="symbol symbol-45px me-2">
                                                                 <span class="symbol-label">
-                                                                    <img src="assets/media/svg/brand-logos/bebo.svg"
+                                                                    <img src="metro/media/svg/brand-logos/bebo.svg"
                                                                         class="h-50 align-self-center"
                                                                         alt="" />
                                                                 </span>
@@ -810,15 +787,13 @@
                                                             <a href="#"
                                                                 class="text-dark fw-bold text-hover-primary mb-1 fs-6">Active
                                                                 Customers</a>
-                                                            <span
-                                                                class="text-muted fw-semibold d-block">Movie
+                                                            <span class="text-muted fw-semibold d-block">Movie
                                                                 Creator</span>
                                                         </td>
                                                         <td class="text-end text-muted fw-bold">AngularJS,
                                                             C#</td>
                                                         <td class="text-end">
-                                                            <span
-                                                                class="badge badge-light-danger">Rejected</span>
+                                                            <span class="badge badge-light-danger">Rejected</span>
                                                         </td>
                                                         <td class="text-end">
                                                             <a href="#"
@@ -834,7 +809,7 @@
                                                         <td>
                                                             <div class="symbol symbol-45px me-2">
                                                                 <span class="symbol-label">
-                                                                    <img src="assets/media/svg/brand-logos/vimeo.svg"
+                                                                    <img src="metro/media/svg/brand-logos/vimeo.svg"
                                                                         class="h-50 align-self-center"
                                                                         alt="" />
                                                                 </span>
@@ -844,15 +819,13 @@
                                                             <a href="#"
                                                                 class="text-dark fw-bold text-hover-primary mb-1 fs-6">New
                                                                 Users</a>
-                                                            <span
-                                                                class="text-muted fw-semibold d-block">Awesome
+                                                            <span class="text-muted fw-semibold d-block">Awesome
                                                                 Users</span>
                                                         </td>
                                                         <td class="text-end text-muted fw-bold">
                                                             Laravel,Metronic</td>
                                                         <td class="text-end">
-                                                            <span
-                                                                class="badge badge-light-primary">Success</span>
+                                                            <span class="badge badge-light-primary">Success</span>
                                                         </td>
                                                         <td class="text-end">
                                                             <a href="#"
@@ -868,7 +841,7 @@
                                                         <td>
                                                             <div class="symbol symbol-45px me-2">
                                                                 <span class="symbol-label">
-                                                                    <img src="assets/media/svg/brand-logos/telegram.svg"
+                                                                    <img src="metro/media/svg/brand-logos/telegram.svg"
                                                                         class="h-50 align-self-center"
                                                                         alt="" />
                                                                 </span>
@@ -878,8 +851,7 @@
                                                             <a href="#"
                                                                 class="text-dark fw-bold text-hover-primary mb-1 fs-6">Popular
                                                                 Authors</a>
-                                                            <span
-                                                                class="text-muted fw-semibold d-block">Most
+                                                            <span class="text-muted fw-semibold d-block">Most
                                                                 Successful</span>
                                                         </td>
                                                         <td class="text-end text-muted fw-bold">Python,
@@ -939,8 +911,7 @@
                                         data-kt-menu="true">
                                         <!--begin::Heading-->
                                         <div class="menu-item px-3">
-                                            <div
-                                                class="menu-content text-muted pb-2 px-3 fs-7 text-uppercase">
+                                            <div class="menu-content text-muted pb-2 px-3 fs-7 text-uppercase">
                                                 Payments</div>
                                         </div>
                                         <!--end::Heading-->
@@ -1043,8 +1014,7 @@
                                     <!--end::Checkbox-->
                                     <!--begin::Description-->
                                     <div class="flex-grow-1">
-                                        <a href="#"
-                                            class="text-gray-800 text-hover-primary fw-bold fs-6">Create
+                                        <a href="#" class="text-gray-800 text-hover-primary fw-bold fs-6">Create
                                             FireStone Logo</a>
                                         <span class="text-muted fw-semibold d-block">Due in 2 Days</span>
                                     </div>
@@ -1106,8 +1076,8 @@
                                     <!--end::Checkbox-->
                                     <!--begin::Description-->
                                     <div class="flex-grow-1">
-                                        <a href="#"
-                                            class="text-gray-800 text-hover-primary fw-bold fs-6">KPI App
+                                        <a href="#" class="text-gray-800 text-hover-primary fw-bold fs-6">KPI
+                                            App
                                             Showcase</a>
                                         <span class="text-muted fw-semibold d-block">Due in 2 Days</span>
                                     </div>
@@ -1208,8 +1178,7 @@
                                                 <!--begin::Input-->
                                                 <div>
                                                     <select class="form-select form-select-solid"
-                                                        data-kt-select2="true"
-                                                        data-placeholder="Select option"
+                                                        data-kt-select2="true" data-placeholder="Select option"
                                                         data-dropdown-parent="#kt_menu_641ad53ced09c"
                                                         data-allow-clear="true">
                                                         <option></option>
@@ -1339,8 +1308,7 @@
                                                 <!--begin::Input-->
                                                 <div>
                                                     <select class="form-select form-select-solid"
-                                                        data-kt-select2="true"
-                                                        data-placeholder="Select option"
+                                                        data-kt-select2="true" data-placeholder="Select option"
                                                         data-dropdown-parent="#kt_menu_641ad53ced25a"
                                                         data-allow-clear="true">
                                                         <option></option>
@@ -1419,7 +1387,7 @@
                                     <!--begin::Symbol-->
                                     <div class="symbol symbol-60px symbol-2by3 me-4">
                                         <div class="symbol-label"
-                                            style="background-image: url('assets/media/stock/600x400/img-20.jpg')">
+                                            style="background-image: url('metro/media/stock/600x400/img-20.jpg')">
                                         </div>
                                     </div>
                                     <!--end::Symbol-->
@@ -1432,8 +1400,7 @@
                                             <span class="text-muted fw-semibold d-block pt-1">Size:
                                                 87KB</span>
                                         </div>
-                                        <span
-                                            class="badge badge-light-success fs-8 fw-bold my-2">Approved</span>
+                                        <span class="badge badge-light-success fs-8 fw-bold my-2">Approved</span>
                                     </div>
                                     <!--end::Title-->
                                 </div>
@@ -1443,7 +1410,7 @@
                                     <!--begin::Symbol-->
                                     <div class="symbol symbol-60px symbol-2by3 me-4">
                                         <div class="symbol-label"
-                                            style="background-image: url('assets/media/stock/600x400/img-19.jpg')">
+                                            style="background-image: url('metro/media/stock/600x400/img-19.jpg')">
                                         </div>
                                     </div>
                                     <!--end::Symbol-->
@@ -1467,7 +1434,7 @@
                                     <!--begin::Symbol-->
                                     <div class="symbol symbol-60px symbol-2by3 me-4">
                                         <div class="symbol-label"
-                                            style="background-image: url('assets/media/stock/600x400/img-25.jpg')">
+                                            style="background-image: url('metro/media/stock/600x400/img-25.jpg')">
                                         </div>
                                     </div>
                                     <!--end::Symbol-->
@@ -1480,8 +1447,7 @@
                                             <span class="text-muted fw-semibold d-block pt-1">Size:
                                                 87KB</span>
                                         </div>
-                                        <span
-                                            class="badge badge-light-success fs-8 fw-bold my-2">Success</span>
+                                        <span class="badge badge-light-success fs-8 fw-bold my-2">Success</span>
                                     </div>
                                     <!--end::Title-->
                                 </div>
@@ -1491,7 +1457,7 @@
                                     <!--begin::Symbol-->
                                     <div class="symbol symbol-60px symbol-2by3 me-4">
                                         <div class="symbol-label"
-                                            style="background-image: url('assets/media/stock/600x400/img-24.jpg')">
+                                            style="background-image: url('metro/media/stock/600x400/img-24.jpg')">
                                         </div>
                                     </div>
                                     <!--end::Symbol-->
@@ -1504,8 +1470,7 @@
                                             <span class="text-muted fw-semibold d-block pt-1">Size:
                                                 345KB</span>
                                         </div>
-                                        <span
-                                            class="badge badge-light-danger fs-8 fw-bold my-2">Rejected</span>
+                                        <span class="badge badge-light-danger fs-8 fw-bold my-2">Rejected</span>
                                     </div>
                                     <!--end::Title-->
                                 </div>
@@ -1538,8 +1503,7 @@
                                         data-kt-menu="true">
                                         <!--begin::Heading-->
                                         <div class="menu-item px-3">
-                                            <div
-                                                class="menu-content text-muted pb-2 px-3 fs-7 text-uppercase">
+                                            <div class="menu-content text-muted pb-2 px-3 fs-7 text-uppercase">
                                                 Payments</div>
                                         </div>
                                         <!--end::Heading-->
@@ -1638,8 +1602,7 @@
                                     </i>
                                     <!--begin::Title-->
                                     <div class="flex-grow-1 me-2">
-                                        <a href="#"
-                                            class="fw-bold text-gray-800 text-hover-primary fs-6">Group
+                                        <a href="#" class="fw-bold text-gray-800 text-hover-primary fs-6">Group
                                             lunch celebration</a>
                                         <span class="text-muted fw-semibold d-block">Due in 2 Days</span>
                                     </div>
