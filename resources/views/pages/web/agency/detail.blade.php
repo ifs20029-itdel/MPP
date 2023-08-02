@@ -101,7 +101,7 @@
                                     @endforeach
                                 </div>
                             </div>
-                            @foreach ($agency->services as $service)
+                            @foreach ($agency->agencyServices as $service)
                                 <div class="modal fade" id="{{ $service->slug }}" tabindex="-1" role="dialog"
                                     aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                                     <div class="modal-dialog modal-dialog-centered" role="document">

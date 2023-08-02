@@ -33,7 +33,6 @@ class AgencyController extends Controller
         if (!$agency) {
             return redirect()->back()->with(['error' => 'Data tidak ditemukan']);
         }
-        $agency->increment('view_count');
         $agency->load('agencyServices');
         return view('pages.web.agency.detail', compact('agency'));
     }
