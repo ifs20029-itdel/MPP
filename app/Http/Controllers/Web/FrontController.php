@@ -13,7 +13,7 @@ class FrontController extends Controller
 {
     public function home()
     {
-        return view('pages.web.home.index', ['agencies' => Agency::all()]);
+        return view('pages.web.home.index', ['agencies' => Agency::all(), 'news'=> News::all()]);
     }
 
     public function news()
