@@ -119,8 +119,8 @@
                         </div>
                         <div class="services-cont pt-25 pl-70">
                             <h4>{{ $new->title }}</h4>
-                            <p>{!! $new->content !!}</p>
-                            <a href="#">Read More <span><i class="fa fa-long-arrow-right"></i></span></a>
+                            <p>{!! Str::limit($new->content, 200, '...') !!}</p>
+                            <a href="{{ route('news.detail', $new->slug) }}">Baca Selanjutnya<span><i class="fa fa-long-arrow-right"></i></span></a>
                         </div>
                     </div>
                 </div>

@@ -2336,6 +2336,14 @@ p {
 .blog-details {}
 
 .blog-details .blog-details-image {}
+.blog-details .blog-details-image .details{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: block;
+    margin: 0 auto
+}
 
 .blog-details .blog-details-image img {
     width: 100%;

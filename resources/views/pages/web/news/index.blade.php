@@ -27,18 +27,18 @@
                     <div class="col-lg-12">
                         <div class="singel-services mt-45 pb-50">
                             <div class="services-icon">
-                                <img src="{{ asset('uploads/news/' . $item->image) }}" alt="Icon">
+                                <img class="berita" src="{{ asset('uploads/news/' . $item->image) }}" alt="Icon">
                             </div>
                             <div class="services-cont pt-25 pl-70">
                                 <h4>{{ $item->title }}</h4>
                                 <p>
                                     {!! Str::limit($item->content, 200, '...') !!}
                                 </p>
-                                <a href="{{ route('news.show', $item->slug) }}">Read More <span><i
+                                <a href="{{ route('news.detail', $item->slug) }}">Read More <span><i
                                             class="fa fa-long-arrow-right"></i></span></a>
                             </div>
                         </div>
-                    </div>
+                    </div> 
                 @endforeach
             </div>
         </div>

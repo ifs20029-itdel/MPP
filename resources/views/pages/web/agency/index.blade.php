@@ -33,7 +33,7 @@
                                 </div>
                                 <div class="products-contant">
                                     <h6 class="products-title"><a
-                                            href="{{ route('agency.show', $agency->slug) }}">{{ $agency->name }}</a>
+                                            href="{{ route('agency.detail', $agency->slug) }}">{{ $agency->name }}</a>
                                     </h6>
                                 </div>
                             </div>
