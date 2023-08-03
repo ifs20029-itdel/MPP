@@ -168,6 +168,26 @@
                     </a>
                 </div>
                 <!--end:Menu item-->
+            @else
+                @foreach ($agencyServices as $item)
+                    <!--begin:Menu item-->
+                    <div class="menu-item">
+                        <!--begin:Menu link-->
+                        <a class="menu-link {{ request()->is('backend/booking/' . $item->slug) ? 'active' : '' }}"
+                            href="{{ route('backend.booking.index', $item->slug) }}">
+                            <span class="menu-icon">
+                                <!--begin::Svg Icon | path: icons/duotune/general/gen025.svg-->
+                                <span class="svg-icon svg-icon-2">
+                                    <i class="fas fa-list fs-2"></i>
+                                </span>
+                                <!--end::Svg Icon-->
+                            </span>
+                            <span class="menu-title">{{ $item->name }}</span>
+                        </a>
+                        <!--end:Menu link-->
+                    </div>
+                    <!--end:Menu item-->
+                @endforeach
             @endrole
             <!--begin:Menu item-->
             <div class="menu-item pt-5">

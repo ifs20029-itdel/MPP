@@ -42,10 +42,8 @@ class RoleSeeder extends Seeder
         ]);
         // Attach role to user
         $user->assignRole($role);
-        // Create a role
-        $role = Role::create([
-            'name' => 'admin',
-        ]);
+
+
         // Create a permission
         $permission = Permission::create([
             'name' => 'show-agency',
@@ -59,12 +57,5 @@ class RoleSeeder extends Seeder
             'name' => 'manage-agency-service-queue',
         ]);
         $permission->assignRole($role);
-        // Create a user
-        $user = \App\Models\User::create([
-            'name' => 'Admin',
-            'email' => 'admin@gmail.com',
-            'password' => bcrypt('password'),
-        ]);
-        $user->assignRole($role);
     }
 }

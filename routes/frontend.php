@@ -38,6 +38,7 @@ Route::get('statistik', [StatistikController::class, 'index'])->name('statistik'
 
 Route::get('agency', [AgencyController::class, 'index'])->name('agency');
 Route::get('agency/{slug}', [AgencyController::class, 'show'])->name('agency.detail');
+Route::post('agency/{slug}', [AgencyController::class, 'store'])->name('booking.store');
 
 Route::get('news', [FrontController::class, 'news'])->name('news');
 Route::get('news/{slug}', [FrontController::class, 'newsDetail'])->name('news.detail');

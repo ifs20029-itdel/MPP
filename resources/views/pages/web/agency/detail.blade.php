@@ -133,9 +133,10 @@
                                                             aria-labelledby="headingTwo"
                                                             data-parent="#accordionExample">
                                                             <div class="card-body">
-                                                                <form action="{{ route('booking.store') }}"
+                                                                <form
+                                                                    action="{{ route('booking.store', $agency->slug) }}"
                                                                     method="POST"
-                                                                    id="booking-form-{{ $service->slug }}">
+                                                                    id="booking-form-collapseOne-{{ $service->slug }}">
                                                                     <input type="hidden" name="agency_id"
                                                                         value="{{ $agency->id }}">
                                                                     <input type="hidden" name="service_id"
@@ -180,7 +181,14 @@
                                                             aria-labelledby="headingTwo"
                                                             data-parent="#accordionExample">
                                                             <div class="card-body">
-                                                                <form>
+                                                                <form
+                                                                    action="{{ route('booking.store', $agency->slug) }}"
+                                                                    method="POST"
+                                                                    id="booking-form-collapseTwo-{{ $service->slug }}">
+                                                                    <input type="hidden" name="agency_id"
+                                                                        value="{{ $agency->id }}">
+                                                                    <input type="hidden" name="service_id"
+                                                                        value="{{ $service->id }}">
                                                                     <div class="form-group">
                                                                         <label for="tanggal">Tanggal</label>
                                                                         <input type="date" class="form-control"
@@ -219,7 +227,7 @@
                                                 <button type="button" class="btn btn-secondary"
                                                     data-dismiss="modal">Tutup</button>
                                                 <button type="button" class="btn btn-primary"
-                                                    onclick="submitBookingForm('booking-form-{{ $service->slug }}')">Kirim</button>
+                                                    onclick="submitBookingForm('{{ $service->slug }}')">Kirim</button>
                                             </div>
                                         </div>
                                     </div>
@@ -232,34 +240,102 @@
         </div>
     </section>
     @section('custom_js')
+        <script src="{{ asset('js/FormControls.js') }}"></script>
         <script>
             function submitBookingForm(id) {
-                // on submit form
-                $('#' + id).submit(function(e) {
-                    e.preventDefault();
-                    var formData = new FormData(this);
-                    $.ajax({
-                        type: 'POST',
-                        url: $(this).attr('action'),
-                        data: formData,
-                        cache: false,
-                        contentType: false,
-                        processData: false,
-                        success: (data) => {
-                            this.reset();
-                            Swal.fire({
-                                icon: 'success',
-                                title: 'Berhasil',
-                                text: 'Data berhasil dikirim',
-                                showConfirmButton: false,
-                                timer: 1500
-                            });
-                        },
-                        error: function(data) {
-                            console.log(data);
-                        }
+                // submit form dimana form id nya diambil dari parameter fungsi dan sesuai dengan collapse yang di klik
+                // check collapse yang di klik
+                if ($('#collapseOne').hasClass('show')) {
+                    // jika collapseOne yang di klik maka submit form dengan id booking-form-collapseOne
+                    $('#booking-form-collapseOne-' + id).on('submit', function(e) {
+                        e.preventDefault();
+                        var form = $(this);
+                        var url = form.attr('action');
+                        var type = form.attr('method');
+                        var data = form.serialize();
+                        $.ajax({
+                            url: url,
+                            type: type,
+                            data: data,
+                            success: function(response) {
+                                if (response.status == 'success') {
+                                    Swal.fire({
+                                        icon: 'success',
+                                        title: 'Berhasil',
+                                        text: response.message,
+                                        showConfirmButton: false,
+                                        timer: 1500
+                                    }).then(function() {
+                                        // close modal
+                                        $('#collapseOne').collapse('hide');
+                                        // reset form
+                                        $('#booking-form-collapseOne-' + id)[0].reset();
+                                        // close modal
+                                        $('#' + id).modal('hide');
+                                    });
+                                } else {
+                                    Swal.fire({
+                                        icon: 'error',
+                                        title: 'Gagal',
+                                        text: response.message,
+                                        showConfirmButton: false,
+                                        timer: 1500
+                                    });
+                                }
+                            },
+                            error: function(xhr, status, error) {
+                                var err = eval("(" + xhr.responseText + ")");
+                                console.log(err);
+                            }
+                        });
                     });
-                });
+                    $('#booking-form-collapseOne-' + id).submit();
+                } else if ($('#collapseTwo').hasClass('show')) {
+                    // jika collapseTwo yang di klik maka submit form dengan id booking-form-collapseTwo
+                    $('#booking-form-collapseTwo-' + id).on('submit', function(e) {
+                        e.preventDefault();
+                        var form = $(this);
+                        var url = form.attr('action');
+                        var type = form.attr('method');
+                        var data = form.serialize();
+                        $.ajax({
+                            url: url,
+                            type: type,
+                            data: data,
+                            success: function(response) {
+                                if (response.status == 'success') {
+                                    Swal.fire({
+                                        icon: 'success',
+                                        title: 'Berhasil',
+                                        text: response.message,
+                                        showConfirmButton: false,
+                                        timer: 1500
+                                    }).then(function() {
+                                        // close modal
+                                        $('#collapseTwo').collapse('hide');
+                                        // reset form
+                                        $('#booking-form-collapseTwo-' + id)[0].reset();
+                                        // close modal
+                                        $('#' + id).modal('hide');
+                                    });
+                                } else {
+                                    Swal.fire({
+                                        icon: 'error',
+                                        title: 'Gagal',
+                                        text: response.message,
+                                        showConfirmButton: false,
+                                        timer: 1500
+                                    });
+                                }
+                            },
+                            error: function(xhr, status, error) {
+                                var err = eval("(" + xhr.responseText + ")");
+                                console.log(err);
+                            }
+                        });
+                    });
+                    $('#booking-form-collapseTwo-' + id).submit();
+                }
             }
         </script>
     @endsection

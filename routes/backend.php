@@ -22,9 +22,19 @@ Route::name('backend.')->middleware(['auth'])->group(function () {
     Route::resource('news', NewsController::class);
 
     // Booking
-    Route::resource('booking', BookingController::class);
+    Route::prefix('booking')->name('booking.')->group(function () {
+        Route::get('/', [BookingController::class, 'index'])->name('index');
+        Route::get('detail/{id}', [BookingController::class, 'detail'])->name('detail');
+        Route::get('process/{id}', [BookingController::class, 'process'])->name('process');
+        Route::get('finish/{id}', [BookingController::class, 'finish'])->name('finish');
+    });
 
     // Critic Suggestion
     Route::get('critic-suggestion', [CriticSuggestionController::class, 'index'])->name('critic-suggestion.index');
-    
+
+    // Role
+    Route::resource('role', RoleController::class);
+
+    // User
+    Route::resource('user', UserController::class);
 });

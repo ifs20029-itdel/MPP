@@ -20,7 +20,7 @@ class CreateBookingsTable extends Migration
             $table->string('whatsapp', 100);
             $table->date('date')->nullable();
             $table->string('queue_number', 100)->nullable();
-            $table->string('status')->default('pending');
+            $table->enum('status', ['0', '1', '2'])->default('0')->comment('0: pending, 1: process, 2: done');
             $table->timestamps();
             $table->softDeletes();
         });
