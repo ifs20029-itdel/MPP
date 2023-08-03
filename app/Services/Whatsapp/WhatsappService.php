@@ -25,6 +25,7 @@ class WhatsappService extends Whatsapp
             'phone' => $phone,
             'message' => $message
         ];
+        // dd($this->body);
         try {
             $response = $this->client->post($this->domain . '/api/send-message', ['body' => json_encode($this->body)]);
             return json_decode($response->getBody()->getContents());

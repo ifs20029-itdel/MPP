@@ -75,31 +75,33 @@ class AgencyController extends Controller
             'date' => $request->date,
             'queue_number' => $queue_number,
         ]);
-
+        $date = $request->date ? date('d-m-Y', strtotime($request->date)) : date('d-m-Y');
         // send whatsapp message
         $message = "Halo {$request->name},\n\n";
         $message .= "Terima kasih telah melakukan booking di {$service->agency->name}.\n";
         $message .= "Berikut adalah detail booking anda:\n\n";
         $message .= "Nama: {$request->name}\n";
         $message .= "Whatsapp: {$request->whatsapp}\n";
-        $message .= "Tanggal: {$request->date}\n";
+        $message .= "Tanggal: {$date}\n";
         $message .= "Nomor antrian: {$queue_number}\n\n";
         $message .= "Silahkan menunggu konfirmasi dari {$service->agency->name}.\n";
         $message .= "Terima kasih.";
 
-        try {
-            $whatsapp = new WhatsappService();
-            $whatsapp->sendMessage($request->whatsapp, $message);
+        $whatsapp = new WhatsappService();
+        $whatsapp->sendMessage($request->whatsapp, $message);
 
-            return response()->json([
-                'status' => 'success',
-                'message' => 'Data berhasil ditambahkan'
-            ]);
-        } catch (\Exception $e) {
-            return response()->json([
-                'status' => 'error',
-                'message' => 'Data berhasil ditambahkan, namun terjadi kesalahan saat mengirim pesan whatsapp'
-            ]);
-        }
+        return response()->json([
+            'status' => 'success',
+            'message' => 'Data berhasil ditambahkan'
+        ]);
+
+        // try {
+
+        // } catch (\Exception $e) {
+        //     return response()->json([
+        //         'status' => 'error',
+        //         'message' => 'Data berhasil ditambahkan, namun terjadi kesalahan saat mengirim pesan whatsapp'
+        //     ]);
+        // }
     }
 }
