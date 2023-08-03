@@ -23,7 +23,7 @@ Route::name('backend.')->middleware(['auth'])->group(function () {
 
     // Booking
     Route::prefix('booking')->name('booking.')->group(function () {
-        Route::get('/', [BookingController::class, 'index'])->name('index');
+        Route::get('/{slug}', [BookingController::class, 'index'])->name('index');
         Route::get('detail/{id}', [BookingController::class, 'detail'])->name('detail');
         Route::get('process/{id}', [BookingController::class, 'process'])->name('process');
         Route::get('finish/{id}', [BookingController::class, 'finish'])->name('finish');
