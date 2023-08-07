@@ -11,15 +11,16 @@ class BookingController extends Controller
     public function index($slug)
     {
         $role = auth()->user()->getRoleNames();
-        // get booking where agency slug is same with role name and agency service is same with $slug
+        // get bookings where agency slug is same with role name and agency service is same with $slug
         // agency has many agency service
         // agency service has many booking
 
-        $bookings = Booking::whereHas('agencyService', function ($query) use ($slug) {
-            $query->where('slug', $slug);
-        })->whereHas('agency', function ($query) use ($role) {
+        $bookings = Booking::whereHas('agencyService.agency', function ($query) use ($slug, $role) {
             $query->where('slug', $role[0]);
+        })->whereHas('agencyService', function ($query) use ($slug) {
+            $query->where('slug', $slug);
         })->get();
+
         return view('pages.admin.booking.index', compact('bookings'));
     }
 
