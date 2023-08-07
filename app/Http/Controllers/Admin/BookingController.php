@@ -53,4 +53,14 @@ class BookingController extends Controller
             'message' => 'Booking berhasil diselesaikan',
         ]);
     }
+
+    public function destroy($id)
+    {
+        $booking = Booking::findOrFail($id);
+        $booking->delete();
+        return response()->json([
+            'status' => 'success',
+            'message' => 'Booking berhasil dihapus',
+        ]);
+    }
 }

@@ -25,8 +25,9 @@ Route::name('backend.')->middleware(['auth'])->group(function () {
     Route::prefix('booking')->name('booking.')->group(function () {
         Route::get('/{slug}', [BookingController::class, 'index'])->name('index');
         Route::get('detail/{id}', [BookingController::class, 'detail'])->name('detail');
-        Route::get('process/{id}', [BookingController::class, 'process'])->name('process');
-        Route::get('finish/{id}', [BookingController::class, 'finish'])->name('finish');
+        Route::put('process/{id}', [BookingController::class, 'process'])->name('process');
+        Route::put('finish/{id}', [BookingController::class, 'finish'])->name('finish');
+        Route::delete('delete/{id}', [BookingController::class, 'destroy'])->name('destroy');
     });
 
     // Critic Suggestion

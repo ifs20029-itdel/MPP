@@ -187,6 +187,7 @@
                                                     <!--begin::Menu item-->
                                                     <div class="menu-item px-3">
                                                         <a href="javascript:;" class="menu-link px-3"
+                                                            data-id="{{ $item->id }}"
                                                             data-filter="process_row">Process</a>
                                                     </div>
                                                     <!--end::Menu item-->
@@ -194,12 +195,14 @@
                                                     <!--begin::Menu item-->
                                                     <div class="menu-item px-3">
                                                         <a href="javascript:;" class="menu-link px-3"
+                                                            data-id="{{ $item->id }}"
                                                             data-filter="finish_row">Finish</a>
                                                     </div>
                                                     <!--end::Menu item-->
                                                 @else<!--begin::Menu item-->
                                                     <div class="menu-item px-3">
                                                         <a href="javascript:;" class="menu-link px-3"
+                                                            data-id="{{ $item->id }}"
                                                             data-filter="delete_row">Delete</a>
                                                     </div>
                                                     <!--end::Menu item-->
@@ -251,6 +254,7 @@
                     $(document).on("click", '[data-filter="process_row"]', (function(t) {
                         t.preventDefault();
                         const n = $(this).closest("tr").find('[data-filter="booking_id"]').val();
+                        const id = $(this).data('id');
                         Swal.fire({
                             text: "Are you sure you want to process this booking?",
                             icon: "warning",
@@ -264,8 +268,8 @@
                             }
                         }).then((function(t) {
                             t.value ? $.ajax({
-                                url: "{{ route('backend.booking.process') }}",
-                                type: "POST",
+                                url: '/backend/booking/process/' + id,
+                                type: "PUT",
                                 data: {
                                     _token: "{{ csrf_token() }}",
                                     id: n
@@ -300,6 +304,7 @@
                     $(document).on("click", '[data-filter="finish_row"]', (function(t) {
                         t.preventDefault();
                         const n = $(this).closest("tr").find('[data-filter="booking_id"]').val();
+                        const id = $(this).data('id');
                         Swal.fire({
                             text: "Are you sure you want to finish this booking?",
                             icon: "warning",
@@ -313,8 +318,8 @@
                             }
                         }).then((function(t) {
                             t.value ? $.ajax({
-                                url: "{{ route('backend.booking.finish') }}",
-                                type: "POST",
+                                url: '/backend/booking/finish/' + id,
+                                type: "PUT",
                                 data: {
                                     _token: "{{ csrf_token() }}",
                                     id: n
@@ -349,6 +354,7 @@
                     $(document).on("click", '[data-filter="delete_row"]', (function(t) {
                         t.preventDefault();
                         const n = $(this).closest("tr").find('[data-filter="booking_id"]').val();
+                        const id = $(this).data('id');
                         Swal.fire({
                             text: "Are you sure you want to delete this booking?",
                             icon: "warning",
@@ -362,8 +368,8 @@
                             }
                         }).then((function(t) {
                             t.value ? $.ajax({
-                                url: "{{ route('backend.booking.delete') }}",
-                                type: "POST",
+                                url: '/backend/booking/delete/' + id,
+                                type: "DELETE",
                                 data: {
                                     _token: "{{ csrf_token() }}",
                                     id: n
