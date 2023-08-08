@@ -107,8 +107,7 @@
                                     <div class="modal-dialog modal-dialog-centered" role="document">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalCenterTitle">Pengaduan
-                                                    Kehilangan
+                                                <h5 class="modal-title" id="exampleModalCenterTitle">{{ $service->name }}
                                                 </h5>
                                                 <button type="button" class="close" data-dismiss="modal"
                                                     aria-label="Close">
@@ -117,7 +116,7 @@
                                             </div>
                                             <div class="modal-body">
                                                 <span>Silahkan Mendaftar nomor antrian anda</span>
-                                                <span>Nomor Antrian Sekarang : </span>
+                                                <span>Nomor Antrian Sekarang : 0</span>
                                                 <div class="accordion mt-2" id="accordionExample">
                                                     <div class="card">
                                                         <div class="card-header" id="headingTwo">
@@ -294,49 +293,66 @@
                     // jika collapseTwo yang di klik maka submit form dengan id booking-form-collapseTwo
                     $('#booking-form-collapseTwo-' + id).on('submit', function(e) {
                         e.preventDefault();
-                        var form = $(this);
-                        var url = form.attr('action');
-                        var type = form.attr('method');
-                        var data = form.serialize();
-                        $.ajax({
-                            url: url,
-                            type: type,
-                            data: data,
-                            success: function(response) {
-                                if (response.status == 'success') {
-                                    Swal.fire({
-                                        icon: 'success',
-                                        title: 'Berhasil',
-                                        text: response.message,
-                                        showConfirmButton: false,
-                                        timer: 1500
-                                    }).then(function() {
-                                        // close modal
-                                        $('#collapseTwo').collapse('hide');
-                                        // reset form
-                                        $('#booking-form-collapseTwo-' + id)[0].reset();
-                                        // close modal
-                                        $('#' + id).modal('hide');
-                                    });
-                                } else {
-                                    Swal.fire({
-                                        icon: 'error',
-                                        title: 'Gagal',
-                                        text: response.message,
-                                        showConfirmButton: false,
-                                        timer: 1500
-                                    });
+                        var selectedDate = new Date($('#tanggal').val());
+                        var today = new Date();
+                        var nextWeek = new Date();
+                        nextWeek.setDate(nextWeek.getDate() + 7);
+
+                        if (selectedDate >= today && selectedDate <= nextWeek) {
+                            var form = $(this);
+                            var url = form.attr('action');
+                            var type = form.attr('method');
+                            var data = form.serialize();
+
+                            $.ajax({
+                                url: url,
+                                type: type,
+                                data: data,
+                                success: function(response) {
+                                    if (response.status == 'success') {
+                                        Swal.fire({
+                                            icon: 'success',
+                                            title: 'Berhasil',
+                                            text: response.message,
+                                            showConfirmButton: false,
+                                            timer: 1500
+                                        }).then(function() {
+                                            // close modal
+                                            $('#collapseTwo').collapse('hide');
+                                            // reset form
+                                            form[0].reset();
+                                            // close modal
+                                            $('#' + id).modal('hide');
+                                        });
+                                    } else {
+                                        Swal.fire({
+                                            icon: 'error',
+                                            title: 'Gagal',
+                                            text: response.message,
+                                            showConfirmButton: false,
+                                            timer: 1500
+                                        });
+                                    }
+                                },
+                                error: function(xhr, status, error) {
+                                    var err = eval("(" + xhr.responseText + ")");
+                                    console.log(err);
                                 }
-                            },
-                            error: function(xhr, status, error) {
-                                var err = eval("(" + xhr.responseText + ")");
-                                console.log(err);
-                            }
-                        });
+                            });
+                        } else {
+                            Swal.fire({
+                                icon: 'error',
+                                title: 'Gagal',
+                                text: 'Pilih tanggal dari hari ini hingga minggu depan.',
+                                showConfirmButton: false,
+                                timer: 1500
+                            });
+                        }
                     });
                     $('#booking-form-collapseTwo-' + id).submit();
                 }
             }
         </script>
+        
     @endsection
 </x-WebLayout>
