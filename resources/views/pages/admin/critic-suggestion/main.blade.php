@@ -123,6 +123,7 @@
                                     <th class="w-10px pe-2">No</th>
                                     <th class="min-w-250px">Nama</th>
                                     <th class="min-w-250px">Instansi</th>
+                                    <th class="min-w-250px">Pesan</th>
                                     <th class="min-w-100px">Dibuat Pada</th>
                                     <th class="text-end min-w-70px">Aksi</th>
                                 </tr>
@@ -134,7 +135,7 @@
                                         <td>
                                             <div class="form-check form-check-sm form-check-custom form-check-solid">
                                                 <input class="form-check-input" type="checkbox"
-                                                    value={{ $item->id }} data-filter="critic_id" />
+                                                    value="{{ $item->id }}" data-filter="critic_id" />
                                             </div>
                                         </td>
                                         <!--end::Checkbox-->
@@ -154,6 +155,14 @@
                                                 <!--begin::Title-->
                                                 <span class="text-gray-800 text-hover-primary fs-5 fw-bold mb-1"
                                                     data-filter="critic_name">{{ $item->agency->name }}</span>
+                                                <!--end::Title-->
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex">
+                                                <!--begin::Title-->
+                                                <span class="text-gray-800 text-hover-primary fs-5 fw-bold mb-1"
+                                                    data-filter="critic_name">{{ $item->message }}</span>
                                                 <!--end::Title-->
                                             </div>
                                         </td>
