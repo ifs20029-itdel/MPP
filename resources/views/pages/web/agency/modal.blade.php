@@ -24,6 +24,8 @@
                         <div class="card-body">
                             <form action="{{ route('booking.store', $agency->slug) }}" method="POST"
                                 id="booking-form-collapseOne-{{ $service->slug }}">
+                                <input type="hidden" name="agency_id" value="{{ $agency->id }}">
+                                <input type="hidden" name="service_id" value="{{ $service->id }}">
                                 <div class="form-group">
                                     <label for="fullname">Nama Anda</label>
                                     <input type="text" class="form-control" id="fullname"
