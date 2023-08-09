@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Models\Booking;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Services\Whatsapp\WhatsappService;
 
 class BookingController extends Controller
 {
@@ -45,6 +46,18 @@ class BookingController extends Controller
         $booking->update([
             'status' => '2',
         ]);
+
+        // send whatsapp message to next queue
+        $nextBooking = Booking::where('agency_service_id', $booking->agency_service_id)
+            ->where('status', '0')
+            ->orderBy('created_at', 'asc')
+            ->first();
+
+        if ($nextBooking) {
+            $nextBooking->load('agencyService.agency');
+            $whatsapp = new WhatsappService();
+            $whatsapp->sendMessage($nextBooking->agencyService->agency->phone, 'Halo, ' . $nextBooking->agencyService->agency->name . '. Booking anda sudah diproses. Silahkan datang ke ' . $nextBooking->agencyService->agency->name . ' untuk melakukan pelayanan.');
+        }
         return response()->json([
             'status' => 'success',
             'message' => 'Booking berhasil diselesaikan',

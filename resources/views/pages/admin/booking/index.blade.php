@@ -125,7 +125,7 @@
                                         <th class="w-10px pe-2">No</th>
                                         <th class="min-w-250px">Nama</th>
                                         <th class="min-w-250px">Whatsapp</th>
-                                        <th class="min-w-250px">Agency Service</th>
+                                        <th class="min-w-250px">Status</th>
                                         <th class="text-end min-w-70px">Aksi</th>
                                     </tr>
                                 </thead>
@@ -169,8 +169,18 @@
                                                 <div class="d-flex">
                                                     <div class="ms-5">
                                                         <!--begin::Title-->
-                                                        <span
-                                                            class="text-gray-800 text-hover-primary fs-5 fw-bold mb-1">{{ $item->agencyService->name }}</span>
+                                                        @if ($item->status == 0)
+                                                            <span
+                                                                class="text-gray-800 text-hover-primary fs-5 fw-bold mb-1">Belum
+                                                                Diproses</span>
+                                                        @elseif ($item->status == 1)
+                                                            <span
+                                                                class="text-gray-800 text-hover-primary fs-5 fw-bold mb-1">Sedang
+                                                                Diproses</span>
+                                                        @else
+                                                            <span
+                                                                class="text-gray-800 text-hover-primary fs-5 fw-bold mb-1">Selesai</span>
+                                                        @endif
                                                         <!--end::Title-->
                                                     </div>
                                                 </div>
