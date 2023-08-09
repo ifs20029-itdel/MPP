@@ -136,7 +136,7 @@
                                         <td>
                                             <div class="form-check form-check-sm form-check-custom form-check-solid">
                                                 <input class="form-check-input" type="checkbox"
-                                                    value={{ $item->id }} data-filter="agencyService_id" />
+                                                    value={{ $item->id }} data-filter="user_id" />
                                             </div>
                                         </td>
                                         <!--end::Checkbox-->
@@ -150,7 +150,7 @@
                                                     <!--begin::Title-->
                                                     <a href="{{ route('backend.agency-service.edit', $item->id) }}"
                                                         class="text-gray-800 text-hover-primary fs-5 fw-bold mb-1"
-                                                        data-filter="agencyService_name">{{ $item->name }}</a>
+                                                        data-filter="user_name">{{ $item->name }}</a>
                                                     <!--end::Title-->
                                                 </div>
                                             </div>
@@ -161,7 +161,7 @@
                                                     <!--begin::Title-->
                                                     <a href="{{ route('backend.agency-service.edit', $item->id) }}"
                                                         class="text-gray-800 text-hover-primary fs-5 fw-bold mb-1"
-                                                        data-filter="agencyService_name">{{ $item->email }}</a>
+                                                        data-filter="user_name">{{ $item->email }}</a>
                                                     <!--end::Title-->
                                                 </div>
                                             </div>
@@ -176,7 +176,7 @@
                                                 data-kt-menu="true">
                                                 <!--begin::Menu item-->
                                                 <div class="menu-item px-3">
-                                                    <a href="{{ route('backend.agency-service.edit', $item->id) }}"
+                                                    <a href="{{ route('backend.user.edit', $item->id) }}"
                                                         class="menu-link px-3">Edit</a>
                                                 </div>
                                                 <!--end::Menu item-->
@@ -215,9 +215,9 @@
                             t.preventDefault();
                             const n = t.target.closest("tr"),
                                 o = n.querySelector(
-                                    '[data-filter="agencyService_name"]').innerText,
+                                    '[data-filter="user_name"]').innerText,
                                 i = n.querySelector(
-                                    '[data-filter="agencyService_id"]');
+                                    '[data-filter="user_id"]');
                             Swal.fire({
                                 text: "Are you sure you want to delete " + o + "?",
                                 icon: "warning",
