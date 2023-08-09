@@ -103,10 +103,6 @@
                         <!--end::Card title-->
                         <!--begin::Card toolbar-->
                         <div class="card-toolbar">
-                            <!--begin::Add customer-->
-                            <a href="{{ route('backend.user.create') }}" class="btn btn-primary">Tambah
-                                User</a>
-                            <!--end::Add customer-->
                         </div>
                         <!--end::Card toolbar-->
                     </div>
