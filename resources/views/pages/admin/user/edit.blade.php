@@ -84,7 +84,7 @@
             <div id="kt_content_container" class="container-xxl">
                 <form id="form_input" class="form d-flex flex-column flex-lg-row"
                     data-kt-redirect="{{ route('backend.user.index') }}"
-                    action="{{ route('backend.user.update', $user->id) }}" method="POST">
+                    action="{{ route('backend.user.update', $user->id) }}" method="PUT">
                     <!--begin::Main column-->
                     <div class="d-flex flex-column flex-row-fluid gap-7 gap-lg-10">
                         <!--begin::General options-->
