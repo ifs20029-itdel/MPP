@@ -34,3 +34,24 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDC3Ip9iVC0nIxC6V14CKLQ1HZNF_65qEQ"></script>
 <script src="{{ asset('assets/js/map-script.js') }}"></script>
 <script src="{{ asset('js/sweetalert.js') }}"></script>
+<script>
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+
+    function handle_open_modal(url, modal, method) {
+        $.ajax({
+            type: method,
+            url: url,
+            success: function(html) {
+                $(modal).html(html);
+                $(modal).modal('show');
+            },
+            error: function() {
+                $(content).html('<h3>Ajax Bermasalah !!!</h3>')
+            },
+        });
+    }
+</script>

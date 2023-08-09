@@ -114,6 +114,22 @@
                                     <!--end::Description-->
                                 </div>
                                 <!--end::Input group-->
+                                <!--begin::Input group-->
+                                <div class="mb-10 fv-row">
+                                    <!--begin::Label-->
+                                    <label class="required form-label">Guard Name</label>
+                                    <!--end::Label-->
+                                    <!--begin::Input-->
+                                    <input type="text" name="guard_name" class="form-control mb-2"
+                                        placeholder="Nama Layanan Instansi" value="{{ $role->guard_name }}" />
+                                    <!--end::Input-->
+                                    <!--begin::Description-->
+                                    <div class="text-muted fs-7">
+                                        Nama yang akan ditampilkan di halaman utama.
+                                    </div>
+                                    <!--end::Description-->
+                                </div>
+                                <!--end::Input group-->
                             </div>
                             <!--end::Card header-->
                         </div>

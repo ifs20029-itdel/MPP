@@ -1,7 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\Admin\NewsController;
+use App\Http\Controllers\Admin\RoleController;
+use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\AgencyController;
 use App\Http\Controllers\Admin\BookingController;
 use App\Http\Controllers\Admin\DashboardController;
@@ -38,4 +41,7 @@ Route::name('backend.')->middleware(['auth'])->group(function () {
 
     // User
     Route::resource('user', UserController::class);
+
+    // Logout
+    Route::get('logout', [AuthController::class, 'logout'])->name('logout');
 });

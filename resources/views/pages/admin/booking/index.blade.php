@@ -113,110 +113,116 @@
                     <!--end::Card header-->
                     <!--begin::Card body-->
                     <div class="card-body pt-0">
-                        <!--begin::Table-->
-                        <table class="table align-middle table-row-dashed fs-6 gy-5" id="booking_table">
-                            <thead>
-                                <tr class="text-start text-gray-400 fw-bold fs-7 text-uppercase gs-0">
-                                    <th class="w-10px pe-2">
-                                        <div class="form-check form-check-sm form-check-custom form-check-solid me-3">
-                                            <input class="form-check-input" type="checkbox" data-kt-check="true"
-                                                data-kt-check-target="#role_table .form-check-input" value="1" />
-                                        </div>
-                                    </th>
-                                    <th class="w-10px pe-2">No</th>
-                                    <th class="min-w-250px">Nama</th>
-                                    <th class="min-w-250px">Whatsapp</th>
-                                    <th class="min-w-250px">Agency Service</th>
-                                    <th class="text-end min-w-70px">Aksi</th>
-                                </tr>
-                            </thead>
-                            <tbody class="fw-semibold text-gray-600">
-                                @foreach ($bookings as $item)
-                                    <tr>
-                                        <!--begin::Checkbox-->
-                                        <td>
-                                            <div class="form-check form-check-sm form-check-custom form-check-solid">
-                                                <input class="form-check-input" type="checkbox"
-                                                    value={{ $item->id }} data-filter="booking_id" />
+                        <div class="table-responsive">
+                            <!--begin::Table-->
+                            <table class="table align-middle table-row-dashed fs-6 gy-5" id="booking_table">
+                                <thead>
+                                    <tr class="text-start text-gray-400 fw-bold fs-7 text-uppercase gs-0">
+                                        <th class="w-10px pe-2">
+                                            <div
+                                                class="form-check form-check-sm form-check-custom form-check-solid me-3">
+                                                <input class="form-check-input" type="checkbox" data-kt-check="true"
+                                                    data-kt-check-target="#role_table .form-check-input"
+                                                    value="1" />
                                             </div>
-                                        </td>
-                                        <!--end::Checkbox-->
-                                        <td>
-                                            {{ $loop->iteration }}
-                                        </td>
-
-                                        <td>
-                                            <div class="d-flex">
-                                                <div class="ms-5">
-                                                    <!--begin::Title-->
-                                                    <span class="text-gray-800 text-hover-primary fs-5 fw-bold mb-1"
-                                                        data-filter="booking_name">{{ $item->name }}</span>
-                                                    <!--end::Title-->
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="d-flex">
-                                                <div class="ms-5">
-                                                    <!--begin::Title-->
-                                                    <span
-                                                        class="text-gray-800 text-hover-primary fs-5 fw-bold mb-1">{{ $item->whatsapp }}</span>
-                                                    <!--end::Title-->
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="d-flex">
-                                                <div class="ms-5">
-                                                    <!--begin::Title-->
-                                                    <span
-                                                        class="text-gray-800 text-hover-primary fs-5 fw-bold mb-1">{{ $item->agencyService->name }}</span>
-                                                    <!--end::Title-->
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td class="text-end">
-                                            <a href="#"
-                                                class="btn btn-sm btn-light btn-active-light-primary btn-flex btn-center"
-                                                data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Actions
-                                                <i class="ki-duotone ki-down fs-5 ms-1"></i></a>
-                                            <!--begin::Menu-->
-                                            <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4"
-                                                data-kt-menu="true">
-                                                @if ($item->status == 0)
-                                                    <!--begin::Menu item-->
-                                                    <div class="menu-item px-3">
-                                                        <a href="javascript:;" class="menu-link px-3"
-                                                            data-id="{{ $item->id }}"
-                                                            data-filter="process_row">Process</a>
-                                                    </div>
-                                                    <!--end::Menu item-->
-                                                @elseif ($item->status == 1)
-                                                    <!--begin::Menu item-->
-                                                    <div class="menu-item px-3">
-                                                        <a href="javascript:;" class="menu-link px-3"
-                                                            data-id="{{ $item->id }}"
-                                                            data-filter="finish_row">Finish</a>
-                                                    </div>
-                                                    <!--end::Menu item-->
-                                                @else<!--begin::Menu item-->
-                                                    <div class="menu-item px-3">
-                                                        <a href="javascript:;" class="menu-link px-3"
-                                                            data-id="{{ $item->id }}"
-                                                            data-filter="delete_row">Delete</a>
-                                                    </div>
-                                                    <!--end::Menu item-->
-                                                @endif
-
-                                            </div>
-                                            <!--end::Menu-->
-                                        </td>
+                                        </th>
+                                        <th class="w-10px pe-2">No</th>
+                                        <th class="min-w-250px">Nama</th>
+                                        <th class="min-w-250px">Whatsapp</th>
+                                        <th class="min-w-250px">Agency Service</th>
+                                        <th class="text-end min-w-70px">Aksi</th>
                                     </tr>
-                                @endforeach
-                            </tbody>
-                            <!--end::Table body-->
-                        </table>
-                        <!--end::Table-->
+                                </thead>
+                                <tbody class="fw-semibold text-gray-600">
+                                    @foreach ($bookings as $item)
+                                        <tr>
+                                            <!--begin::Checkbox-->
+                                            <td>
+                                                <div
+                                                    class="form-check form-check-sm form-check-custom form-check-solid">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        value={{ $item->id }} data-filter="booking_id" />
+                                                </div>
+                                            </td>
+                                            <!--end::Checkbox-->
+                                            <td>
+                                                {{ $loop->iteration }}
+                                            </td>
+
+                                            <td>
+                                                <div class="d-flex">
+                                                    <div class="ms-5">
+                                                        <!--begin::Title-->
+                                                        <span class="text-gray-800 text-hover-primary fs-5 fw-bold mb-1"
+                                                            data-filter="booking_name">{{ $item->name }}</span>
+                                                        <!--end::Title-->
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="d-flex">
+                                                    <div class="ms-5">
+                                                        <!--begin::Title-->
+                                                        <span
+                                                            class="text-gray-800 text-hover-primary fs-5 fw-bold mb-1">{{ $item->whatsapp }}</span>
+                                                        <!--end::Title-->
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="d-flex">
+                                                    <div class="ms-5">
+                                                        <!--begin::Title-->
+                                                        <span
+                                                            class="text-gray-800 text-hover-primary fs-5 fw-bold mb-1">{{ $item->agencyService->name }}</span>
+                                                        <!--end::Title-->
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="text-end">
+                                                <a href="#"
+                                                    class="btn btn-sm btn-light btn-active-light-primary btn-flex btn-center"
+                                                    data-kt-menu-trigger="click"
+                                                    data-kt-menu-placement="bottom-end">Actions
+                                                    <i class="ki-duotone ki-down fs-5 ms-1"></i></a>
+                                                <!--begin::Menu-->
+                                                <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4"
+                                                    data-kt-menu="true">
+                                                    @if ($item->status == 0)
+                                                        <!--begin::Menu item-->
+                                                        <div class="menu-item px-3">
+                                                            <a href="javascript:;" class="menu-link px-3"
+                                                                data-id="{{ $item->id }}"
+                                                                data-filter="process_row">Process</a>
+                                                        </div>
+                                                        <!--end::Menu item-->
+                                                    @elseif ($item->status == 1)
+                                                        <!--begin::Menu item-->
+                                                        <div class="menu-item px-3">
+                                                            <a href="javascript:;" class="menu-link px-3"
+                                                                data-id="{{ $item->id }}"
+                                                                data-filter="finish_row">Finish</a>
+                                                        </div>
+                                                        <!--end::Menu item-->
+                                                    @else<!--begin::Menu item-->
+                                                        <div class="menu-item px-3">
+                                                            <a href="javascript:;" class="menu-link px-3"
+                                                                data-id="{{ $item->id }}"
+                                                                data-filter="delete_row">Delete</a>
+                                                        </div>
+                                                        <!--end::Menu item-->
+                                                    @endif
+
+                                                </div>
+                                                <!--end::Menu-->
+                                            </td>
+                                        </tr>
+                                    @endforeach
+                                </tbody>
+                                <!--end::Table body-->
+                            </table>
+                            <!--end::Table-->
+                        </div>
                     </div>
                     <!--end::Card body-->
                 </div>
@@ -231,23 +237,25 @@
         <script>
             "use strict";
             var Booking = function() {
-
                 const _initTable = () => {
-                    const t = document.querySelector("#booking_table");
-                    t && (e = $(t).DataTable({
-                        info: !1,
-                        order: [],
-                        pageLength: 10,
-                        columnDefs: [{
-                            orderable: !1,
-                            targets: 0
-                        }]
-                    }), e.on("draw", (function() {
-                        n()
-                    })), document.querySelector('[data-filter="search"]').addEventListener("keyup", (function(
-                        t) {
-                        e.search(t.target.value).draw()
-                    })), n())
+                    var e, t, n = () => {
+                        t = document.querySelector("#booking_table");
+                        t && (e = $(t).DataTable({
+                            info: !1,
+                            order: [],
+                            pageLength: 10,
+                            columnDefs: [{
+                                orderable: !1,
+                                targets: 0
+                            }]
+                        }), e.on("draw", (function() {
+                            n()
+                        })), document.querySelector('[data-filter="search"]').addEventListener("keyup", (
+                            function(
+                                t) {
+                                e.search(t.target.value).draw()
+                            })), n())
+                    }
                 }
 
                 const _process = () => {

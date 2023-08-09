@@ -132,10 +132,10 @@
                                 <!--begin::Input group-->
                                 <div class="mb-10 fv-row">
                                     <!--begin::Label-->
-                                    <label class="required form-label">Email</label>
+                                    <label class="required form-label">Role</label>
                                     <!--end::Label-->
                                     <!--begin::Select-->
-                                    <select name="role_id" aria-label="Select a Role" data-control="select2"
+                                    <select name="role" aria-label="Select a Role" data-control="select2"
                                         data-placeholder="Select a Role..." class="form-select form-select-solid">
                                         <option value="">Select a Role...</option>
                                         @foreach ($roles as $role)

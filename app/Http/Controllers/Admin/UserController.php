@@ -29,7 +29,7 @@ class UserController extends Controller
     public function create()
     {
         $roles = Role::where('name', '!=', 'super-admin')->get();
-        return view('pages.admin.users.create', compact('roles', 'role'));
+        return view('pages.admin.user.create', compact('roles'));
     }
 
     /**
@@ -65,7 +65,7 @@ class UserController extends Controller
         return response()->json([
             'status' => 'success',
             'message' => 'User created successfully',
-            'redirect' => route('admin.user.index')
+            'redirect' => route('backend.user.index')
         ]);
     }
 
@@ -134,7 +134,7 @@ class UserController extends Controller
         return response()->json([
             'status' => 'success',
             'message' => 'User updated successfully',
-            'redirect' => route('admin.user.index')
+            'redirect' => route('backend.user.index')
         ]);
     }
 
@@ -158,8 +158,7 @@ class UserController extends Controller
 
         return response()->json([
             'status' => 'success',
-            'message' => 'User deleted successfully',
-            'redirect' => route('admin.user.index')
+            'message' => 'User deleted successfully'
         ]);
     }
 }

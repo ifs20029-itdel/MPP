@@ -104,7 +104,8 @@
                         <!--begin::Card toolbar-->
                         <div class="card-toolbar">
                             <!--begin::Add customer-->
-                            <a href="{{ route('backend.agency-service.create') }}" class="btn btn-primary">Tambah Instansi</a>
+                            <a href="{{ route('backend.agency-service.create') }}" class="btn btn-primary">Tambah
+                                Instansi</a>
                             <!--end::Add customer-->
                         </div>
                         <!--end::Card toolbar-->

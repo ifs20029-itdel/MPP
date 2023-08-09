@@ -232,7 +232,7 @@
                             }).then((function(t) {
                                 if (t.value) {
                                     var url =
-                                        "{{ route('backend.agency-service.destroy', ':id') }}";
+                                        "{{ route('backend.user.destroy', ':id') }}";
                                     url = url.replace(':id', i.value);
                                     $.ajax({
                                         url: url,

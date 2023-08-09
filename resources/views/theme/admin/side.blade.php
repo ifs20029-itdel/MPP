@@ -71,7 +71,7 @@
                         <!--end::Menu item-->
                         <!--begin::Menu item-->
                         <div class="menu-item px-5">
-                            <a href="" class="menu-link px-5">Sign Out</a>
+                            <a href="{{ route('backend.logout') }}" class="menu-link px-5">Sign Out</a>
                         </div>
                         <!--end::Menu item-->
                     </div>
@@ -147,6 +147,30 @@
                 <!--begin:Menu item-->
                 <div class="menu-item">
                     <!--begin:Menu link-->
+                    <a class="menu-link {{ request()->is('backend/role') ? 'active' : '' }}"
+                        href="{{ route('backend.role.index') }}">
+                        <span class="menu-icon">
+                            <i class="fas fa-user-tag fs-2"></i>
+                        </span>
+                        <span class="menu-title">Role</span>
+                    </a>
+                </div>
+                <!--end:Menu item-->
+                <!--begin:Menu item-->
+                <div class="menu-item">
+                    <!--begin:Menu link-->
+                    <a class="menu-link {{ request()->is('backend/user') ? 'active' : '' }}"
+                        href="{{ route('backend.user.index') }}">
+                        <span class="menu-icon">
+                            <i class="fas fa-users fs-2"></i>
+                        </span>
+                        <span class="menu-title">User</span>
+                    </a>
+                </div>
+                <!--end:Menu item-->
+                <!--begin:Menu item-->
+                <div class="menu-item">
+                    <!--begin:Menu link-->
                     <a class="menu-link {{ request()->is('backend/news') ? 'active' : '' }}"
                         href="{{ route('backend.news.index') }}">
                         <span class="menu-icon">
@@ -189,31 +213,6 @@
                     <!--end:Menu item-->
                 @endforeach
             @endrole
-            <!--begin:Menu item-->
-            <div class="menu-item pt-5">
-                <!--begin:Menu content-->
-                <div class="menu-content">
-                    <span class="menu-heading fw-bold text-uppercase fs-7">Pages</span>
-                </div>
-                <!--end:Menu content-->
-            </div>
-            <!--end:Menu item-->
-            <!--begin:Menu item-->
-            <div class="menu-item">
-                <!--begin:Menu link-->
-                <a class="menu-link" href="https://preview.keenthemes.com/html/metronic/docs/base/utilities"
-                    target="_blank">
-                    <span class="menu-icon">
-                        <i class="ki-duotone ki-rocket fs-2">
-                            <span class="path1"></span>
-                            <span class="path2"></span>
-                        </i>
-                    </span>
-                    <span class="menu-title">Components</span>
-                </a>
-                <!--end:Menu link-->
-            </div>
-            <!--end:Menu item-->
         </div>
         <!--end::Menu-->
     </div>

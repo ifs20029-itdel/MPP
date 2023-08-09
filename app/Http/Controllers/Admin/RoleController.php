@@ -27,7 +27,7 @@ class RoleController extends Controller
      */
     public function create()
     {
-        return view('pages.admin.roles.create');
+        return view('pages.admin.role.create');
     }
 
     /**
@@ -46,7 +46,7 @@ class RoleController extends Controller
         if ($validator->fails()) {
             return response()->json([
                 'status' => 'error',
-                'errors' => $validator->errors(),
+                'message' => $validator->errors()->first(),
             ]);
         }
 
@@ -58,7 +58,7 @@ class RoleController extends Controller
         return response()->json([
             'status' => 'success',
             'message' => 'Role created successfully',
-            'redirect' => route('admin.role.index')
+            'redirect' => route('backend.role.index')
         ]);
     }
 
@@ -101,7 +101,7 @@ class RoleController extends Controller
         if ($validator->fails()) {
             return response()->json([
                 'status' => 'error',
-                'errors' => $validator->errors(),
+                'message' => $validator->errors()->first(),
             ]);
         }
 
@@ -113,7 +113,7 @@ class RoleController extends Controller
         return response()->json([
             'status' => 'success',
             'message' => 'Role updated successfully',
-            'redirect' => route('admin.role.index')
+            'redirect' => route('backend.role.index')
         ]);
     }
 

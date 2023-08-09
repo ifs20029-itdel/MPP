@@ -39,6 +39,28 @@ class AgencyController extends Controller
     }
 
     /**
+     * Display the specified resource.
+     *
+     * @param  \App\Models\Agency  $agency
+     * @return \Illuminate\Http\Response
+     */
+    public function showService($slug, $service_slug)
+    {
+        $agency = Agency::where('slug', $slug)->first();
+        if (!$agency) {
+            return redirect()->back()->with(['error' => 'Data tidak ditemukan']);
+        }
+        $service = AgencyService::where('slug', $service_slug)->first();
+        if (!$service) {
+            return redirect()->back()->with(['error' => 'Data tidak ditemukan']);
+        }
+        $service->load('agency');
+        // number of bookings today
+        $bookings = $service->bookings()->whereDate('created_at', date('Y-m-d'))->count();
+        return view('pages.web.agency.modal', compact('agency', 'service', 'bookings'));
+    }
+
+    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -69,12 +91,13 @@ class AgencyController extends Controller
         }
         // create queue number based on total bookings today
         $queue_number = $service->bookings()->whereDate('created_at', date('Y-m-d'))->count() + 1;
-        $booking = $service->bookings()->create([
+        $service->bookings()->create([
             'name' => $request->name,
             'whatsapp' => $request->whatsapp,
-            'date' => $request->date,
+            'date' => $request->date ? date('Y-m-d', strtotime($request->date)) : date('Y-m-d'),
             'queue_number' => $queue_number,
         ]);
+
         $date = $request->date ? date('d-m-Y', strtotime($request->date)) : date('d-m-Y');
         // send whatsapp message
         $message = "Halo {$request->name},\n\n";
@@ -94,14 +117,5 @@ class AgencyController extends Controller
             'status' => 'success',
             'message' => 'Data berhasil ditambahkan'
         ]);
-
-        // try {
-
-        // } catch (\Exception $e) {
-        //     return response()->json([
-        //         'status' => 'error',
-        //         'message' => 'Data berhasil ditambahkan, namun terjadi kesalahan saat mengirim pesan whatsapp'
-        //     ]);
-        // }
     }
 }
