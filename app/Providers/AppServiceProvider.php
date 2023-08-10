@@ -26,8 +26,13 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         View::composer('*', function ($view) {
-            $agencyServices = AgencyService::all();
-            $view->with('agencyServices', $agencyServices);
+            if (auth()->check()) {
+                // get agency services where role user is agency slug
+                $agencyServices = AgencyService::whereHas('agency', function ($query) {
+                    $query->where('slug', auth()->user()->getRoleNames()[0]);
+                })->get();
+                $view->with('agencyServices', $agencyServices);
+            }
         });
     }
 }
