@@ -18,9 +18,8 @@ class AgencyServiceController extends Controller
      */
     public function index()
     {
-        return view('pages.admin.agency-service.index', [
-            'agencyServices' => AgencyService::all(),
-        ]);
+        $data = AgencyService::all();
+        return view('pages.admin.agency-service.index', compact('data'));
     }
 
     /**
@@ -92,8 +91,10 @@ class AgencyServiceController extends Controller
      */
     public function edit(AgencyService $agencyService)
     {
+        $agencies = Agency::all();
         return view('pages.admin.agency-service.edit', [
             'agencyService' => $agencyService,
+            'agencies' => $agencies,
         ]);
     }
 

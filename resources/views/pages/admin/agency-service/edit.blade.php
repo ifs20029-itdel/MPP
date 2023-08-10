@@ -109,7 +109,8 @@
                                         <option></option>
                                         @foreach ($agencies as $agency)
                                             <option value="{{ $agency->id }}"
-                                                @if ($agency->id == $agencyService->agency_id) selected @endif>{{ $agency->name }}
+                                                @if ($agency->id == $agencyService->agency_id) selected @endif>
+                                                {{ $agencyService->name }}
                                             </option>
                                         @endforeach
                                     </select>

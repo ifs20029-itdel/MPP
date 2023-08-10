@@ -13,6 +13,8 @@ class AgencyService extends Model
         'agency_id',
         'name',
         'slug',
+        'description',
+        'status',
     ];
 
     public function agency()

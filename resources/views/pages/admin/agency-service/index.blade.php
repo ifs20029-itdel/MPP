@@ -130,7 +130,7 @@
                                 </tr>
                             </thead>
                             <tbody class="fw-semibold text-gray-600">
-                                @foreach ($agencyServices as $item)
+                                @foreach ($data as $item)
                                     <tr>
                                         <!--begin::Checkbox-->
                                         <td>
@@ -143,7 +143,6 @@
                                         <td>
                                             {{ $loop->iteration }}
                                         </td>
-
                                         <td>
                                             <div class="d-flex">
                                                 <div class="ms-5">
