@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Models\Agency;
 use Illuminate\Http\Request;
 use Spatie\Permission\Models\Role;
 use App\Http\Controllers\Controller;
@@ -27,7 +28,8 @@ class RoleController extends Controller
      */
     public function create()
     {
-        return view('pages.admin.role.create');
+        $agencies = Agency::all();
+        return view('pages.admin.role.create', compact('agencies'));
     }
 
     /**
