@@ -104,8 +104,13 @@
                                     <label class="required form-label">Nama Role</label>
                                     <!--end::Label-->
                                     <!--begin::Input-->
-                                    <input type="text" name="name" class="form-control mb-2"
-                                        placeholder="Nama Layanan Instansi" value="{{ $role->name }}" />
+                                    <select name="name" class="form-select form-select-solid mb-2">
+                                        @foreach ($agencies as $agency)
+                                            <option value="{{ $agency->slug }}"
+                                                @if ($role->name == $agency->slug) selected @endif>{{ $agency->name }}
+                                            </option>
+                                        @endforeach
+                                    </select>
                                     <!--end::Input-->
                                     <!--begin::Description-->
                                     <div class="text-muted fs-7">

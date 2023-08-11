@@ -83,7 +83,8 @@ class RoleController extends Controller
      */
     public function edit(Role $role)
     {
-        return view('pages.admin.role.edit', compact('role'));
+        $agencies = Agency::all();
+        return view('pages.admin.role.edit', compact('role', 'agencies'));
     }
 
     /**
