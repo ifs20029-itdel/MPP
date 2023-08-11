@@ -17,7 +17,9 @@ class RoleController extends Controller
      */
     public function index()
     {
-        $roles = Role::all();
+        $roles = Role::where(function ($query) {
+            $query->where('name', '!=', 'super-admin');
+        })->get();
         return view('pages.admin.role.index', compact('roles'));
     }
 
