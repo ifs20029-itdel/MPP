@@ -57,7 +57,9 @@ class AgencyController extends Controller
         $service->load('agency');
         // number of bookings today
         $bookings = $service->bookings()->whereDate('created_at', date('Y-m-d'))->count();
-        return view('pages.web.agency.modal', compact('agency', 'service', 'bookings'));
+        // number of bookings that have been confirmed
+        $confirmed = $service->bookings()->whereDate('created_at', date('Y-m-d'))->where('status', 'confirmed')->count();
+        return view('pages.web.agency.modal', compact('agency', 'service', 'bookings', 'confirmed'));
     }
 
     /**
@@ -91,6 +93,13 @@ class AgencyController extends Controller
         }
         // create queue number based on total bookings today
         $queue_number = $service->bookings()->whereDate('created_at', date('Y-m-d'))->count() + 1;
+        // if queue number > 21 then return error
+        if ($queue_number > 21) {
+            return response()->json([
+                'status' => 'error',
+                'message' => 'Antrian sudah penuh, maksimal 20 orang per hari',
+            ]);
+        }
         $service->bookings()->create([
             'name' => $request->name,
             'whatsapp' => $request->whatsapp,
