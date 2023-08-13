@@ -58,7 +58,7 @@ class AgencyController extends Controller
         // number of bookings today
         $bookings = $service->bookings()->whereDate('created_at', date('Y-m-d'))->count();
         // number of bookings that have been confirmed
-        $confirmed = $service->bookings()->whereDate('created_at', date('Y-m-d'))->where('status', 'confirmed')->count();
+        $confirmed = $service->bookings()->whereDate('created_at', date('Y-m-d'))->where('status', '2')->count();
         return view('pages.web.agency.modal', compact('agency', 'service', 'bookings', 'confirmed'));
     }
 
