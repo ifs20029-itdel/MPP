@@ -56,9 +56,9 @@ class AgencyController extends Controller
         }
         $service->load('agency');
         // number of bookings today
-        $bookings = $service->bookings()->whereDate('created_at', date('Y-m-d'))->count();
+        $bookings = $service->bookings()->whereDate('date', date('Y-m-d'))->count();
         // number of bookings that have been confirmed
-        $confirmed = $service->bookings()->whereDate('created_at', date('Y-m-d'))->where('status', '2')->count();
+        $confirmed = $service->bookings()->whereDate('date', date('Y-m-d'))->where('status', '2')->count();
         return view('pages.web.agency.modal', compact('agency', 'service', 'bookings', 'confirmed'));
     }
 
@@ -91,6 +91,7 @@ class AgencyController extends Controller
                 'message' => 'Data tidak ditemukan',
             ]);
         }
+
         $date = $request->date ? date('Y-m-d', strtotime($request->date)) : date('Y-m-d');
 
         // create queue number based on total bookings today
