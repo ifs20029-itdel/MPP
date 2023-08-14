@@ -123,7 +123,7 @@
                                 </thead>
                                 <tbody class="fw-semibold text-gray-600">
                                     @foreach ($bookings as $item)
-                                        <tr> 
+                                        <tr>
                                             <!--end::Checkbox-->
                                             <td>
                                                 {{ $loop->iteration }}
