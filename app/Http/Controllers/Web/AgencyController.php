@@ -91,19 +91,22 @@ class AgencyController extends Controller
                 'message' => 'Data tidak ditemukan',
             ]);
         }
+        $date = $request->date ? date('Y-m-d', strtotime($request->date)) : date('Y-m-d');
+
         // create queue number based on total bookings today
-        $queue_number = $service->bookings()->whereDate('created_at', date('Y-m-d'))->count() + 1;
+        $queue_number = $service->bookings()->whereDate('date', $date)->count() + 1;
         // if queue number > 21 then return error
-        if ($queue_number > 20) {
+        if (($queue_number > 20)) {
             return response()->json([
                 'status' => 'error',
                 'message' => 'Antrian sudah penuh, maksimal 20 orang per hari',
             ]);
         }
+
         $service->bookings()->create([
             'name' => $request->name,
             'whatsapp' => $request->whatsapp,
-            'date' => $request->date ? date('Y-m-d', strtotime($request->date)) : date('Y-m-d'),
+            'date' => $date,
             'queue_number' => $queue_number,
         ]);
 

@@ -20,7 +20,7 @@ class BookingController extends Controller
             ->whereDate('date', date('Y-m-d'))
             ->get();
         $agencyServiceName = $bookings->isEmpty() ? null : $bookings[0]->agencyService->name;
-        
+
         return view('pages.admin.booking.index', compact('bookings', 'slug', 'agencyServiceName'));
     }
 
