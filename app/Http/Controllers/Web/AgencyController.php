@@ -94,7 +94,7 @@ class AgencyController extends Controller
         // create queue number based on total bookings today
         $queue_number = $service->bookings()->whereDate('created_at', date('Y-m-d'))->count() + 1;
         // if queue number > 21 then return error
-        if ($queue_number > 21) {
+        if ($queue_number > 20) {
             return response()->json([
                 'status' => 'error',
                 'message' => 'Antrian sudah penuh, maksimal 20 orang per hari',
