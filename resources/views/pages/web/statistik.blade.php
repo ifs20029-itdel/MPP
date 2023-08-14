@@ -44,7 +44,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row pb-100">
+            <div class="row pb-100 pt-100">
                 <ul class="options">
                     <li class="option" onclick="changeData('today')">Kunjungan Harian</li>
                     <li class="option" onclick="changeData('kemarin')">Kunjungan Bulanan</li>
@@ -62,64 +62,67 @@
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <script>
             // Data untuk grafik
-            const dataSets = {
-                today: [10, 15, 20, 25, 30, 35],
-                kemarin: [5, 10, 15, 20, 25, 30],
-                instansi: [20, 25, 30, 35, 40, 45],
-                instansi2: [10, 25, 31, 35, 1, 45], //data berbeda berdasarkan pilihan
-                // Kunjungan harian datanya adalah total kunjungan per hari
-                //Kunjungan bulanan datanya adalah total kunjungan perbulan
-                //kunjungan harian per instansi datanya adalah instansi per hari ini
-                //kunjugan bulanan per instansi datanya adalah instansi dalam bulan ini
-            };
+        const dataSets = {
+            today: {!! json_encode($countsByDate) !!},
+            kemarin: [5, 10, 15, 20, 25, 30],
+            instansi: [20, 25, 30, 35, 40, 45],
+            instansi2: [10, 25, 31, 35, 1, 45],
+            // Data lainnya...
+        };
 
-            // Membuat grafik
-            function createChart(data) {
-                const ctx = document.getElementById('line-chart').getContext('2d');
-                const chart = new Chart(ctx, {
-                    type: 'line',
-                    data: {
-                        labels: ['Data 1', 'Data 2', 'Data 3', 'Data 4', 'Data 5',
-                            'Data 6'
-                        ], //label berbeda berdasarkan pilihan
-                        // Kunjungan harian labelnya adalah tanggal dalam 1 minggu
-                        //Kunjungan bulanan labelnya adalah bulan dalam 2-3 bulan
-                        //kunjungan harian per instansi labelnya adalah instansi
-                        //kunjugan bulanan per instansi labelnya adalah instansi
-                        datasets: [{
-                            label: 'Data Grafik',
-                            data: data,
-                            borderColor: 'rgb(75, 192, 192)',
-                            backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                            borderWidth: 2
-                        }]
-                    },
-                    options: {
-                        responsive: true,
-                        maintainAspectRatio: false,
-                        scales: {
-                            y: {
-                                beginAtZero: true
-                            }
+        // Nama label untuk setiap dataset
+        const labelSets = {
+            today: {!! json_encode($lastWeekLabels) !!},
+            kemarin: [10, 15, 20, 5, 30, 35],
+            instansi: JSON.parse('{!! json_encode($agencyNames) !!}'),
+            instansi2: JSON.parse('{!! json_encode($agencyNames) !!}'),
+            // Label lainnya...
+        };
+
+        // Membuat grafik
+        function createChart(data, labels) {
+            const ctx = document.getElementById('line-chart').getContext('2d');
+            const chart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Data Kunjungan',
+                        data: data,
+                        borderColor: 'rgb(75, 192, 192)',
+                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true
                         }
                     }
-                });
-            }
-
-            // Fungsi untuk mengganti data grafik berdasarkan pilihan
-            function changeData(option) {
-                const data = dataSets[option];
-                if (data) {
-                    const chart = Chart.instances[0];
-                    chart.data.datasets[0].data = data;
-                    chart.update();
                 }
-            }
-
-            // Memulai dengan data hari ini
-            document.addEventListener('DOMContentLoaded', () => {
-                createChart(dataSets.today);
             });
+        }
+
+        // Fungsi untuk mengganti data grafik berdasarkan pilihan
+        function changeData(option) {
+            const data = dataSets[option];
+            const labels = labelSets[option];
+            if (data && labels) {
+                const chart = Chart.instances[0];
+                chart.data.datasets[0].data = data;
+                chart.data.labels = labels; // Mengganti label
+                chart.update();
+            }
+        }
+
+        // Memulai dengan data hari ini
+        document.addEventListener('DOMContentLoaded', () => {
+            createChart(dataSets.today, {!! json_encode($lastWeekLabels) !!});
+        });
+
         </script>
     @endsection
 
