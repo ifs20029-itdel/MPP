@@ -56,7 +56,7 @@
                         </li>
                         <!--end::Item-->
                         <!--begin::Item-->
-                        <li class="breadcrumb-item text-muted">{{ $agencyServiceName }}</li>
+                        <li class="breadcrumb-item text-muted">Layanan {{ $agencyServiceName }}</li>
                         <!--end::Item-->
                         <!--begin::Item-->
                         <li class="breadcrumb-item">
@@ -64,7 +64,7 @@
                         </li>
                         <!--end::Item-->
                         <!--begin::Item-->
-                        <li class="breadcrumb-item text-dark">List {{ $agencyServiceName }}</li>
+                        <li class="breadcrumb-item text-dark">List Layanan {{ $agencyServiceName }}</li>
                         <!--end::Item-->
                     </ul>
                     <!--end::Breadcrumb-->
