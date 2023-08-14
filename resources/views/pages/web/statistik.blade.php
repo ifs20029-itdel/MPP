@@ -64,18 +64,18 @@
             // Data untuk grafik
         const dataSets = {
             today: {!! json_encode($countsByDate) !!},
-            kemarin: [5, 10, 15, 20, 25, 30],
-            instansi: [20, 25, 30, 35, 40, 45],
-            instansi2: [10, 25, 31, 35, 1, 45],
+            kemarin: {!! json_encode($countsByMonth) !!},
+            instansi: {!! json_encode($agencyVisitors->pluck('total_visitors')) !!},
+            instansi2: {!! json_encode($agencyVisitorsThisMonth->pluck('total_visitors')) !!},
             // Data lainnya...
         };
 
         // Nama label untuk setiap dataset
         const labelSets = {
             today: {!! json_encode($lastWeekLabels) !!},
-            kemarin: [10, 15, 20, 5, 30, 35],
-            instansi: JSON.parse('{!! json_encode($agencyNames) !!}'),
-            instansi2: JSON.parse('{!! json_encode($agencyNames) !!}'),
+            kemarin: {!! json_encode($lastMonthLabels) !!},
+            instansi: {!! json_encode($agencyVisitors->pluck('agency_name')) !!},
+            instansi2: {!! json_encode($agencyVisitorsThisMonth->pluck('agency_name')) !!},
             // Label lainnya...
         };
 
