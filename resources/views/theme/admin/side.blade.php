@@ -5,7 +5,7 @@
     <div class="aside-user d-flex align-items-sm-center justify-content-center py-5">
         <!--begin::Symbol-->
         <div class="symbol symbol-50px">
-            <img src="{{ asset('metro/media/avatars/300-1.jpg') }}" alt="" />
+            <img src="{{ asset('images/blank.png') }}" alt="" />
         </div>
         <!--end::Symbol-->
         <!--begin::Wrapper-->
@@ -15,10 +15,10 @@
                 <!--begin::Info-->
                 <div class="flex-grow-1 me-2">
                     <!--begin::Username-->
-                    <a href="#" class="text-white text-hover-primary fs-6 fw-bold">Paul Melone</a>
+                    <a href="#" class="text-white text-hover-primary fs-6 fw-bold">{{ Auth::user()->name }}</a>
                     <!--end::Username-->
                     <!--begin::Description-->
-                    <span class="text-gray-600 fw-semibold d-block fs-8 mb-1">Python Dev</span>
+                    <span class="text-gray-600 fw-semibold d-block fs-8 mb-1">{{ $role = auth()->user()->getRoleNames()[0]; }}</span>
                     <!--end::Description-->
                     <!--begin::Label-->
                     <div class="d-flex align-items-center text-success fs-9">
@@ -45,16 +45,16 @@
                             <div class="menu-content d-flex align-items-center px-3">
                                 <!--begin::Avatar-->
                                 <div class="symbol symbol-50px me-5">
-                                    <img alt="Logo" src="{{ asset('metro/media/avatars/300-1.jpg') }}" />
+                                    <img alt="Logo" src="{{ asset('images/blank.png') }}" />
                                 </div>
                                 <!--end::Avatar-->
                                 <!--begin::Username-->
                                 <div class="d-flex flex-column">
-                                    <div class="fw-bold d-flex align-items-center fs-5">Max Smith
-                                        <span class="badge badge-light-success fw-bold fs-8 px-2 py-1 ms-2">Pro</span>
+                                    <div class="fw-bold d-flex align-items-center fs-5">{{ Auth::user()->name }}
+                                        <span class="badge badge-light-success fw-bold fs-8 px-2 py-1 ms-2">{{ $role = auth()->user()->getRoleNames()[0]; }}</span>
                                     </div>
                                     <a href="#"
-                                        class="fw-semibold text-muted text-hover-primary fs-7">max@kt.com</a>
+                                        class="fw-semibold text-muted text-hover-primary fs-7">{{ Auth::user()->email }}</a>
                                 </div>
                                 <!--end::Username-->
                             </div>
@@ -62,13 +62,7 @@
                         <!--end::Menu item-->
                         <!--begin::Menu separator-->
                         <div class="separator my-2"></div>
-                        <!--end::Menu separator-->
-                        <!--begin::Menu item-->
-                        <div class="menu-item px-5 my-1">
-                            <a href="" class="menu-link px-5">Account
-                                Settings</a>
-                        </div>
-                        <!--end::Menu item-->
+                        <!--end::Menu separator--> 
                         <!--begin::Menu item-->
                         <div class="menu-item px-5">
                             <a href="{{ route('backend.logout') }}" class="menu-link px-5">Sign Out</a>

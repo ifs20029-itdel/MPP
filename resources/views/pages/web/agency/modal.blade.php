@@ -131,6 +131,7 @@
                                 $('#booking-form-collapseOne-' + id)[0].reset();
                                 // close modal
                                 $('#' + id).modal('hide');
+                                window.location.reload();
                             });
                         } else {
                             Swal.fire({
@@ -183,6 +184,7 @@
                                     form[0].reset();
                                     // close modal
                                     $('#' + id).modal('hide');
+                                    window.location.reload();
                                 });
                             } else {
                                 Swal.fire({

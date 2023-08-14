@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Models\Booking;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\AgencyService;
 use App\Services\Whatsapp\WhatsappService;
 
 class BookingController extends Controller
@@ -18,8 +19,9 @@ class BookingController extends Controller
         })
             ->whereDate('date', date('Y-m-d'))
             ->get();
-
-        return view('pages.admin.booking.index', compact('bookings'));
+        $agencyServiceName = $bookings->isEmpty() ? null : $bookings[0]->agencyService->name;
+        
+        return view('pages.admin.booking.index', compact('bookings', 'slug', 'agencyServiceName'));
     }
 
     public function detail($id)

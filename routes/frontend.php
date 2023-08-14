@@ -33,7 +33,6 @@ Route::post('login', [AuthController::class, 'login'])->name('login');
 
 
 Route::get('profil', [ProfileController::class, 'index'])->name('profil');
-Route::get('berita', [BeritaController::class, 'index'])->name('berita');
 Route::get('statistik', [StatistikController::class, 'index'])->name('statistik');
 
 Route::get('agency', [AgencyController::class, 'index'])->name('agency');

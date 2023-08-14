@@ -41,13 +41,13 @@
                 <!--begin::Page title-->
                 <div class="page-title d-flex justify-content-center flex-column me-5">
                     <!--begin::Title-->
-                    <h1 class="d-flex flex-column text-dark fw-bold fs-3 mb-0">User</h1>
+                    <h1 class="d-flex flex-column text-dark fw-bold fs-3 mb-0">{{ $agencyServiceName }}</h1>
                     <!--end::Title-->
                     <!--begin::Breadcrumb-->
                     <ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 pt-1">
                         <!--begin::Item-->
                         <li class="breadcrumb-item text-muted">
-                            <a href="#" class="text-muted text-hover-primary">Beranda</a>
+                            <a href="{{ route('backend.dashboard') }}" class="text-muted text-hover-primary">Beranda</a>
                         </li>
                         <!--end::Item-->
                         <!--begin::Item-->
@@ -56,7 +56,7 @@
                         </li>
                         <!--end::Item-->
                         <!--begin::Item-->
-                        <li class="breadcrumb-item text-muted">User</li>
+                        <li class="breadcrumb-item text-muted">{{ $agencyServiceName }}</li>
                         <!--end::Item-->
                         <!--begin::Item-->
                         <li class="breadcrumb-item">
@@ -64,7 +64,7 @@
                         </li>
                         <!--end::Item-->
                         <!--begin::Item-->
-                        <li class="breadcrumb-item text-dark">List User</li>
+                        <li class="breadcrumb-item text-dark">List {{ $agencyServiceName }}</li>
                         <!--end::Item-->
                     </ul>
                     <!--end::Breadcrumb-->
@@ -114,14 +114,6 @@
                             <table class="table align-middle table-row-dashed fs-6 gy-5" id="booking_table">
                                 <thead>
                                     <tr class="text-start text-gray-400 fw-bold fs-7 text-uppercase gs-0">
-                                        <th class="w-10px pe-2">
-                                            <div
-                                                class="form-check form-check-sm form-check-custom form-check-solid me-3">
-                                                <input class="form-check-input" type="checkbox" data-kt-check="true"
-                                                    data-kt-check-target="#role_table .form-check-input"
-                                                    value="1" />
-                                            </div>
-                                        </th>
                                         <th class="w-10px pe-2">No</th>
                                         <th class="min-w-250px">Nama</th>
                                         <th class="min-w-250px">Whatsapp</th>
@@ -131,15 +123,7 @@
                                 </thead>
                                 <tbody class="fw-semibold text-gray-600">
                                     @foreach ($bookings as $item)
-                                        <tr>
-                                            <!--begin::Checkbox-->
-                                            <td>
-                                                <div
-                                                    class="form-check form-check-sm form-check-custom form-check-solid">
-                                                    <input class="form-check-input" type="checkbox"
-                                                        value={{ $item->id }} data-filter="booking_id" />
-                                                </div>
-                                            </td>
+                                        <tr> 
                                             <!--end::Checkbox-->
                                             <td>
                                                 {{ $loop->iteration }}
@@ -269,6 +253,7 @@
                         t.preventDefault();
                         const n = $(this).closest("tr").find('[data-filter="booking_id"]').val();
                         const id = $(this).data('id');
+                        // const slug = $(this).data('slug');
                         Swal.fire({
                             text: "Are you sure you want to process this booking?",
                             icon: "warning",
@@ -286,7 +271,8 @@
                                 type: "PUT",
                                 data: {
                                     _token: "{{ csrf_token() }}",
-                                    id: n
+                                    id: n,
+                                    // slug: slug
                                 },
                                 success: function(t) {
                                     Swal.fire({
@@ -298,7 +284,7 @@
                                             confirmButton: "btn fw-bold btn-primary"
                                         }
                                     }).then((function() {
-                                        e.ajax.reload()
+                                        window.location.reload();
                                     }))
                                 }
                             }) : "cancel" === t.dismiss && Swal.fire({
@@ -348,7 +334,7 @@
                                             confirmButton: "btn fw-bold btn-primary"
                                         }
                                     }).then((function() {
-                                        e.ajax.reload()
+                                        window.location.reload();
                                     }))
                                 }
                             }) : "cancel" === t.dismiss && Swal.fire({
@@ -398,7 +384,7 @@
                                             confirmButton: "btn fw-bold btn-primary"
                                         }
                                     }).then((function() {
-                                        e.ajax.reload()
+                                        window.location.reload();
                                     }))
                                 }
                             }) : "cancel" === t.dismiss && Swal.fire({
