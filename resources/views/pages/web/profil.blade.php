@@ -4,7 +4,7 @@
     <li></li>
     <!--====== PRODUCTS PART START ======-->
     
-    <section id="products-part" class="pt-65">
+    <section id="products-part" class="pt-65 mb-5 mt-5">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8">
