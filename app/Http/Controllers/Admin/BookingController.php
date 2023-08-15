@@ -75,4 +75,10 @@ class BookingController extends Controller
             'message' => 'Booking berhasil dihapus',
         ]);
     }
+
+
+    public function view ()
+    {
+        return view('pages.admin.booking.detail-booking');
+    }
 }

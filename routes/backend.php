@@ -32,6 +32,9 @@ Route::name('backend.')->middleware(['auth'])->group(function () {
         Route::put('finish/{id}', [BookingController::class, 'finish'])->name('finish');
         Route::delete('delete/{id}', [BookingController::class, 'destroy'])->name('destroy');
     });
+    
+    // Detail View
+    Route::get('view', [BookingController::class, 'view'])->name('view');
 
     // Critic Suggestion
     Route::get('critic-suggestion', [CriticSuggestionController::class, 'index'])->name('critic-suggestion.index');
@@ -44,4 +47,5 @@ Route::name('backend.')->middleware(['auth'])->group(function () {
 
     // Logout
     Route::get('logout', [AuthController::class, 'logout'])->name('logout');
+
 });
