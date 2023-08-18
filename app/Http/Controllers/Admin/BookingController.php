@@ -35,6 +35,7 @@ class BookingController extends Controller
         $booking = Booking::findOrFail($id);
         $booking->update([
             'status' => '1',
+            'start_time' => date('H:i:s'),
         ]);
         return response()->json([
             'status' => 'success',
@@ -47,6 +48,7 @@ class BookingController extends Controller
         $booking = Booking::findOrFail($id);
         $booking->update([
             'status' => '2',
+            'end_time' => date('H:i:s'),
         ]);
 
         // send whatsapp message to next queue
@@ -77,8 +79,9 @@ class BookingController extends Controller
     }
 
 
-    public function view ()
+    public function show($id)
     {
-        return view('pages.admin.booking.detail-booking');
+        $booking = Booking::findOrFail($id);
+        return view('pages.admin.booking.detail-booking', compact('booking'));
     }
 }

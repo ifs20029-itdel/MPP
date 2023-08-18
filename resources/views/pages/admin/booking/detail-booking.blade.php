@@ -66,32 +66,32 @@
     <!--====== HEADER PART START ======-->
 
     <header id="header-part">
-        
+
 
         <!--===== NAVBAR START =====-->
         <div class="navigation">
             {{-- <div class="container"> --}}
-                <div class="row no-gutters m-1">
-                    <div class="col-lg-12">
-                        <nav class="navbar navbar-expand-lg">
+            <div class="row no-gutters m-1">
+                <div class="col-lg-12">
+                    <nav class="navbar navbar-expand-lg">
 
-                            <a class="navbar-brand" href="index.html">
-                                <img src="{{ asset('images/Logo_Mpp.png') }}" height="150px" alt="Logo">
-                            </a> <!-- Logo -->
+                        <a class="navbar-brand" href="index.html">
+                            <img src="{{ asset('images/Logo_Mpp.png') }}" height="150px" alt="Logo">
+                        </a> <!-- Logo -->
 
-                            <button class="navbar-toggler" type="button" data-toggle="collapse"
-                                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                                aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button> <!-- toggle Button -->
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button> <!-- toggle Button -->
 
-                            
-                        </nav> <!-- nav -->
 
-                    </div>
-                </div> <!-- row -->
+                    </nav> <!-- nav -->
+
+                </div>
+            </div> <!-- row -->
             {{-- </div> <!-- container --> --}}
         </div>
         <!--===== NAVBAR ENDS =====-->
@@ -152,34 +152,34 @@
 
     <section id="client-part" class="pt-40">
         {{-- <div class="container"> --}}
-            <div class="row">
-                <div class="client-slied owl-carousel">
-                    <div class="col-lg-12 col-md-12">
-                        <div class="singel-pricing gray-bg text-center mt-30">
-                            <h4>Layanan Instansi</h4>
-                            <h1>50</h1>
-                        </div>
-                    </div> 
-                    <div class="col-lg-12 col-md-12">
-                        <div class="singel-pricing gray-bg text-center mt-30">
-                            <h4>Layanan Instansi</h4>
-                            <h1>20</h1>
-                        </div>
-                    </div> 
-                    <div class="col-lg-12 col-md-12">
-                        <div class="singel-pricing gray-bg text-center mt-30">
-                            <h4>Layanan Instansi</h4>
-                            <h1>10</h1>
-                        </div>
-                    </div> 
+        <div class="row">
+            <div class="client-slied owl-carousel">
+                <div class="col-lg-12 col-md-12">
+                    <div class="singel-pricing gray-bg text-center mt-30">
+                        <h4>Layanan Instansi</h4>
+                        <h1>50</h1>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12">
+                    <div class="singel-pricing gray-bg text-center mt-30">
+                        <h4>Layanan Instansi</h4>
+                        <h1>20</h1>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12">
+                    <div class="singel-pricing gray-bg text-center mt-30">
+                        <h4>Layanan Instansi</h4>
+                        <h1>10</h1>
+                    </div>
                 </div>
             </div>
+        </div>
         {{-- </div> --}}
     </section>
 
     <!--====== CLIENT PART ENDS ======-->
 
-    
+
 
     <!--====== FOOTER PART ENDS ======-->
 

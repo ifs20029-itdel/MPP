@@ -16,6 +16,8 @@ class Booking extends Model
         'date',
         'queue_number',
         'status',
+        'start_time',
+        'end_time',
     ];
 
     public function agencyService()
@@ -41,5 +43,16 @@ class Booking extends Model
     public function scopeRejected($query)
     {
         return $query->where('status', 'rejected');
+    }
+
+    public function getDurationAttribute()
+    {
+        $start = strtotime($this->start_time);
+        $end = strtotime($this->end_time);
+        $total = $end - $start;
+        $hours = floor($total / 3600);
+        $minutes = floor(($total / 60) % 60);
+        $seconds = $total % 60;
+        return $hours . ' jam ' . $minutes . ' menit ' . $seconds . ' detik';
     }
 }

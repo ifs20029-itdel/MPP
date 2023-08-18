@@ -118,6 +118,7 @@
                                         <th class="min-w-250px">Nama</th>
                                         <th class="min-w-250px">Whatsapp</th>
                                         <th class="min-w-250px">Status</th>
+                                        <th class="text-end min-w-70px">Total Waktu</th>
                                         <th class="text-end min-w-70px">Aksi</th>
                                     </tr>
                                 </thead>
@@ -165,6 +166,16 @@
                                                             <span
                                                                 class="text-gray-800 text-hover-primary fs-5 fw-bold mb-1">Selesai</span>
                                                         @endif
+                                                        <!--end::Title-->
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="text-end">
+                                                <div class="d-flex">
+                                                    <div class="ms-5">
+                                                        <!--begin::Title-->
+                                                        <span
+                                                            class="text-gray-800 text-hover-primary fs-5 fw-bold mb-1">{{ $item->duration }}</span>
                                                         <!--end::Title-->
                                                     </div>
                                                 </div>

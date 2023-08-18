@@ -21,6 +21,8 @@ class CreateBookingsTable extends Migration
             $table->date('date')->nullable();
             $table->string('queue_number', 100)->nullable();
             $table->enum('status', ['0', '1', '2'])->default('0')->comment('0: pending, 1: process, 2: done');
+            $table->time('start_time')->nullable();
+            $table->time('end_time')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
