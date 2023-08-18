@@ -10,7 +10,7 @@
         <div class="modal-body">
             <span>Silahkan Mendaftar nomor antrian anda</span>
             <span>Nomor Antrian Sekarang : {{ $bookings }}</span>
-            <span>Nomor Antrian Sedang Dilayani : {{ $confirmed }}</span>
+            <span>Nomor Antrian Yang Sudah Dilayani : {{ $confirmed }}</span>
             <div class="accordion mt-2" id="accordionExample">
                 <div class="card">
                     <div class="card-header" id="headingTwo">
