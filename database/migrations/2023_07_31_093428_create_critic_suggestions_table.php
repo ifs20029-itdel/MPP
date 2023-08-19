@@ -16,7 +16,7 @@ class CreateCriticSuggestionsTable extends Migration
         Schema::create('critic_suggestions', function (Blueprint $table) {
             $table->id();
             $table->string('name', 100);
-            $table->foreignId('agency_id')->constrained('agencies')->onDelete('cascade');
+            $table->foreignId('booking_id')->constrained('bookings');
             $table->longText('message');
             $table->timestamps();
         });

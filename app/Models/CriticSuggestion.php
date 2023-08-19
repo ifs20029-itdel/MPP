@@ -11,13 +11,13 @@ class CriticSuggestion extends Model
 
     protected $fillable = [
         'name',
-        'agency_id',
+        'booking_id',
         'message',
     ];
 
-    public function agency()
+    public function booking()
     {
-        return $this->belongsTo(Agency::class);
+        return $this->belongsTo(Booking::class);
     }
 
     public function scopeLatestFirst($query)

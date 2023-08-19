@@ -33,13 +33,6 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="singel-form form-group">
-                                        <label>Nama :</label>
-                                        <input name="name" type="text" data-error="Nama wajib diisi."
-                                            placeholder="Nama" />
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="singel-form form-group">
                                         <label>Instansi :</label>
                                         <div class="produtct">
                                             <select name="agency_id" class="form-control">
@@ -47,6 +40,24 @@
                                                 @foreach ($agencies as $agency)
                                                     <option value="{{ $agency->id }}">{{ $agency->name }}</option>
                                                 @endforeach
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="singel-form form-group">
+                                        <label>Layanan Instansi :</label>
+                                        <div class="produtct">
+                                            <select name="agency_id" class="form-control">
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="singel-form form-group">
+                                        <label>Nomor Booking :</label>
+                                        <div class="produtct">
+                                            <select name="booking_id" class="form-control">
                                             </select>
                                         </div>
                                     </div>
@@ -82,6 +93,58 @@
         <script src="{{ asset('js/FormControls.js') }}"></script>
         <script>
             $(document).ready(function() {
+                // on change agency
+                $('select[name="agency_id"]').on('change', function() {
+                    var agency_id = $(this).val();
+                    if (agency_id) {
+                        $.ajax({
+                            url: '/get-agency-services/' + agency_id,
+                            type: 'GET',
+                            dataType: 'json',
+                            success: function(data) {
+                                $('select[name="service_id"]').empty();
+                                $('select[name="service_id"]').append(
+                                    '<option value="">Pilih Layanan</option>'
+                                );
+                                $.each(data, function(key, value) {
+                                    $('select[name="service_id"]').append(
+                                        '<option value="' + key + '">' + value +
+                                        '</option>'
+                                    );
+                                });
+                            }
+                        });
+                    } else {
+                        $('select[name="service_id"]').empty();
+                    }
+                });
+
+                // on change service
+                $('select[name="service_id"]').on('change', function() {
+                    var service_id = $(this).val();
+                    if (service_id) {
+                        $.ajax({
+                            url: '/get-bookings/' + service_id,
+                            type: 'GET',
+                            dataType: 'json',
+                            success: function(data) {
+                                $('select[name="booking_id"]').empty();
+                                $('select[name="booking_id"]').append(
+                                    '<option value="">Pilih Nomor Booking</option>'
+                                );
+                                $.each(data, function(key, value) {
+                                    $('select[name="booking_id"]').append(
+                                        '<option value="' + key + '">' + value +
+                                        '</option>'
+                                    );
+                                });
+                            }
+                        });
+                    } else {
+                        $('select[name="booking_id"]').empty();
+                    }
+                });
+
                 // on submit
                 $('#form_input').on('submit', function(e) {
                     e.preventDefault();

@@ -121,7 +121,7 @@
                                         </div>
                                     </th>
                                     <th class="w-10px pe-2">No</th>
-                                    <th class="min-w-250px">Nama</th>
+                                    <th class="min-w-250px">Booking</th>
                                     <th class="min-w-250px">Instansi</th>
                                     <th class="min-w-250px">Pesan</th>
                                     <th class="min-w-100px">Dibuat Pada</th>
@@ -146,7 +146,7 @@
                                             <div class="d-flex">
                                                 <!--begin::Title-->
                                                 <span class="text-gray-800 text-hover-primary fs-5 fw-bold mb-1"
-                                                    data-filter="critic_name">{{ $item->name }}</span>
+                                                    data-filter="critic_name">{{ $item->booking->queue_number . ' - ' . $item->booking->name }}</span>
                                                 <!--end::Title-->
                                             </div>
                                         </td>
@@ -154,7 +154,7 @@
                                             <div class="d-flex">
                                                 <!--begin::Title-->
                                                 <span class="text-gray-800 text-hover-primary fs-5 fw-bold mb-1"
-                                                    data-filter="critic_name">{{ $item->agency->name }}</span>
+                                                    data-filter="critic_name">{{ $item->booking->agencyService->name . ' - ' . $item->booking->agencyService->agency->name }}</span>
                                                 <!--end::Title-->
                                             </div>
                                         </td>

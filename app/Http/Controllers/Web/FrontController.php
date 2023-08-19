@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Web;
 
 use App\Models\News;
 use App\Models\Agency;
+use App\Models\Booking;
 use Illuminate\Http\Request;
 use App\Models\CriticSuggestion;
 use App\Http\Controllers\Controller;
@@ -13,7 +14,7 @@ class FrontController extends Controller
 {
     public function home()
     {
-        return view('pages.web.home.index', ['agencies' => Agency::all(), 'news'=> News::all()]);
+        return view('pages.web.home.index', ['agencies' => Agency::all(), 'news' => News::all()]);
     }
 
     public function news()
@@ -29,7 +30,25 @@ class FrontController extends Controller
 
     public function criticSuggestion()
     {
+
         return view('pages.web.critic-suggestion.index', ['agencies' => Agency::all()]);
+    }
+
+    public function getAgencyServices($agency_id)
+    {
+        $agency = Agency::findOrFail($agency_id);
+        $agency->load('agencyServices');
+        return response()->json($agency->agencyServices);
+    }
+
+    public function getBookings($agency_service_id)
+    {
+        $bookings = Booking::where('agency_service_id', $agency_service_id)
+            ->where('status', '2')
+            ->whereDate('date', date('Y-m-d'))
+            ->orderBy('created_at', 'asc')
+            ->get();
+        return response()->json($bookings);
     }
 
     public function storeCriticSuggestion(Request $request)

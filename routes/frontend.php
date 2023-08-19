@@ -44,4 +44,6 @@ Route::get('news', [FrontController::class, 'news'])->name('news');
 Route::get('news/{slug}', [FrontController::class, 'newsDetail'])->name('news.detail');
 
 Route::get('critic-suggestion', [FrontController::class, 'criticSuggestion'])->name('critic-suggestion');
+Route::get('get-agency-services/{agency_id}', [FrontController::class, 'getAgencyServices'])->name('get-agency-services');
+Route::get('get-bookings/{agency_service_id}', [FrontController::class, 'getBookings'])->name('get-bookings');
 Route::post('critic-suggestion', [FrontController::class, 'storeCriticSuggestion'])->name('critic-suggestion.store');

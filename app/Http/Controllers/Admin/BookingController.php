@@ -51,12 +51,14 @@ class BookingController extends Controller
             'end_time' => date('H:i:s'),
         ]);
 
-        // send whatsapp message to next queue
+        // get next booking
         $nextBooking = Booking::where('agency_service_id', $booking->agency_service_id)
             ->where('status', '0')
+            ->whereDate('date', date('Y-m-d'))
             ->orderBy('created_at', 'asc')
             ->first();
 
+        // send whatsapp message
         if ($nextBooking) {
             $nextBooking->load('agencyService.agency');
             $whatsapp = new WhatsappService();
