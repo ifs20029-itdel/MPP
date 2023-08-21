@@ -48,7 +48,7 @@
                                     <div class="singel-form form-group">
                                         <label>Layanan Instansi :</label>
                                         <div class="produtct">
-                                            <select name="agency_id" class="form-control">
+                                            <select name="service_id" class="form-control">
                                             </select>
                                         </div>
                                     </div>

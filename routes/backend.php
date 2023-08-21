@@ -31,6 +31,7 @@ Route::name('backend.')->middleware(['auth'])->group(function () {
         Route::put('process/{id}', [BookingController::class, 'process'])->name('process');
         Route::put('finish/{id}', [BookingController::class, 'finish'])->name('finish');
         Route::delete('delete/{id}', [BookingController::class, 'destroy'])->name('destroy');
+        Route::get('export/{slug}', [BookingController::class, 'export'])->name('export');
     });
 
     // Detail View

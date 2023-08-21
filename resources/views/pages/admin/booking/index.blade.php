@@ -156,15 +156,15 @@
                                                         <!--begin::Title-->
                                                         @if ($item->status == 0)
                                                             <span
-                                                                class="text-gray-800 text-hover-primary fs-5 fw-bold mb-1">Belum
+                                                                class="badge badge-light-danger text-gray-800 text-hover-primary fs-5 fw-bold mb-1">Belum
                                                                 Diproses</span>
                                                         @elseif ($item->status == 1)
                                                             <span
-                                                                class="text-gray-800 text-hover-primary fs-5 fw-bold mb-1">Sedang
+                                                                class="badge badge-light-warning text-gray-800 text-hover-primary fs-5 fw-bold mb-1">Sedang
                                                                 Diproses</span>
                                                         @else
                                                             <span
-                                                                class="text-gray-800 text-hover-primary fs-5 fw-bold mb-1">Selesai</span>
+                                                                class="badge badge-light-success text-gray-800 text-hover-primary fs-5 fw-bold mb-1">Selesai</span>
                                                         @endif
                                                         <!--end::Title-->
                                                     </div>
