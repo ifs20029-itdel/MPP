@@ -19,9 +19,9 @@ class BookingController extends Controller
         })
             ->whereDate('date', date('Y-m-d'))
             ->get();
-        $agencyServiceName = $bookings->isEmpty() ? null : $bookings[0]->agencyService->name;
+        $agencyService = AgencyService::where('slug', $slug)->first();
 
-        return view('pages.admin.booking.index', compact('bookings', 'slug', 'agencyServiceName'));
+        return view('pages.admin.booking.index', compact('bookings', 'slug', 'agencyService'));
     }
 
     public function detail($id)

@@ -41,7 +41,7 @@
                 <!--begin::Page title-->
                 <div class="page-title d-flex justify-content-center flex-column me-5">
                     <!--begin::Title-->
-                    <h1 class="d-flex flex-column text-dark fw-bold fs-3 mb-0">{{ $agencyServiceName }}</h1>
+                    <h1 class="d-flex flex-column text-dark fw-bold fs-3 mb-0">{{ $agencyService->name }}</h1>
                     <!--end::Title-->
                     <!--begin::Breadcrumb-->
                     <ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 pt-1">
@@ -56,7 +56,7 @@
                         </li>
                         <!--end::Item-->
                         <!--begin::Item-->
-                        <li class="breadcrumb-item text-muted">Layanan {{ $agencyServiceName }}</li>
+                        <li class="breadcrumb-item text-muted">Layanan {{ $agencyService->name }}</li>
                         <!--end::Item-->
                         <!--begin::Item-->
                         <li class="breadcrumb-item">
@@ -64,7 +64,7 @@
                         </li>
                         <!--end::Item-->
                         <!--begin::Item-->
-                        <li class="breadcrumb-item text-dark">List Layanan {{ $agencyServiceName }}</li>
+                        <li class="breadcrumb-item text-dark">List Layanan {{ $agencyService->name }}</li>
                         <!--end::Item-->
                     </ul>
                     <!--end::Breadcrumb-->
@@ -103,6 +103,10 @@
                         <!--end::Card title-->
                         <!--begin::Card toolbar-->
                         <div class="card-toolbar">
+                            <div class="d-flex justify-content-end">
+                                <a target="_blank" href="{{ route('backend.booking.export', $agencyService->slug) }}"
+                                    class="btn btn-sm btn-primary me-2">Cetak PDF</a>
+                            </div>
                         </div>
                         <!--end::Card toolbar-->
                     </div>
@@ -175,7 +179,7 @@
                                                     <div class="ms-5">
                                                         <!--begin::Title-->
                                                         <span
-                                                            class="text-gray-800 text-hover-primary fs-5 fw-bold mb-1">{{ $item->duration }}</span>
+                                                            class="text-gray-800 text-hover-primary fs-5 fw-bold mb-1">{{ $item->status == 2 ? $item->duration : '-' }}</span>
                                                         <!--end::Title-->
                                                     </div>
                                                 </div>

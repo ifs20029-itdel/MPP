@@ -97,23 +97,11 @@
                 $('select[name="agency_id"]').on('change', function() {
                     var agency_id = $(this).val();
                     if (agency_id) {
-                        $.ajax({
-                            url: '/get-agency-services/' + agency_id,
-                            type: 'GET',
-                            dataType: 'json',
-                            success: function(data) {
-                                $('select[name="service_id"]').empty();
-                                $('select[name="service_id"]').append(
-                                    '<option value="">Pilih Layanan</option>'
-                                );
-                                $.each(data, function(key, value) {
-                                    $('select[name="service_id"]').append(
-                                        '<option value="' + key + '">' + value +
-                                        '</option>'
-                                    );
-                                });
-                            }
-                        });
+                        $.get('/get-agency-services/' + agency_id, function(data) {
+                            $("select").niceSelect('destroy');
+                            $('select[name="service_id"]').html(data);
+                            $("select").niceSelect();
+                        }, 'html');
                     } else {
                         $('select[name="service_id"]').empty();
                     }
@@ -123,23 +111,11 @@
                 $('select[name="service_id"]').on('change', function() {
                     var service_id = $(this).val();
                     if (service_id) {
-                        $.ajax({
-                            url: '/get-bookings/' + service_id,
-                            type: 'GET',
-                            dataType: 'json',
-                            success: function(data) {
-                                $('select[name="booking_id"]').empty();
-                                $('select[name="booking_id"]').append(
-                                    '<option value="">Pilih Nomor Booking</option>'
-                                );
-                                $.each(data, function(key, value) {
-                                    $('select[name="booking_id"]').append(
-                                        '<option value="' + key + '">' + value +
-                                        '</option>'
-                                    );
-                                });
-                            }
-                        });
+                        $.get('/get-bookings/' + service_id, function(data) {
+                            $("select").niceSelect('destroy');
+                            $('select[name="booking_id"]').html(data);
+                            $("select").niceSelect();
+                        }, 'html');
                     } else {
                         $('select[name="booking_id"]').empty();
                     }

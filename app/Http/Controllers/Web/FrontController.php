@@ -38,7 +38,11 @@ class FrontController extends Controller
     {
         $agency = Agency::findOrFail($agency_id);
         $agency->load('agencyServices');
-        return response()->json($agency->agencyServices);
+        $list = "<option value=''>Pilih Layanan</option>";
+        foreach ($agency->agencyServices as $agencyService) {
+            $list .= "<option value='$agencyService->id'>$agencyService->name</option>";
+        }
+        echo $list;
     }
 
     public function getBookings($agency_service_id)
@@ -48,14 +52,18 @@ class FrontController extends Controller
             ->whereDate('date', date('Y-m-d'))
             ->orderBy('created_at', 'asc')
             ->get();
-        return response()->json($bookings);
+
+        $list = "<option value=''>Pilih Nomor Antrian</option>";
+        foreach ($bookings as $booking) {
+            $list .= "<option value='$booking->id'>$booking->queue_number</option>";
+        }
+        echo $list;
     }
 
     public function storeCriticSuggestion(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'name' =>  ['required', 'string', 'max:255'],
-            'agency_id' =>  ['required', 'string', 'max:255'],
+            'booking_id' =>  ['required', 'string', 'max:255'],
             'message' =>  ['required', 'string', 'max:255'],
         ]);
 
@@ -66,11 +74,7 @@ class FrontController extends Controller
             ]);
         }
 
-        CriticSuggestion::create([
-            'name' => $request->name,
-            'agency_id' => $request->agency_id,
-            'message' => $request->message,
-        ]);
+        CriticSuggestion::create($request->all());
 
         return response()->json([
             'status' => 'success',

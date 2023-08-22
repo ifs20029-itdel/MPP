@@ -10,7 +10,6 @@ class CriticSuggestion extends Model
     use HasFactory;
 
     protected $fillable = [
-        'name',
         'booking_id',
         'message',
     ];
