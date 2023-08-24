@@ -49,6 +49,10 @@
                                         <label>Layanan Instansi :</label>
                                         <div class="produtct">
                                             <select name="agency_id" class="form-control">
+                                                <option value="">Pilih Jenis Layanan</option>
+                                                @foreach ($agency->agencyServices as $service)
+                                                    <option value="{{ $agency->name }}">{{ $service->name }}</option>
+                                                @endforeach
                                             </select>
                                         </div>
                                     </div>
