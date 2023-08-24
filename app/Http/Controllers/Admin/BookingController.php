@@ -19,9 +19,9 @@ class BookingController extends Controller
         })
             ->whereDate('date', date('Y-m-d'))
             ->get();
-        $agencyServiceName = $bookings->isEmpty() ? null : $bookings[0]->agencyService->name;
+        $agencyService = AgencyService::where('slug', $slug)->first();
 
-        return view('pages.admin.booking.index', compact('bookings', 'slug', 'agencyServiceName'));
+        return view('pages.admin.booking.index', compact('bookings', 'slug', 'agencyService'));
     }
 
     public function detail($id)
@@ -85,5 +85,19 @@ class BookingController extends Controller
     {
         $booking = Booking::findOrFail($id);
         return view('pages.admin.booking.detail-booking', compact('booking'));
+    }
+
+    public function export($slug)
+    {
+        // get bookings data for today
+        $bookings = Booking::whereHas('agencyService', function ($query) use ($slug) {
+            $query->where('slug', $slug);
+        })
+            ->whereDate('date', date('Y-m-d'))
+            ->get();
+
+        // export to pdf
+        $pdf = \PDF::loadView('pages.admin.booking.export', compact('bookings'));
+        return $pdf->download('laporan-booking-' . date('Y-m-d') . '.pdf');
     }
 }
